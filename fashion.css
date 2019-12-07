@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    line-height: 30px;
+    font-family: 'sf pro text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} 
+
+.nav-container {
+    padding-left: 60px;
+    padding-top: 20px;
+    padding-right: 60px;
+    padding-bottom: 15px;
+    max-width: 1440px;
+}
+
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 57px;
+    position: relative;
+}
+
+nav a {
+    color: #4A4A4A;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Raleway';
+}
+
+nav a:hover{
+    color: black;
+    font-style: bold;
+}
+
+nav a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+nav a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.nounderline {
+    text-decoration: none !important
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 50px;
+    color: black;
+    font-family: 'raleway';
+    font-weight: 400;
+    border-left: 2px solid #4A90E2;
+    padding-left: 20px;
+}
+
+.text-width {
+    max-width: 940px;
+    font-size: 18px;
+}
+
+.divider-hr {
+    border-top: 1px solid #EEE; 
+    background: transparent;
+    justify-content: center;
+    margin: 100px 482px;
+}
+mark {
+    background-color: #fbf1b5;
+}
+.image-group {
+    max-width: 940px;
+}
+
+.center-text {
+    text-align: center;
+    font-size: 18px;
+}
+
+.italic-text {
+    font-size:30px;
+    text-align: center;
+    max-width: 767px;
+    line-height: 50px;
+    margin: 0 auto;
+    padding-top: 80px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+
+.grid-2-text {
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.large-images {
+    max-width: 1440px;
+}
+.normal-p {
+    max-width: 940px;
+}
+.next-container {
+    margin: 100px 250px;
+    padding-bottom: 20px;
+}
+.next-container a {
+    text-decoration: none;
+    color: #4A4A4A;
+}
+
+.next-container a:hover {
+    color: #000;
+}
+.next-container p {
+    padding-top: 20px;
+    font-family: 'raleway';
+    font-size: 16px;
+    line-height: 20px;
+}
+.next-float-left {
+    float: left;
+}
+.next-float-right {
+    float: right;
+}
+
+
+.footer-hr {
+    margin-top: 50px;
+    clear:both;
+    border-top: .3px solid #EEE;
+    justify-content: center;
+}
+
+.footer-container {
+    padding-left: 60px;
+    padding-top: 20px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+    font-family: 'raleway';
+    max-width: 1440px;
+}
+
+.float-left img{
+    vertical-align: top;
+}
+.float-left p {
+    display: inline-block;
+    line-height: 20px;
+    font-size: 14px;
+    padding-left:10px;
+    color: #4A4A4A;
+}
+
+.float-right {
+    float: right;
+}
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    display: inline-block;
+    margin-left: 57px;
+    position: relative;
+}

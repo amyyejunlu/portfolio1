@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    line-height: 30px;
+    font-family: 'sf pro text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav-container {
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 15px;
+    max-width: 1440px;
+}
+
+
+nav {
+    float: right;
+
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 60px;
+    position: relative;
+}
+
+nav a {
+    color:#4A4A4A;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Raleway';
+}
+
+nav a:hover{
+    color: black;
+    font-style: bold;
+}
+
+nav a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+nav a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.nounderline {
+    text-decoration: none !important
+}
+
+h1, h2, h3 {
+    font-family: 'raleway';
+    font-weight: 400;
+    color: #000;
+}
+
+h1 {
+    font-size:30px;
+    line-height: 50px;
+    margin-top: 100px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    border-left: 2px solid #4A90E2;
+    padding-left: 20px;
+}
+
+.column-grid {
+    display: grid;
+    margin-top: 50px;
+    max-width: 782px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0px;
+}
+
+
+section p {
+    max-width: 940px;
+    font-size: 18px;
+}
+
+mark {
+    background-color: #fbf1b5;
+}
+.border-image {
+    border: 1px solid #EEE;
+    max-width: 100%;
+    height: auto;
+}
+.research {
+    /*margin-left: 250px;*/
+    margin-bottom: 50px;
+    max-width: 975px;
+}
+
+.stacked-row {
+    max-width: 940px;
+}
+
+.jumbotron {
+    background-color: #F5F5F5 !important; 
+}
+.middle-section h3 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-style: none;
+}
+
+.middle-sect-paragraph {
+    font-family: 'raleway';
+    max-width: 692px;
+    font-size: 24px;
+    font-style: italic;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.middle-section-list {
+    font-family: 'raleway';
+    max-width: 692px;
+    font-size: 24px;
+    line-height: 38px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    padding-top: 0px;
+}
+
+.textwidth {
+    margin-bottom: 70px;
+}
+
+
+.text-image {
+    margin-bottom: 50px;
+}
+
+.stepsimages > img {
+    margin: 5px;
+}
+
+.image-zoom {
+    transition: transform .3s;
+}
+.image-zoom:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+
+.image-group {
+    max-width: 1440px;
+}
+.image-grou-2 {
+    max-width: 800px;
+}
+
+.modal.persona-modal{
+    max-width: 920px;
+    transition: all 1s ease-in-out;
+    transform: scale(0.8);
+}
+
+.enlarge-image {
+    opacity: 0.8;
+    cursor: zoom-in;
+}
+.enlarge-image:hover {
+    opacity: 100;
+}
+
+.next-container {
+    padding-bottom: 50px;
+    max-width: 940px;
+}
+.next-container a {
+    text-decoration: none;
+    color: #4A4A4A;
+}
+
+.next-container a:hover {
+    color: #000;
+}
+.next-container p {
+    padding-top: 20px;
+    font-family: 'raleway';
+    font-size: 16px;
+    line-height: 20px;
+}
+.next-float-left {
+    float: left;
+}
+.next-float-right {
+    float: right;
+}
+
+
+.footer-container {
+    padding-left: 60px;
+    padding-top: 20px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+    font-family: 'raleway';
+    max-width: 1440px;
+}
+
+.float-left img{
+    vertical-align: top;
+}
+.float-left p {
+    display: inline-block;
+    line-height: 20px;
+    font-size: 14px;
+    padding-left:10px;
+    color: #4A4A4A;
+}
+
+.float-right {
+    float: right;
+}
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    display: inline-block;
+    margin-left: 57px;
+    position: relative;
+}
