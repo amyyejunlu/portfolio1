@@ -1,191 +1,405 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    line-height: 30px;
-    font-family: 'sf pro text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-} 
-
-.nav-container {
-    padding-left: 60px;
-    padding-top: 20px;
-    padding-right: 60px;
-    padding-bottom: 15px;
-    max-width: 1440px;
+* {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 155.19%;
+    letter-spacing: 0.04em;
+    font-size: 20px;
 }
 
-
-nav {
-    float: right;
+#mainContent {
+    /* background-color: #fcfcfc; */
 }
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav li {
-    display: inline-block;
-    margin-left: 57px;
-    position: relative;
-}
-
-nav a {
-    color: #4A4A4A;
-    font-size: 16px;
-    text-decoration: none;
-    font-family: 'Raleway';
-}
-
-nav a:hover{
-    color: black;
-    font-style: bold;
-}
-
-nav a:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #000;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
+.parallax_img {
+    /* The image used */
+    background-image: url("fashion_home2.jpg");
+  
+    /* Set a specific height */
+    min-height: 700px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 145%;
+    /* or 109px */
 
-nav a:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-.nounderline {
-    text-decoration: none !important
-}
+    letter-spacing: 0.07em;
 
-h3 {
-    font-size: 24px;
-    margin-bottom: 50px;
-    color: black;
-    font-family: 'raleway';
-    font-weight: 400;
-    border-left: 2px solid #4A90E2;
-    padding-left: 20px;
+    color: #000000;
 }
 
-.text-width {
-    max-width: 940px;
-    font-size: 18px;
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 118%;
+
+    letter-spacing: 0.045em;
+
+    color: #444444;
 }
 
-.divider-hr {
-    border-top: 1px solid #EEE; 
-    background: transparent;
-    justify-content: center;
-    margin: 100px 482px;
-}
-mark {
-    background-color: #fbf1b5;
-}
-.image-group {
-    max-width: 940px;
-}
+.h2-heading {
+    font-family: "SF Pro Text", sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 26px;
+/* letter-spacing: 0.04em; */
+/* or 31px */
 
-.center-text {
-    text-align: center;
-    font-size: 18px;
-}
 
+color: #4A4A4A;
+}
 .italic-text {
-    font-size:30px;
-    text-align: center;
-    max-width: 767px;
-    line-height: 50px;
-    margin: 0 auto;
-    padding-top: 80px;
-    font-weight: 100;
+    font-family: "Roboto", sans-serif;
     font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130.5%;
+    /* or 37px */
+
+    letter-spacing: 0.07em;
+
+    color: #000000;
+
 }
 
-
-.grid-2-text {
-    line-height: 30px;
+p, .list {
+    font-family: 'neue-haas-unica', sans-serif;
+    font-weight: 300;
+    font-style: normal;
     font-size: 18px;
-}
-
-.large-images {
-    max-width: 1440px;
-}
-.normal-p {
-    max-width: 940px;
-}
-.next-container {
-    margin: 100px 250px;
-    padding-bottom: 20px;
-}
-.next-container a {
-    text-decoration: none;
+    line-height: 28px;
+    letter-spacing: 0.04em;
     color: #4A4A4A;
+    /* text-align: justify;
+    text-justify: auto; */
 }
 
-.next-container a:hover {
-    color: #000;
+.large-text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 118%;
+
+    letter-spacing: 0.045em;
+    color: #444444;
 }
-.next-container p {
-    padding-top: 20px;
-    font-family: 'raleway';
-    font-size: 16px;
-    line-height: 20px;
-}
-.next-float-left {
-    float: left;
-}
-.next-float-right {
-    float: right;
+.text-width {
+    width: 379px;
 }
 
-
-.footer-hr {
-    margin-top: 50px;
-    clear:both;
-    border-top: .3px solid #EEE;
-    justify-content: center;
+.small-text-width {
+    width: 250px;
+}
+/* Images */
+#humancir_cover {
+    width: 90%;
 }
 
-.footer-container {
-    padding-left: 60px;
-    padding-top: 20px;
-    padding-right: 60px;
-    padding-bottom: 20px;
-    font-family: 'raleway';
-    max-width: 1440px;
-}
-
-.float-left img{
-    vertical-align: top;
-}
-.float-left p {
-    display: inline-block;
-    line-height: 20px;
-    font-size: 14px;
-    padding-left:10px;
-    color: #4A4A4A;
-}
-
-.float-right {
-    float: right;
-}
-footer ul {
-    list-style: none;
-}
-
-footer li {
-    display: inline-block;
-    margin-left: 57px;
+#project_definition {
     position: relative;
+}
+
+#project_definition_image {
+    width: 70%;
+}
+
+
+#project_definition_text {
+    position: absolute;
+    top: 0%;
+    left: 21%;
+    width: 48%;
+    height: 100%;
+    font-family: "SF Pro Text", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 90%;
+    line-height: 155.19%;
+    color: #4A4A4A;
+}
+
+#research_problem {
+    width: 70%;
+}
+.img-shadow {
+    -webkit-box-shadow: -3px 6px 146px -97px rgba(56,56,56,1);
+-moz-box-shadow: -3px 6px 146px -97px rgba(56,56,56,1);
+box-shadow: -3px 6px 146px -97px rgba(56,56,56,1);
+    /* -webkit-box-shadow: 0px 17px 151px -82px rgba(94,94,94,1);
+    -moz-box-shadow: 0px 17px 151px -82px rgba(94,94,94,1);
+    box-shadow: 0px 17px 151px -82px rgba(94,94,94,1); */
+}
+.img-shadow:hover {
+    box-shadow: 0 14px 28px rgba(77, 77, 77, 0.1), 0 10px 10px rgba(0,0,0,0.22);
+}
+/* Figures */
+
+#stakeholder {
+    width: 90vw;
+    cursor: zoom-in;
+}
+
+#customer {
+    width: 20vw;
+    cursor: zoom-in;
+}
+
+#bkgd {
+    width: 35vw;
+    cursor: zoom-in;
+}
+
+#walkthewall {
+    width: 35vw;
+    cursor: zoom-in;
+}
+
+.interviews {
+    width: 30vw;
+    cursor: zoom-in;
+}
+
+#affinity_diagram {
+    width: 90vw;
+    cursor: zoom-in;
+}
+
+#critique {
+    width: 32vw;
+    cursor: zoom-in;
+}
+
+.prototype {
+    width: 32vw;
+    cursor: zoom-in;
+}
+
+#finalposter {
+    width: 32vw;
+    cursor: zoom-in;
+}
+
+#team {
+    width: 32vw;
+    cursor: zoom-in;
+}
+
+.figure-caption {
+    font-family: "SF Pro Text", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 155.19%;
+    /* or 16px */
+    color: #4A4A4A;
+}
+
+/* Storyboard Collection */
+.swap-on-hover {
+    /*position: relative; */
+    margin:  0 auto;
+    max-width: 400px;
+}
+
+.swap-on-hover_front-image, .swap-on-hover_back-image {
+    position: absolute;
+    top:0;
+    left:0;
+    overflow: hidden;
+    /* Sets the width and height for the images*/
+    width: 90%;
+}
+
+.swap-on-hover .swap-on-hover_front-image {
+    /*z-index: 9999;*/
+    transition: opacity .5s linear;
+    cursor: zoom-in;
+}
+
+.swap-on-hover:hover > .swap-on-hover_front-image{
+    opacity: 0;
+}  
+
+.storyboard_filler {
+    margin-bottom: 180px;
+}
+
+/* Modal */
+.modal-dialog {
+    width: 0%;
+    height: 0%;
+    margin: 2% 0% 0% 20%;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.modal_L {
+    height: auto;
+    width: 60vw;
+    margin: auto;
+    cursor: zoom-out;
+}
+.modal_XL {
+    height: auto;
+    width: 80vw;
+    margin: auto;
+    cursor: zoom-out;
+}
+/* Navbar CSS */
+nav a{
+    font-size: 12px;
+    line-height: 133.69%;
+    letter-spacing: 0.2em;
+}
+.bold {
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+a.nav-link, a.design_sub {
+    color: #767676;
+}
+
+a.nav-link:hover, a.nav-link:active, a.design_sub:hover, a.design_sub:active {
+    color: black;
+    text-decoration: none;
+}
+
+#copyright {
+    font-family: "SF Pro Text", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #767676;
+}
+
+footer {
+    padding-top: 30px;
+}
+footer a{
+    color: #767676;
+}
+
+footer a:hover {
+    color: black;
+    text-decoration: none;
+}
+#nextPage {
+    text-align: right;
+    margin-right: -13%;
+}
+
+#nextText {
+    font-family: "SF Pro Text", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 155.19%;
+    /* or 25px */
+    color: #4A4A4A;
+}
+
+@media (max-width:768px) {
+      /* Modal */
+      .modal-dialog {
+        width: 0%;
+        height: 0%;
+        margin: 2% 0% 0% 5%;
+        padding: 0;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .modal_L {
+        height: auto;
+        width: 90vw;
+        margin: auto;
+        cursor: zoom-out;
+    }
+
+    .modal_XL {
+        height: auto;
+        width: 95vw;
+        margin: auto;
+        cursor: zoom-out;
+    }
+    /* Figures */
+    #stakeholder {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+    #customer {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+    #bkgd {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+    #walkthewall {
+        width: 100%;
+        cursor: zoom-in;
+    }
+    .interviews {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+
+    /* #affinity_diagram {
+        width: 90vw;
+        cursor: zoom-in;
+    } */
+    #critique {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+    .prototype {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+    #finalposter {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+    #team {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+    #nextPage {
+        text-align: right;
+        margin-right: 0%;
+    }
+    .col-md-3.storyboard {
+        padding-bottom: 200px;
+    }
+    .storyboard_filler {
+        margin-bottom: 0px;
+    }
+    #research_problem {
+        width: 100%;
+    }
+    #project_definition_image {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+	.parallax_img {
+		background-attachment: inherit;
+	}
 }

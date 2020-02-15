@@ -1,0 +1,352 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 155.19%;
+    letter-spacing: 0.04em;
+    font-size: 20px;
+}
+/* .row {
+    margin-right: -50px;
+} */
+#mainContent {
+    background-color: #fcfcfc;
+    /* padding-top: 5px; */
+}
+.parallax_img {
+    /* The image used */
+    background-image: url("knows_img.png");
+  
+    /* Set a specific height */
+    min-height: 700px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.italic-text {
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 150.5%;
+    /* or 37px */
+
+    letter-spacing: 0.07em;
+
+    color: #000000;
+
+}
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 145%;
+
+    letter-spacing: 0.07em;
+
+    color: #000000;
+}
+ 
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 118%;
+
+    letter-spacing: 0.045em;
+
+    color: #444444;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 155.19%;
+
+    /* or 22px */
+    color: #4A4A4A;
+    text-align: center;
+}
+
+.h2-heading {
+    font-family: "SF Pro Text", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    /* letter-spacing: 0.04em; */
+    /* or 31px */
+
+
+color: #4A4A4A;
+}
+/* div.col-md-3 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 155.19%;
+    /* or 17px */
+    /* letter-spacing: 0.015em; */
+
+    /* margin-top: 20px; */
+    /* margin-bottom: 100px; */
+} 
+
+/* div.col-md-9 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 155.19%;
+    /* or 19px */
+   
+    /* margin-top: 20px; */
+    /* margin-bottom: 100px; */
+} 
+
+.text-right {
+    color: white;
+}
+
+
+
+p {
+    font-family: 'neue-haas-unica', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    color: #4A4A4A;
+    /* text-align: justify; */
+}
+.regular-text {
+    font-family: 'neue-haas-unica', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    color: #4A4A4A;
+    text-align: left;
+}
+/* Carousel */
+#knowsCarousel {
+    text-align: center;
+}
+.carousel-control-next, .carousel-control-prev {
+    filter: invert(100%);
+}
+
+/* Website Questions */
+.websiteQuestions {
+    background: #FFFFFF;
+    box-shadow: 0 14px 28px rgba(77, 77, 77, 0.1);
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 155.19%;
+    color: #4a4a4a;
+    padding: 10px;
+}
+/* Images */
+#ant_cover {
+    width: 90%;
+}
+
+.he_image {
+    width: 80%;
+}
+
+#information_architecture {
+    width: 90%;
+}
+
+.viz_thumb {
+    width: 90%;
+    cursor: zoom-in;
+}
+#redesign {
+    width: 100%;
+    cursor: zoom-in;
+}
+
+.float-image {
+    position: relative;
+    top: 40px;
+}
+
+.tweaks {
+    width: 100%;
+}
+.img-shadow {
+    box-shadow: 0px 6px 146px -97px rgba(56,56,56,1);
+    transition: all 0.3s ease 0s;
+    /* -webkit-box-shadow: 0px 17px 151px -82px rgba(94,94,94,1);
+    -moz-box-shadow: 0px 17px 151px -82px rgba(94,94,94,1);
+    box-shadow: 0px 17px 151px -82px rgba(94,94,94,1); */
+}
+.img-shadow:hover {
+        box-shadow: 0px 14px 28px rgba(77, 77, 77, 0.1), 0px 10px 10px rgba(0,0,0,0.22);
+        transform: translateY(-7px);
+}
+
+/* Figures */
+#viz10 {
+    width: 100%;
+    cursor: zoom-in;
+}
+#viz10a {
+    width: 100%;
+    cursor: zoom-in;
+}
+#viz10b {
+    width: 100%;
+    cursor: zoom-in;
+}
+
+#privacy_grade {
+    width: 100%;
+    cursor: zoom-in;
+}
+
+#illustration {
+    cursor: zoom-in;
+}
+
+#privStyle {
+    cursor: zoom-in;
+}
+
+.figure-caption {
+    font-family: "SF Pro Text", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 155.19%;
+    /* or 16px */
+    color: #4A4A4A;
+}
+
+/* Modal */
+.modal-dialog {
+    width: 0%;
+    height: 0%;
+    margin: 2% 0% 0% 20%;
+    padding: 0;
+    max-width: 100%;
+    /* max-height: 100%; */
+}
+
+.modal_L {
+    height: auto;
+    width: 50vw;
+    margin: auto;
+    cursor: zoom-out;
+}
+
+/* Videos */
+#knows_video {
+    width: 90%;
+   
+}
+
+/* Navbar CSS */
+/* ul.navbar-nav {
+    padding-top: 0px;
+    font-size: 14px;
+    line-height: 133.69%;
+    letter-spacing: 0.2em;
+} */
+
+nav a{
+    font-size: 12px;
+    line-height: 133.69%;
+    letter-spacing: 0.2em;
+}
+.bold {
+    font-weight: bold;
+}
+
+a.nav-link, a.design_sub {
+    color: #767676;
+}
+
+a.nav-link:hover, a.nav-link:active, a.design_sub:hover, a.design_sub:active {
+    color: black;
+    text-decoration: none;
+}
+
+#copyright {
+    font-family: "SF Pro Text", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #767676;
+}
+
+footer{
+    padding-top: 30px;
+}
+
+footer a{
+    color: #767676;
+}
+
+footer a:hover {
+    color: black;
+    text-decoration: none;
+}
+#nextPage {
+    text-align: right;
+    margin-right: -13%;
+}
+
+#nextText {
+    font-family: "SF Pro Text", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 155.19%;
+    /* or 25px */
+    color: #4A4A4A;
+}
+
+@media (max-width:768px) {
+    #nextPage {
+        text-align: right;
+        margin-right: 0%;
+    }
+      /* Modal */
+      .modal-dialog {
+        width: 0%;
+        height: 0%;
+        margin: 2% 0% 0% 5%;
+        padding: 0;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .modal_L {
+        height: auto;
+        width: 90%;
+        margin: auto;
+        cursor: zoom-out;
+    }
+}
+
+@media screen and (max-width: 768px) {
+	.parallax_img {
+		background-attachment: inherit;
+	}
+}

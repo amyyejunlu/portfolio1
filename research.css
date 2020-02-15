@@ -1,0 +1,421 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 155.19%;
+    letter-spacing: 0.04em;
+    font-size: 20px;
+}
+
+#mainContent {
+    background-color: #fcfcfc;
+}
+.parallax_img {
+    /* The image used */
+    background-image: url("ucre_home.png");
+  
+    /* Set a specific height */
+    min-height: 700px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.img-shadow {
+    box-shadow: -3px 6px 146px -97px rgba(56,56,56,1);
+    transition: all 0.3s ease 0s;
+}
+
+.img-shadow:hover {
+    box-shadow: 0 14px 28px rgba(77, 77, 77, 0.1), 0 10px 10px rgba(0,0,0,0.22);
+    transform: translateY(-7px);
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 145%;
+
+    letter-spacing: 0.07em;
+
+    color: #000000;
+}
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 118%;
+
+    letter-spacing: 0.045em;
+
+    color: #444444;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 160%;
+    color: #000000;
+}
+
+#researchGoals {
+    background-color: white;
+    /* box-shadow: 0px 6px 146px -97px rgba(56,56,56,1); */
+}
+#designGoals {
+    background-color: white;
+}
+.large-text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 145%;
+    letter-spacing: 0.07em;
+    color: #000000;
+}
+.list {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 191.69%;
+    /* or 58px */
+    color: #000000;
+}
+.small-list {
+    font-family: 'neue-haas-unica', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 191.69%;
+    /* or 58px */
+    color: #000000;
+    text-align: left;
+}
+.center-text {
+    max-width: 700px;
+    text-align: center;
+}
+p {
+    font-family: 'neue-haas-unica', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    color: #4A4A4A;
+    /* text-align: justify; */
+}
+.italic-text {
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 150.5%;
+    /* or 37px */
+
+    letter-spacing: 0.07em;
+    color: #000000;
+}
+
+/* Images */
+#humancir_cover {
+    width: 90%;
+}
+
+#project_definition {
+    position: relative;
+}
+
+#project_definition_image {
+    width: 70%;
+}
+
+
+#project_definition_text {
+    position: absolute;
+    top: 0%;
+    left: 21%;
+    width: 48%;
+    height: 100%;
+    font-family: "SF Pro Text", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 90%;
+    line-height: 155.19%;
+    color: #4A4A4A;
+}
+
+#research_problem {
+    width: 70%;
+}
+
+/* Figures */
+
+#stakeholder {
+    width: 14vw;
+    cursor: zoom-in;
+}
+
+#customer {
+    width: 20vw;
+    cursor: zoom-in;
+}
+
+#bkgd {
+    width: 60vw;
+    cursor: zoom-in;
+}
+
+#walkthewall {
+    width: 35vw;
+    cursor: zoom-in;
+}
+
+.interviews {
+    width: 30vw;
+    cursor: zoom-in;
+}
+
+#affinity_diagram {
+    width: 100%;
+    cursor: zoom-in;
+}
+
+#critique {
+    width: 32vw;
+    cursor: zoom-in;
+}
+
+.prototype {
+    width: 32vw;
+    cursor: zoom-in;
+}
+
+#finalposter {
+    width: 50vw;
+    cursor: zoom-in;
+}
+#privacy_grade {
+    cursor: zoom-in;
+}
+#team {
+    width: 32vw;
+    cursor: zoom-in;
+}
+
+.figure-caption {
+    font-family: "SF Pro Text", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 155.19%;
+    /* or 16px */
+    color: #4A4A4A;
+}
+
+/* Storyboard Collection */
+.swap-on-hover {
+    /*position: relative; */
+    margin:  0 auto;
+    max-width: 400px;
+}
+
+.swap-on-hover_front-image, .swap-on-hover_back-image {
+    position: absolute;
+    top:0;
+    left:0;
+    overflow: hidden;
+    /* Sets the width and height for the images*/
+    width: 90%;
+}
+
+.swap-on-hover .swap-on-hover_front-image {
+    /*z-index: 9999;*/
+    transition: opacity .5s linear;
+    cursor: zoom-in;
+}
+
+.swap-on-hover:hover > .swap-on-hover_front-image{
+    opacity: 0;
+}  
+
+.storyboard_filler {
+    margin-bottom: 180px;
+}
+
+/* Modal */
+.modal-dialog {
+    width: 0%;
+    height: 0%;
+    margin: 2% 0% 0% 20%;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.modal_L {
+    height: auto;
+    width: 60vw;
+    margin: auto;
+    cursor: zoom-out;
+}
+.modal_XL {
+    height: auto;
+    width: 80vw;
+    margin: auto;
+    cursor: zoom-out;
+}
+/* Navbar CSS */
+nav a{
+    font-size: 12px;
+    line-height: 133.69%;
+    letter-spacing: 0.2em;
+}
+.bold {
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+a.nav-link, a.design_sub {
+    color: #767676;
+}
+
+a.nav-link:hover, a.nav-link:active, a.design_sub:hover, a.design_sub:active {
+    color: black;
+    text-decoration: none;
+}
+
+#copyright {
+    font-family: "SF Pro Text", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #767676;
+}
+
+footer {
+    padding-top: 30px;
+}
+footer a{
+    color: #767676;
+}
+
+footer a:hover {
+    color: black;
+    text-decoration: none;
+}
+#nextPage {
+    text-align: right;
+    margin-right: -13%;
+}
+
+#nextText {
+    font-family: "SF Pro Text", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 155.19%;
+    /* or 25px */
+    color: #4A4A4A;
+}
+
+@media (max-width:768px) {
+      /* Modal */
+      .modal-dialog {
+        width: 0%;
+        height: 0%;
+        margin: 2% 0% 0% 5%;
+        padding: 0;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .modal_L {
+        height: auto;
+        width: 90vw;
+        margin: auto;
+        cursor: zoom-out;
+    }
+
+    .modal_XL {
+        height: auto;
+        width: 95vw;
+        margin: auto;
+        cursor: zoom-out;
+    }
+    /* Figures */
+    #stakeholder {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+    #customer {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+    #bkgd {
+        width: 100%;
+        cursor: zoom-in;
+    }
+    #walkthewall {
+        width: 100%;
+        cursor: zoom-in;
+    }
+    .interviews {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+
+    #affinity_diagram {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+    #critique {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+    .prototype {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+    #finalposter {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+    #team {
+        width: 90vw;
+        cursor: zoom-in;
+    }
+    #nextPage {
+        text-align: right;
+        margin-right: 0%;
+    }
+    .col-md-3.storyboard {
+        padding-bottom: 200px;
+    }
+    .storyboard_filler {
+        margin-bottom: 0px;
+    }
+    #research_problem {
+        width: 100%;
+    }
+    #project_definition_image {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+	.parallax_img {
+		background-attachment: inherit;
+	}
+}

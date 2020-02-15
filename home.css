@@ -1,0 +1,375 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 155.19%;
+    letter-spacing: 0.04em;
+    font-size: 20px;
+}
+#mainContent {
+    /* background-color: #fcfcfc; */
+}
+
+.slide-bottom {
+	-webkit-animation: slide-bottom 1s ease-out infinite both;
+	        animation: slide-bottom 1s ease-out infinite both;
+}
+.design_cover {
+    max-width: 434px;
+    /* margin-left: 23px; */
+}
+.pointer {
+    cursor: pointer;
+}
+.cover {
+    -webkit-box-shadow: -4px 9px 88px -40px rgba(89,89,89,1);
+    -moz-box-shadow: -4px 9px 88px -40px rgba(89,89,89,1);
+    box-shadow: -4px 9px 88px -40px rgba(89,89,89,1);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.cover:hover {
+    -webkit-box-shadow: -4px 9px 88px -40px rgba(45,156,219,1);
+    -moz-box-shadow: -4px 9px 88px -40px rgba(45,156,219,1);
+    box-shadow: -4px 9px 88px -40px rgba(45,156,219,1);
+    cursor: pointer;
+    transform: translateY(-7px);
+}
+#ant_cover {
+    background-image: url("ant_cover.png");
+}
+
+#catalog_cover {
+    background-image: url("catalog_cover_home.png");
+}
+
+/* #junto_cover {
+    background-image: url("junto_cover.png");
+} */
+
+#cinnabon_cover {
+    background-image: url("cinnabon_cover_home.png");
+}
+
+#humancir_cover {
+    background-image: url("humancir_cover.png");
+}
+
+#fashion_cover {
+    background-image: url("Fashion.png");
+}
+
+#about_cover {
+    background-image: url("amylu_cover.png");
+}
+
+.responsive {
+    background-position: center;
+    width: 300px;
+    height: 234px;
+    /* height: calc(2vw * 8);
+    width: calc(4.5vw * 7); */
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    /* opacity: 1; */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    /* margin: 2%; */
+    overflow: hidden;
+    /* max-height: 238px; */
+    /* max-width: 435px; */
+}
+
+.responsive:hover {    
+    /* background-size: auto 110%; */
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    box-shadow: 0 15px 25px -10px (rgba(0, 0, 0, 0.25));
+}
+
+.responsive-wrapper {
+    text-align: center;
+}
+
+.responsive-text {
+    margin-top: 50%;
+    background-color: rgba(252, 252, 252, 0.9);
+    padding: 10px;
+    color: black;
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+research-middle, design-right {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 146.69%;
+    /* or 56px */
+    letter-spacing: 0.07em;
+    color: #000;
+}
+.intro-text {
+    max-width:800px;
+    text-align: left;
+}
+.first-text {
+    max-width: 500px;
+}
+#physical {
+    font-family: 'Roboto', sans-serif;
+    font-style: ;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 146.69%;
+    /* or 56px */
+
+    letter-spacing: 0.07em;
+    text-decoration: underline;
+    color: #000;
+}
+
+#physical:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#Design {
+    background-color:#ebf7ff;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    /* margin-top: 30px; */
+    padding-top: 20px; 
+}
+#Research {
+    background-color: #E9E2FD;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    padding-top: 20px;
+}
+
+#Fashion {
+    background-color: #FDE2F6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-top: 20px;
+}
+
+/* #About {
+    background-color: #EDF9EA;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    /* padding-top: 20px; */
+}
+
+
+
+#amy {
+ background-color: #000;
+}
+#amy:hover, #amy:active {
+    color: #2D9CDB;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 157.19%;
+    /* or 62px */
+    letter-spacing: 0.07em;
+    color: #000000;
+    text-align: left;
+}
+
+h1 a {
+    text-decoration: underline;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 157.19%;
+    /* or 62px */
+    letter-spacing: 0.07em;
+}
+
+.whoIsAmy_2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 160.69%;
+    letter-spacing: 0.07em;
+    color: #000000;
+    max-width: 630px;
+    text-align: left;
+}
+
+p {
+    font-family: "SF Pro Text", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 38px;
+    letter-spacing: 0.04em;
+    color: #4A4A4A;
+}
+
+#copyright {
+    font-family: "SF Pro Text", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #4A4A4A;
+}
+
+footer {
+    padding-top: 30px;
+}
+
+footer a{
+    color: #4A4A4A;
+}
+
+footer a:hover {
+    color: black;
+    text-decoration: none;
+}
+/* @media (max-width:768px) {
+    .responsive {
+        height: 238px;
+        width: 335px;
+    }
+}
+
+@media (max-width:576px) {
+    .responsive {
+        height: calc(238px * 0.8);
+        width: calc(335px * 0.8);
+    }
+} */
+@media (max-width: 1440px){
+  
+}
+@media (max-width:1024px) {
+    .cover {
+        max-width: 100%;
+    }
+
+   
+}
+@media (max-width:768px) {
+    /* .col-md-3 {
+        max-width: 100%;
+    }
+    .col-md-6 {
+        max-width: 96%;
+    } */
+    .responsive {
+        height: calc(3vw * 5.5);
+        width: 100%;
+       }
+   
+}
+
+
+@media (max-width:425px) {
+   
+    #amy, h1 {
+        font-size: 40px;
+    }
+    .responsive {
+        height: calc(6vw * 9);
+        width: 100%;
+       }
+       .cover {
+           max-width: 100%;
+       }
+       .whoIsAmy_2 {
+        font-size: 28px;
+
+}
+@media (max-width:375px) {
+    .cover {
+        max-width: 300px;
+    }
+    .design_cover {
+        max-width: 320px;
+
+    }
+    #amy, h1, .whoIsAmy_2 {
+        font-size: 30px;
+    }
+    .responsive {
+        height: calc(10vw * 6);
+       }
+}
+
+@media (max-width:325px) {
+    .cover {
+        max-width: 260px;
+    }
+    .design_cover {
+        max-width: 280px;
+    }
+    #amy, h1 {
+        font-size: 30px;
+    }
+   .responsive {
+    height: calc(10vw * 6);
+   }
+   .research-middle {
+       margin-left: 0px;
+   }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-1-30 21:35:27
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-bottom
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(100px);
+              transform: translateY(100px);
+    }
+  }
+  @keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(100px);
+              transform: translateY(100px);
+    }
+  }
+  
