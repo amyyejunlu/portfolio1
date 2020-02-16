@@ -173,12 +173,10 @@ h3 {
     background-color: #EDF9EA;
     /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     /* padding-top: 20px; */
-}
 
 
-
-#amy {
- background-color: #000;
+.arrow {
+    display: inline-block;
 }
 #amy:hover, #amy:active {
     color: #2D9CDB;
@@ -189,7 +187,7 @@ h1, #amy {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 800;
-    font-size: 150px;
+    font-size: 120px;
     line-height: 130.19%;
     letter-spacing: 0.07em;
     color: #000000;
@@ -200,7 +198,7 @@ h2 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 60px;
+    font-size: 50px;
     line-height: 130%;
     letter-spacing: 0.07em;
     
@@ -233,10 +231,11 @@ h1 a {
 p {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 136%;
+    /* or 24px */
+    
     letter-spacing: 0.07em;
     color: #767676;
     /* background-color: #ffffff;
