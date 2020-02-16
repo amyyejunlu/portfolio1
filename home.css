@@ -126,10 +126,7 @@ h3 {
     letter-spacing: 0.07em;
     color: #000;
 }
-.intro-text {
-    max-width:800px;
-    text-align: left;
-}
+
 .first-text {
     max-width: 500px;
 }
@@ -186,23 +183,18 @@ h3 {
 h1, #amy {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 800;
-    font-size: 120px;
-    line-height: 130.19%;
-    letter-spacing: 0.07em;
+    font-weight: bold;
+    font-size: 200px;
+    line-height: 87.5%;
+    display: flex;
+    align-items:center;
+    text-align: right;
+    letter-spacing: 0.125em;
+    text-transform: capitalize;
+    font-feature-settings: 'cpsp' on;
     color: #000000;
     /* text-align: left; */
     text-decoration: none;
-}
-h2 {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 130%;
-    letter-spacing: 0.07em;
-    
-    color: #000000;
 }
 h1 a {
     text-decoration: underline;
@@ -216,28 +208,17 @@ h1 a {
     letter-spacing: 0.07em;
 }
 
-.whoIsAmy_2 {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 160.69%;
-    letter-spacing: 0.07em;
-    color: #000000;
-    max-width: 630px;
-    text-align: left;
-}
 
-p {
+h2 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 136%;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 117.5%;
     /* or 24px */
-    
-    letter-spacing: 0.07em;
-    color: #767676;
+    text-align: right;
+    letter-spacing: 0.1em;
+    color: #0d0d0d;
     /* background-color: #ffffff;
     padding: 20px 30px;
     cursor: pointer;
