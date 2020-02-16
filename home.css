@@ -190,7 +190,7 @@ h1, #amy {
     align-items:center;
     text-align: right;
     letter-spacing: 0.125em;
-    text-transform: capitalize;
+    text-transform: lowercase;
     font-feature-settings: 'cpsp' on;
     color: #000000;
     /* text-align: left; */
@@ -295,7 +295,7 @@ footer a:hover {
    
     #amy, h1 {
         font-size: 70px;
-        text-align: center;
+        text-align: right;
     }
     h2 {
         font-size: 40px;
@@ -319,8 +319,9 @@ footer a:hover {
         max-width: 320px;
 
     }
-    #amy, h1, .whoIsAmy_2 {
+    #amy, h1 {
         font-size: 70px;
+        text-align: right;
     }
     .responsive {
         height: calc(10vw * 6);
@@ -329,7 +330,7 @@ footer a:hover {
 
 @media (max-width:325px) {
     h2 {
-        font-size: 70px;
+        font-size: 40px;
     }
     .cover {
         max-width: 260px;
@@ -338,7 +339,7 @@ footer a:hover {
         max-width: 280px;
     }
     #amy, h1 {
-        font-size: 60px;
+        font-size: 70px;
     }
    .responsive {
     height: calc(10vw * 6);
