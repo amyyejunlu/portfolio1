@@ -115,17 +115,16 @@ research-middle, design-right {
     margin-right: auto;
     width: 50%;
 }
-
+/* 
 h3 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 146.69%;
-    /* or 56px */
     letter-spacing: 0.07em;
     color: #000;
-}
+} */
 
 .first-text {
     max-width: 500px;
@@ -196,6 +195,23 @@ h1, #amy {
     /* text-align: left; */
     text-decoration: none;
 }
+
+#thankyou {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 180px;
+    line-height: 87.5%;
+    display: flex;
+    align-items:center;
+    text-align: left;
+    letter-spacing: 0.125em;
+    text-transform: lowercase;
+    font-feature-settings: 'cpsp' on;
+    color: #000000;
+    /* text-align: left; */
+    text-decoration: none;
+}
 h1 a {
     text-decoration: underline;
     color: #000;
@@ -212,10 +228,9 @@ h1 a {
 h2 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 500;
     font-size: 30px;
     line-height: 117.5%;
-    /* or 24px */
     text-align: right;
     letter-spacing: 0.1em;
     color: #0d0d0d;
