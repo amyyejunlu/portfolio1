@@ -314,6 +314,10 @@ footer a:hover {
 @media (max-width:425px) {
    
     #amy, h1 {
+        font-size: 70px;
+        text-align: center;
+    }
+    h2 {
         font-size: 40px;
     }
     .responsive {
@@ -323,11 +327,11 @@ footer a:hover {
        .cover {
            max-width: 100%;
        }
-       .whoIsAmy_2 {
-        font-size: 28px;
-
 }
 @media (max-width:375px) {
+    h2 {
+        font-size: 40px;
+    }
     .cover {
         max-width: 300px;
     }
@@ -336,7 +340,7 @@ footer a:hover {
 
     }
     #amy, h1, .whoIsAmy_2 {
-        font-size: 30px;
+        font-size: 70px;
     }
     .responsive {
         height: calc(10vw * 6);
@@ -344,6 +348,9 @@ footer a:hover {
 }
 
 @media (max-width:325px) {
+    h2 {
+        font-size: 70px;
+    }
     .cover {
         max-width: 260px;
     }
@@ -351,7 +358,7 @@ footer a:hover {
         max-width: 280px;
     }
     #amy, h1 {
-        font-size: 30px;
+        font-size: 60px;
     }
    .responsive {
     height: calc(10vw * 6);
