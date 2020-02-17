@@ -21,14 +21,14 @@
 .pointer {
     cursor: pointer;
 }
-.cover {
+.cover, .knows-cover, .cinnabon-cover {
     -webkit-box-shadow: -4px 9px 88px -40px rgba(89,89,89,1);
     -moz-box-shadow: -4px 9px 88px -40px rgba(89,89,89,1);
     box-shadow: -4px 9px 88px -40px rgba(89,89,89,1);
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
-.cover:hover {
+.cover:hover, .knows-cover:hover, .cinnabon-cover:hover {
     -webkit-box-shadow: -4px 9px 88px -40px rgba(45,156,219,1);
     -moz-box-shadow: -4px 9px 88px -40px rgba(45,156,219,1);
     box-shadow: -4px 9px 88px -40px rgba(45,156,219,1);
