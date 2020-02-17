@@ -2,12 +2,37 @@ h1 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 100px;
-    line-height: 145%;
+    font-size: 200px;
+    line-height: 87.5%;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: 0.125em;
+    text-transform: lowercase;
+    font-feature-settings: 'cpsp' on;
+    color: #000000;
+}
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 117.5%;
+    /* or 42px */
 
-    letter-spacing: 0.07em;
+    letter-spacing: 0.1em;
 
     color: #000000;
+}
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 130.5%;
+    letter-spacing: 0.07em;
+
+color: #000000;
 }
 p {
     font-family: 'neue-haas-unica', sans-serif;
@@ -23,17 +48,12 @@ p {
     max-width: 400px;
 }
 .intro-text {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 30px;
-    line-height: 118%;
-
-    letter-spacing: 0.045em;
-
-    color: #444444;
+    max-width: 387px;
+    text-align: left;
 }
-
+.text {
+    max-width: 387px;
+}
 .button {
     font-family: 'neue-haas-unica', sans-serif;
     background-color: #ffffff;
