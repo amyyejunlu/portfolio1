@@ -282,7 +282,10 @@ footer a:hover {
     }
 } */
 @media (min-width: 1440px){
-
+ #resize1 {
+     max-width: 1440px;
+     margin: auto;
+ }
 }
 @media (max-width:1024px) {
     .cover {
