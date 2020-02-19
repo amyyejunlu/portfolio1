@@ -35,6 +35,10 @@
     cursor: pointer;
     transform: translateY(-7px);
 }
+
+.move-cinnabon {
+    margin-top: 250px;
+}
 #ant_cover {
     background-image: url("ant_cover.png");
 }
@@ -322,6 +326,9 @@ footer a:hover {
     #amy, h1 {
         font-size: 150px;
         text-align: right;
+    }
+    .move-cinnabon {
+        margin-top: 0px;
     }
     h2 {
         font-size: 40px;
