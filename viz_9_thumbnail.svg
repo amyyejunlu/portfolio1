@@ -1,14 +1,14 @@
-<svg width="234" height="230" viewBox="0 0 234 230" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect x="4" width="230" height="230" fill="url(#pattern0)"/>
+<svg width="230" height="230" viewBox="0 0 230 230" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="0.25" y="0.25" width="229.5" height="229.5" fill="url(#pattern0)" stroke="#C4C4C4" stroke-width="0.5"/>
 <g filter="url(#filter0_d)">
-<rect x="4" y="12" width="16" height="19" fill="#444444"/>
-<path d="M12.1299 25.7542C13.8926 25.7542 14.9229 24.3528 14.9229 21.9651C14.9229 19.6165 13.79 18.3665 12.1738 18.3665C10.6797 18.3665 9.62012 19.387 9.62012 20.8274C9.62012 22.1799 10.5967 23.1711 11.9395 23.1711C12.7744 23.1711 13.4482 22.7805 13.7852 22.1067H13.8682C13.8389 23.8206 13.2188 24.7825 12.1396 24.7825C11.4951 24.7825 10.9922 24.4407 10.8262 23.8792H9.72266C9.93262 25.0168 10.8799 25.7542 12.1299 25.7542ZM12.1787 22.2483C11.3096 22.2483 10.709 21.6477 10.709 20.7883C10.709 19.9631 11.3438 19.3284 12.1885 19.3284C13.0283 19.3284 13.6631 19.968 13.6631 20.8127C13.6631 21.6477 13.043 22.2483 12.1787 22.2483Z" fill="white"/>
+<rect x="7" y="7" width="16" height="19" fill="#444444"/>
+<path d="M15.1299 20.7544C16.8926 20.7544 17.9229 19.353 17.9229 16.9653C17.9229 14.6167 16.79 13.3667 15.1738 13.3667C13.6797 13.3667 12.6201 14.3872 12.6201 15.8276C12.6201 17.1802 13.5967 18.1714 14.9395 18.1714C15.7744 18.1714 16.4482 17.7808 16.7852 17.1069H16.8682C16.8389 18.8208 16.2188 19.7827 15.1396 19.7827C14.4951 19.7827 13.9922 19.4409 13.8262 18.8794H12.7227C12.9326 20.0171 13.8799 20.7544 15.1299 20.7544ZM15.1787 17.2485C14.3096 17.2485 13.709 16.6479 13.709 15.7886C13.709 14.9634 14.3438 14.3286 15.1885 14.3286C16.0283 14.3286 16.6631 14.9683 16.6631 15.813C16.6631 16.6479 16.043 17.2485 15.1787 17.2485Z" fill="white"/>
 </g>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0" transform="scale(0.000488281)"/>
 </pattern>
-<filter id="filter0_d" x="0" y="12" width="24" height="27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d" x="3" y="7" width="24" height="27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
 <feOffset dy="4"/>

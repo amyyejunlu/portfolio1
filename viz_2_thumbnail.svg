@@ -1,14 +1,14 @@
-<svg width="234" height="230" viewBox="0 0 234 230" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect x="4" width="230" height="230" fill="url(#pattern0)"/>
+<svg width="232" height="232" viewBox="0 0 232 232" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="0.75" y="0.75" width="230.5" height="230.5" fill="url(#pattern0)" stroke="#C4C4C4" stroke-width="0.5"/>
 <g filter="url(#filter0_d)">
-<rect x="4" y="12" width="16" height="19" fill="#444444"/>
-<path d="M9.70312 20.5979H10.7383C10.7383 19.8313 11.2607 19.3137 12.0566 19.3137C12.8379 19.3137 13.3018 19.8215 13.3018 20.4905C13.3018 21.0471 13.0674 21.3889 12.1738 22.3069L9.76172 24.7922V25.5833H14.5078V24.6018H11.2559V24.5188L12.8086 22.9905C14.0439 21.7698 14.4004 21.1936 14.4004 20.3782C14.4004 19.2112 13.4482 18.3665 12.125 18.3665C10.7041 18.3665 9.70312 19.2844 9.70312 20.5979Z" fill="white"/>
+<rect x="7" y="8" width="16" height="19" fill="#444444"/>
+<path d="M12.7031 16.5981H13.7383C13.7383 15.8315 14.2607 15.314 15.0566 15.314C15.8379 15.314 16.3018 15.8218 16.3018 16.4907C16.3018 17.0474 16.0674 17.3892 15.1738 18.3071L12.7617 20.7925V21.5835H17.5078V20.6021H14.2559V20.519L15.8086 18.9907C17.0439 17.77 17.4004 17.1938 17.4004 16.3784C17.4004 15.2114 16.4482 14.3667 15.125 14.3667C13.7041 14.3667 12.7031 15.2847 12.7031 16.5981Z" fill="white"/>
 </g>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0" transform="scale(0.000488281)"/>
 </pattern>
-<filter id="filter0_d" x="0" y="12" width="24" height="27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d" x="3" y="8" width="24" height="27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
 <feOffset dy="4"/>

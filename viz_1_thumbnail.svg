@@ -1,14 +1,14 @@
-<svg width="234" height="230" viewBox="0 0 234 230" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect x="4" width="230" height="230" fill="url(#pattern0)"/>
+<svg width="230" height="230" viewBox="0 0 230 230" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="0.25" y="0.25" width="229.5" height="229.5" fill="url(#pattern0)" stroke="#C4C4C4" stroke-width="0.5"/>
 <g filter="url(#filter0_d)">
-<rect x="4" y="12" width="16" height="19" fill="#444444"/>
-<path d="M11.4512 25.5833H12.5449V18.5374H11.4561L9.60059 19.8459V20.9641L11.3682 19.7141H11.4512V25.5833Z" fill="white"/>
+<rect x="7" y="7" width="16" height="19" fill="#444444"/>
+<path d="M14.4512 20.5835H15.5449V13.5376H14.4561L12.6006 14.8462V15.9644L14.3682 14.7144H14.4512V20.5835Z" fill="white"/>
 </g>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0" transform="scale(0.000488281)"/>
 </pattern>
-<filter id="filter0_d" x="0" y="12" width="24" height="27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d" x="3" y="7" width="24" height="27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
 <feOffset dy="4"/>

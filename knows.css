@@ -1,16 +1,11 @@
 * {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 155.19%;
-    letter-spacing: 0.04em;
-    font-size: 20px;
+
 }
 /* .row {
     margin-right: -50px;
 } */
 #mainContent {
-    background-color: #fcfcfc;
+    /* background-color: #fcfcfc; */
     /* padding-top: 5px; */
 }
 .parallax_img {
@@ -26,42 +21,30 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-
-.italic-text {
-    font-family: "Roboto", sans-serif;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 150.5%;
-    /* or 37px */
-
-    letter-spacing: 0.07em;
-
-    color: #000000;
-
-}
 h1 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 70px;
-    line-height: 145%;
-
+    font-size: 125px;
+    line-height: 118%;
+    /* or 147px */
+    
     letter-spacing: 0.07em;
-
+    
     color: #000000;
 }
  
 h2 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 300;
-    font-size: 30px;
+    font-weight: bold;
+    font-size: 120px;
     line-height: 118%;
-
+    /* or 142px */
+    
     letter-spacing: 0.045em;
-
-    color: #444444;
+    
+    color: #000000;
 }
 
 h3 {
@@ -76,17 +59,28 @@ h3 {
     text-align: center;
 }
 
-.h2-heading {
-    font-family: "SF Pro Text", sans-serif;
+.intro-header {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 118%;
+    /* or 35px */
+    letter-spacing: 0.045em;
+    color: #000000;
+}
+
+.intro-text {
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 26px;
-    /* letter-spacing: 0.04em; */
-    /* or 31px */
-
-
-color: #4A4A4A;
+    font-size: 30px;
+    line-height: 130.5%;
+    /* or 39px */
+    
+    letter-spacing: 0.045em;
+    
+    color: #000000;
 }
 /* div.col-md-3 {
     font-family: 'Roboto', sans-serif;
@@ -118,16 +112,61 @@ color: #4A4A4A;
 }
 
 
-
 p {
-    font-family: 'neue-haas-unica', sans-serif;
-    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0.04em;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 140%;
+    /* or 28px */  
+    letter-spacing: 0.02em;
     color: #4A4A4A;
-    /* text-align: justify; */
+}
+
+.gray-text {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 118%;
+    /* or 118px */
+    letter-spacing: 0.045em;
+    color: #E5E5E5;
+}
+
+.med-gray-text {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 118%;
+    /* or 59px */
+
+    letter-spacing: 0.045em;
+
+    color: #C4C4C4;
+}
+.small-gray-text {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 155.19%;
+    /* or 25px */
+    color: #767676;
+}
+
+.blue-text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 118%;
+    /* or 59px */
+
+    letter-spacing: 0.045em;
+
+    color: #2D9CDB;
 }
 .regular-text {
     font-family: 'neue-haas-unica', sans-serif;
@@ -160,12 +199,11 @@ p {
     padding: 10px;
 }
 /* Images */
-#ant_cover {
-    width: 90%;
-}
 
 .he_image {
-    width: 80%;
+    width: 70%;
+    padding: 10px;
+    border: 0.5px solid #C4C4C4;
 }
 
 #information_architecture {
@@ -258,7 +296,8 @@ p {
 /* Videos */
 #knows_video {
     width: 90%;
-   
+    border: 0.5px solid #C4C4C4;
+    padding: 20px;
 }
 
 /* Navbar CSS */
@@ -322,8 +361,23 @@ footer a:hover {
     /* or 25px */
     color: #4A4A4A;
 }
+@media (min-width: 1440px){
+    #resize1 {
+        max-width: 1440px;
+        margin: auto;
+    }
 
+}
 @media (max-width:768px) {
+    h1 {
+        font-size: 70px;
+    }
+    h2 {
+        font-size: 60px;
+    }
+    #ant_cover {
+        width: 100%;
+    };
     #nextPage {
         text-align: right;
         margin-right: 0%;
@@ -344,9 +398,25 @@ footer a:hover {
         cursor: zoom-out;
     }
 }
-
-@media screen and (max-width: 768px) {
+@media (max-width:425px) {
+    .ml-5 {
+        margin-left:0rem!important;
+    }
+    .pt-5 {
+        padding-top: 0rem!important;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 50px;
+    }
+    gray-text {
+        font-size: 30px;
+    }
+}
+/* @media screen and (max-width: 768px) {
 	.parallax_img {
 		background-attachment: inherit;
 	}
-}
+} */
