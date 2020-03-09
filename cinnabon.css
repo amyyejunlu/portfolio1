@@ -6,10 +6,7 @@
     letter-spacing: 0.04em;
     font-size: 20px;
 }
-#mainContent {
-    background-color: #fcfcfc;
 
-}
 .parallax_img {
     /* The image used */
     background-image: url("cinnabon_home.png");
@@ -23,30 +20,113 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-h1 {
+
+
+  .button {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 90px;
-    line-height: 145%;
+    font-size: 36px;
+    display: flex;
+    /* letter-spacing: 0.07em; */
+    text-transform: lowercase;
+    font-feature-settings: 'cpsp' on;   
+    color: #000000;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    border: none;
+    border-radius: 70px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+}
+.button:hover {
+    color: white;
+    background-color: black;
+}
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 120px;
+    /* or 310px */
+    letter-spacing: 0.08em;
+    
+    color: #000000;
+}
 
-    letter-spacing: 0.07em;
+.intro-header {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 118%;
+    /* or 35px */
+    letter-spacing: 0.045em;
+    color: #000000;
+}
 
+p {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 140%;
+    /* or 28px */  
+    letter-spacing: 0.02em;
+    color: #4A4A4A;
+}
+
+li {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 130.5%;
+    /* or 39px */
+    letter-spacing: 0.045em;
     color: #000000;
 }
 
 h2 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 300;
-    font-size: 30px;
+    font-weight: bold;
+    font-size: 120px;
     line-height: 118%;
-
+    /* or 142px */
+    
     letter-spacing: 0.045em;
-
-    color: #444444;
+    
+    color: #000000;
 }
 
+.gray-text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 90px;
+    line-height: 118%;
+    letter-spacing: 0.045em;
+
+    /* or 49px */
+    color: #8A959D;
+}
+.number {
+    font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 90px;
+line-height: 118%;
+/* or 106px */
+
+letter-spacing: 0.045em;
+
+color: #9EADB9;
+}
 h3 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -59,17 +139,22 @@ h3 {
     text-align: center;
 }
 
-.h2-heading {
-    font-family: "SF Pro Text", sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 26px;
-/* letter-spacing: 0.04em; */
-/* or 31px */
-
-
-color: #4A4A4A;
+.download-button {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    border: none;
+  border-radius: 0px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+}
+.download-button:hover {
+    background-color: #ffffff;
+    border-radius: 0px;
+    transform: translateY(-7px);
 }
 
 #cinnabonTitle {
@@ -79,33 +164,6 @@ color: #4A4A4A;
     margin-top: -20px;
     padding-top: 30px;
 }
-/*this is to adjust margin for intro */
-/* div.col-md-2 {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 139.19%;
-    /* or 17px */
-    /* letter-spacing: 0.015em; */
-    /* color: #4A4A4A; */
-    /* margin-top: 20px; */
-    /* margin-bottom: 50px; */
-}
-
-/* div.col-md-10 {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 155.19%; */
-    /* or 19px */
-    /* color: #4A4A4A;
-    margin-top: 20px; */
-    /* margin-bottom: 50px; */
-}
-
-
 
 /* Section Header CSS */
 .sectionHeader {
@@ -128,38 +186,7 @@ ul.list-unstyled {
     list-style: square inside url("dash.svg");
     list-style-position: outside;
 }
-p {
-    font-family: 'neue-haas-unica', sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0.04em;
-    color: #4A4A4A;
-    /* text-align: justify; */
-}
-.italic-text {
-    font-family: "Roboto", sans-serif;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 150.5%;
-    /* or 37px */
 
-    letter-spacing: 0.07em;
-    color: #000000;
-}
-.large-text {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 145%;
-
-    letter-spacing: 0.07em;
-
-    color: #000000;
-}
 .list {
         font-family: 'Roboto', sans-serif;
         font-style: normal;
@@ -169,9 +196,7 @@ p {
         /* or 58px */
         color: #000000;
 }
-#goals {
-    background-color: white; 
-}
+
 /* Images */
 .img-shadow {
     box-shadow: -3px 6px 146px -97px rgba(56,56,56,1);
@@ -186,54 +211,24 @@ p {
     width: 90%;
     height: auto;
 }
-
-.compPics {
-    width: 30vw;
-    height: auto;
-    cursor: zoom-in;
-}
-
-#prototype1 {
+.cinnabon-pic {
     width: 90%;
-    height: auto;
+}
+.large-img {
+    width: 90%;
+}
+.compPics {
+    width: 80%;
+    /* height: auto; */
     cursor: zoom-in;
-}
-
-#prototype2 {
-    width: 95%;
-}
-
-#prototype3 {
-    width: 95%;
-    height: auto;
 }
 
 #cinnabon_process {
-    width: 90%;
-    height: auto;
-    cursor: zoom-in;
+    width: 100%;
 }
-
-#cinnabon_visual {
-    width: 95%;
+#prototype1 {
+    width: 100%;
 }
-
-#cinnabon_figma {
-    width: 95%;
-    height: auto;
-    cursor: zoom-in;
-}
-
-#cinnabon_final {
-    width: 95%;  
-    height: auto;  
-}
-
-#cinnabon_revision {
-    width: 95%;
-    height: auto;
-}
-
 #cinnabon_video {
     width: 90%;
     height: auto;
@@ -241,25 +236,12 @@ p {
 }
 
 .codedPic {
-    width: 95%;
+    width: 80%;
     height: auto;
     margin-bottom: 5%;
     box-shadow: -3px 6px 146px -97px rgba(56,56,56,1);
 }
 
-button {
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 7px;
-    padding: 10px;
-    text-decoration: none;
-
-}
-button:hover {
-    background: black;
-    color: #fff;
-    text-decoration: none;
-}
 /* Figures */
 
 .figure-caption {
@@ -305,7 +287,7 @@ button:hover {
 
 /* Navbar CSS */
 
-nav a{
+/* nav a{
     font-size: 12px;
     line-height: 133.69%;
     letter-spacing: 0.2em;
@@ -320,7 +302,7 @@ a.nav-link, a.design_sub {
 a.nav-link:hover, a.nav-link:active, a.design_sub:hover, a.design_sub:active {
     color: black;
     text-decoration: none;
-}
+} */
 
 #copyright {
     font-family: "SF Pro Text", sans-serif;

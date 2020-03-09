@@ -49,7 +49,6 @@
 .download-button:hover {
     background-color: #ffffff;
     border-radius: 0px;
-
     transform: translateY(-7px);
 }
 
