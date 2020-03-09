@@ -6,10 +6,86 @@
     letter-spacing: 0.04em;
     font-size: 20px;
 }
-#mainContent {
-    /* background-color: #fcfcfc; */
+.button {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: 0.07em;
+    text-transform: lowercase;
+    font-feature-settings: 'cpsp' on;   
+    color: #000000;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    border: none;
+    border-radius: 70px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+}
+.button:hover {
+    color: white;
+    background-color: black;
 }
 
+.download-button {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    border: none;
+  border-radius: 0px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+}
+.download-button:hover {
+    background-color: #ffffff;
+    border-radius: 0px;
+
+    transform: translateY(-7px);
+}
+
+.intro-header {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 118%;
+    /* or 35px */
+    
+    letter-spacing: 0.045em;
+    
+    color: #000000;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 140%;
+    /* or 28px */  
+    letter-spacing: 0.02em;
+    color: #4A4A4A;
+}
+
+.he_image {
+    width: 90%;
+    margin: 50px;
+    border-radius: 60px;
+    /* box-shadow: -4px 9px 88px -40px rgba(89,89,89,1); */
+}
+.center-image {
+    margin-left: 150px;
+}
 .slide-bottom {
 	-webkit-animation: slide-bottom 1s ease-out infinite both;
 	        animation: slide-bottom 1s ease-out infinite both;
@@ -229,25 +305,15 @@ h1 a {
 }
 
 
-h2 {
+h3 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 117.5%;
-    text-align: right;
-    letter-spacing: 0.1em;
-    color: #0d0d0d;
-    /* background-color: #ffffff;
-    padding: 20px 30px;
-    cursor: pointer;
-    text-decoration: none;
-    border: none;
-    display: inline-block;
-    border: none;
-  border-radius: 0px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s; */
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 140%;
+    /* or 39px */   
+    letter-spacing: 0.07em;
+    color: #4A4A4A;
 }
 
 
@@ -292,62 +358,59 @@ footer a:hover {
  }
 }
 @media (max-width:1024px) {
-    .cover {
+    .header-img {
         max-width: 90%;
     }
-    .knows-cover {
+
+    .cover-img {
         max-width: 100%;
     }
-    .cinnabon-cover {
-        max-width: 100%;
+    .center-image {
+        margin-left: 70px;
     }
-    h2 {
-        font-size: 27px;
+    h3 {
+        font-size: 20px;
     }
 
    
 }
 @media (max-width:768px) {
-    h1 {
-        font-size: 120px;
+    .ml-5 {
+        margin-left: 0rem!important;
     }
-    h2 {
-        font-size: 20px;
+    .center-image {
+        margin-left: 20px;
     }
-    .responsive {
-        height: calc(3vw * 5.5);
-        width: 100%;
-       }
-   
+    .work-img {
+        width: 190%;
+    }
 }
 
 
 @media (max-width:425px) {
-    #amy, h1 {
-        font-size: 150px;
-        text-align: right;
-    }
-    .move-cinnabon {
-        margin-top: 0px;
-    }
-    h2 {
-        font-size: 40px;
-        width:300px;
-        text-align: right;
-    }
-    .responsive {
-        height: calc(6vw * 9);
-        width: 100%;
-       }
-       .cover {
-           max-width: 100%;
-       }
-       .cinnabon-cover {
-           width: 95%;
-       }
-       .knows-cover {
-           width: 90%;
-       }
+ .work-img {
+     width: 0%;
+ }
+ .header-img {
+ }
+ .button {
+     float:right;
+ }
+ .black-dash {
+     margin-top: 50px;
+ }
+ .ml-5 {
+     margin-left: 1rem!important;
+ }
+ .ml-3 {
+     margin-left: 0rem!important;
+ }
+.center-image {
+    margin-left: 60px;
+}
+.he_image {
+    margin: 0px;
+}
 }
 @media (max-width:375px) {
     #amy, h1 {

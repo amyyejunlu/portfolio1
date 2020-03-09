@@ -1,13 +1,13 @@
 * {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 155.19%;
+    letter-spacing: 0.04em;
+    font-size: 20px;
+}
 
-}
-/* .row {
-    margin-right: -50px;
-} */
-#mainContent {
-    /* background-color: #fcfcfc; */
-    /* padding-top: 5px; */
-}
+
 .parallax_img {
     /* The image used */
     background-image: url("knows_img.png");
@@ -21,6 +21,32 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .button {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    display: flex;
+    /* letter-spacing: 0.07em; */
+    text-transform: lowercase;
+    font-feature-settings: 'cpsp' on;   
+    color: #000000;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    border: none;
+    border-radius: 70px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+}
+.button:hover {
+    color: white;
+    background-color: black;
+}
 h1 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -308,7 +334,7 @@ p {
     letter-spacing: 0.2em;
 } */
 
-nav a{
+/* nav a{
     font-size: 12px;
     line-height: 133.69%;
     letter-spacing: 0.2em;
@@ -324,7 +350,7 @@ a.nav-link, a.design_sub {
 a.nav-link:hover, a.nav-link:active, a.design_sub:hover, a.design_sub:active {
     color: black;
     text-decoration: none;
-}
+} */
 
 #copyright {
     font-family: "SF Pro Text", sans-serif;

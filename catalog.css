@@ -24,6 +24,33 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+.button {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: 0.07em;
+    text-transform: lowercase;
+    font-feature-settings: 'cpsp' on;   
+    color: #000000;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    border: none;
+    border-radius: 70px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+}
+.button:hover {
+    color: white;
+    background-color: black;
+}
 
 p {
     width: 500px;
@@ -37,9 +64,6 @@ p {
     color: #4A4A4A;
 }
 
-.p-width {
-    /* width: 547px; */
-}
 .intro-header {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -310,7 +334,7 @@ h1 {
     font-style: normal;
     font-weight: 900;
     font-size: 200px;
-    line-height: 155.19%;
+    /* line-height: 155.19%; */
     letter-spacing: 0.08em;
     color: #000000;
 }
