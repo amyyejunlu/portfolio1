@@ -185,7 +185,9 @@ figure.dating_figure {
     margin: auto;
     cursor: zoom-out;
 }
-
+#lowfi_1, #lowfi_6, #lowfi_8 {
+    width: 100%;
+}
 #speeddate_1 {
     height: auto;
     width: 90%;
@@ -198,54 +200,6 @@ figure.dating_figure {
     cursor: zoom-in;
 }
 
-#lowfi_1 {
-    /* height: auto; */
-    /* width: 105%; */
-}
-
-/* #lowfi_2 {
-    height: auto;
-    width: 40%;
-} */
-
-/* #lowfi_3 {
-    height: auto;
-    width: 100%;
-    box-shadow: -3px 6px 146px -97px rgba(56,56,56,1);
-} */
-
-#lowfi_4 {
-    /* height: auto; */
-    /* width: 80%; */
-}
-
-/* #lowfi_5 {
-    height: auto;
-    width: 90%;
-    box-shadow: -3px 6px 146px -97px rgba(56,56,56,1);
-} */
-
-#lowfi_6 {
-    /* height: auto; */
-    /* width: 80%; */
-}
-
-/* #lowfi_7 {
-    height: auto;
-    width: 90%;
-    box-shadow: -3px 6px 146px -97px rgba(56,56,56,1);
-} */
-
-#lowfi_8 {
-    /* height: auto; */
-    /* width: 100%; */
-}
-
-/* #lowfi_9 {
-    height: auto;
-    width: 90%;
-    box-shadow: -3px 6px 146px -97px rgba(56,56,56,1);
-} */
 
 #desktop_1 {
     height: auto;
@@ -425,7 +379,7 @@ footer a:hover {
         margin: auto;
     }
     #lowfi_1, #lowfi_6, #lowfi_8 {
-        width: 80%;
+        /* width: 50%; */
     }
 }
 
@@ -434,7 +388,7 @@ footer a:hover {
         max-width: 100%;
     }
     #lowfi_1, #lowfi_6, #lowfi_8 {
-        width: 80%;
+        /* width: 50%; */
     }
     .gray-text {
         padding-left: 50px;
@@ -522,7 +476,7 @@ footer a:hover {
         cursor: zoom-in;
     }
     #lowfi_1, #lowfi_6, #lowfi_8 {
-        width: 100%;
+        /* width: 40%; */
     }
 
     #branding {
@@ -655,9 +609,7 @@ footer a:hover {
     li {
         font-size: 18px;
     }
-    #lowfi_1 {
-        /* width: 100%; */
-    }
+ 
 }
 
     /* @media screen and (max-width: 768px) {
