@@ -339,8 +339,22 @@ footer a:hover {
     /* or 25px */
     color: #4A4A4A;
 }
+@media (min-width: 1440px){
+    #resize1 {
+        max-width: 1440px;
+        margin: auto;
+    }
 
+}
+@media (max-width: 1040px) {
+    .ml-5 {
+        margin-left:0rem!important;
+    }
+}
 @media (max-width:768px) {
+    .ml-5 {
+        margin-left:0rem!important;
+    }
     div.col-md-2 {
         font-family: 'Roboto', sans-serif;
         font-style: normal;
@@ -403,6 +417,23 @@ footer a:hover {
     
 }
 
+@media (max-width: 425px) {
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 50px;
+    }
+    .gray-text {
+        font-size: 30px;
+    }
+    .codedPic, .large-img {
+        width: 100%;
+    }
+    .cinnabon-pic {
+        margin-top: 40px;
+    }
+}
 @media screen and (max-width: 768px) {
 	.parallax_img {
 		background-attachment: inherit;
