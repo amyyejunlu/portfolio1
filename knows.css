@@ -374,18 +374,32 @@ footer a:hover {
     text-decoration: none;
 }
 #nextPage {
-    text-align: right;
-    margin-right: -13%;
+    /* text-align: right; */
+    /* margin-right: -13%; */
+    background: #FFFFFF;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    width: 114px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+    justify-content: center;
+}
+
+#nextPage:hover {
+    cursor: pointer;
+    transform: translateY(-7px);
 }
 
 #nextText {
-    font-family: "SF Pro Text", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 155.19%;
-    /* or 25px */
-    color: #4A4A4A;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.07em;
+    text-transform: lowercase;
+    font-feature-settings: 'cpsp' on;
+    color: #000000;
 }
 @media (min-width: 1440px){
     #resize1 {
@@ -404,10 +418,6 @@ footer a:hover {
     #ant_cover {
         width: 100%;
     };
-    #nextPage {
-        text-align: right;
-        margin-right: 0%;
-    }
       /* Modal */
       .modal-dialog {
         width: 0%;
