@@ -449,7 +449,7 @@ footer a:hover {
         padding-top: 0rem!important;
     }
     h1 {
-        font-size: 60px;
+        font-size: 50px;
         margin-top: 30px;
     }
     h2 {
@@ -466,7 +466,7 @@ footer a:hover {
         margin-left: 20px;
     }
     .intro-text {
-        margin-top: 20px;
+        margin-top: 18px;
     }
     .intro-header {
         margin-top: 50px;
@@ -479,6 +479,9 @@ footer a:hover {
     }
     .blue-text {
         margin-top: 30px;
+    }
+    .button {
+        float:right;
     }
 }
 

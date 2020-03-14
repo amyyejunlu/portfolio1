@@ -449,6 +449,9 @@ footer a:hover {
     .cinnabon-pic {
         margin-top: 40px;
     }
+    .button {
+        float:right;
+    }
 }
 @media screen and (max-width: 768px) {
 	.parallax_img {
