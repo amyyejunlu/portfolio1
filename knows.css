@@ -170,7 +170,7 @@ p {
 
     letter-spacing: 0.045em;
 
-    color: #C4C4C4;
+    color: #E5E5E5;
 }
 .small-gray-text {
     font-family: "Roboto", sans-serif;
@@ -435,6 +435,11 @@ footer a:hover {
         margin: auto;
         cursor: zoom-out;
     }
+
+}
+
+@media (min-width: 768px) {
+    
 }
 @media (max-width:425px) {
     .ml-5 {
@@ -445,12 +450,60 @@ footer a:hover {
     }
     h1 {
         font-size: 60px;
+        margin-top: 30px;
     }
     h2 {
+        font-size: 60px;
+        margin-top: 30px;
+    }
+    .gray-text {
+        font-size: 60px;
+    }
+    .med-gray-text {
+        margin-bottom: 30px;
+    }
+    .mobile-margin {
+        margin-left: 20px;
+    }
+    .intro-text {
+        margin-top: 20px;
+    }
+    .intro-header {
+        margin-top: 50px;
+    }
+    .mt-5 {
+        margin-top: 0rem!important;
+    }
+    .viz_thumb {
+        margin-bottom: 30px;
+    }
+    .blue-text {
+        margin-top: 30px;
+    }
+}
+
+}
+@media (max-width:320px) {
+    h1 {
+        font-size: 58px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    .intro-header {
+        font-size: 22px;
+    }
+    .intro-text,  .gray-text  {
+        font-size: 18px;
+    }
+    .number {
         font-size: 50px;
     }
-    gray-text {
-        font-size: 30px;
+    li {
+        font-size: 18px;
+    }
+    .mobile-margin {
+        margin-left: 10px;
     }
 }
 /* @media screen and (max-width: 768px) {

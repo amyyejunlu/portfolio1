@@ -34,6 +34,12 @@
     background-color: black;
 }
 
+.cover-img {
+    transition: all 0.3s ease 0s;
+}
+.cover-img:hover {
+    transform: translateY(-10px);
+}
 .download-button {
     background-color: #ffffff;
     padding: 20px 30px;

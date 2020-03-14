@@ -563,8 +563,14 @@ footer a:hover {
     .mt-5 {
         margin-top: 0rem!important;
     }
+    .pl-5 {
+        padding-left: 1rem!important;
+    }
     .intro-header {
         margin-top: 50px;
+    }
+    .mobile-margin {
+        margin-left: 30px;
     }
     .intro-text {
         margin-top: 20px;
@@ -601,6 +607,11 @@ footer a:hover {
     }
 
 }
+@media (max-width: 375px) {
+    .mobile-margin {
+        margin-left: 10px;
+    }
+}
 @media (max-width:320px) {
     h1 {
         font-size: 58px;
@@ -622,6 +633,9 @@ footer a:hover {
     }
     li {
         font-size: 18px;
+    }
+    .mobile-margin {
+        margin-left: 10px;
     }
  
 }
