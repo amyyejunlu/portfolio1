@@ -398,6 +398,9 @@ footer a:hover {
 }
 
 @media (max-width: 1024px){
+    h1 {
+        font-size: 180px;
+    }
     .brand-img {
         max-width: 100%;
     }
@@ -543,13 +546,19 @@ footer a:hover {
     .role-spacing {
         max-width: 90%;
     }
+    h2 {
+        font-size: 100px;
+    }
+    .need-spacing {
+        padding-top: 40px;
+    }
 }
 @media (max-width:425px) {
     h1 {
         font-size: 75px;
     }
     h2 {
-        font-size: 60px;
+        font-size: 70px;
     }
     .h2-margin {
         margin-top: 30px;
@@ -581,6 +590,9 @@ footer a:hover {
     .brand-img {
         width: 100%;
         margin-top: 50px;
+    }
+    .quote {
+        width: 90%;
     }
     .button, #nextPage {
         float:right;
