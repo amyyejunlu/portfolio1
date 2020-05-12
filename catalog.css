@@ -2,9 +2,9 @@
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
-    line-height: 155.19%;
-    letter-spacing: 0.04em;
-    font-size: 20px;
+    line-height: 155%;
+    letter-spacing: 0.06em;
+    font-size: 18px;
 }
 
 #mainContent {
@@ -57,10 +57,10 @@ p {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 140%;
+    font-size: 18px;
+    line-height: 155%;
     /* or 28px */  
-    letter-spacing: 0.02em;
+    letter-spacing: 0.06em;
     color: #4A4A4A;
 }
 
@@ -71,9 +71,8 @@ p {
     font-size: 30px;
     line-height: 118%;
     /* or 35px */
-    
     letter-spacing: 0.045em;
-    
+    max-width: 550px;
     color: #000000;
 }
 
