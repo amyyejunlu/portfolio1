@@ -34,6 +34,10 @@
     background-color: black;
 }
 
+.black-dash, .text-dash {
+    margin-left: 100px;
+}
+
 h2 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -98,6 +102,23 @@ p {
 
 .about-width {
     max-width: 460px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.scroll {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 186.69%;
+    /* or 26px */
+    
+    letter-spacing: 0.07em;
+    
+    color: #797979;
 }
 .center-image {
     margin-left: 100px;
