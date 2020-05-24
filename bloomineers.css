@@ -1,0 +1,733 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 155%;
+    letter-spacing: 0.06em;
+    font-size: 18px;
+}
+
+.parallax_img {
+    /* The image used */
+    background-image: url("cinnabon_home.png");
+  
+    /* Set a specific height */
+    min-height: 700px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .button {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    display: flex;
+    /* letter-spacing: 0.07em; */
+    text-transform: lowercase;
+    font-feature-settings: 'cpsp' on;   
+    color: #000000;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    border: none;
+    border-radius: 70px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+}
+.button:hover {
+    color: white;
+    background-color: black;
+}
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 132%;
+    letter-spacing: 0.045em;
+    
+    color: #000000;
+}
+
+.intro-header {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 118%;
+    /* or 35px */
+    letter-spacing: 0.045em;
+    color: #000000;
+}
+.intro-header2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 118%;
+    /* or 35px */
+    letter-spacing: 0.045em;
+    color: #000000;
+}
+.sub-header {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 155.19%;
+    /* identical to box height, or 28px */
+
+    letter-spacing: 0.06em;
+
+    color: #000000;
+}
+
+.goal-header {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 155%;
+    /* or 37px */
+    letter-spacing: 0.06em;
+    color: #242424;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 155%;
+    /* or 28px */  
+    letter-spacing: 0.06em;
+    color: #4A4A4A;
+}
+.intro-text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 122.5%;
+    /* or 39px */
+    width: 527.42px;
+    letter-spacing: 0.06em;
+    
+    color: #000000;
+}
+
+.team-text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+.text-width {
+    max-width: 500px;
+}
+.text-width-small {
+    width: 430.08px;
+}
+
+.text-width-smaller {
+    width: 406px;
+}
+
+.center-text {
+    max-width: 489.86px;
+text-align: center;
+
+}
+
+.no-margin {
+   padding-left: 8px;
+}
+li {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 130.5%;
+    /* or 39px */
+    letter-spacing: 0.045em;
+    color: #000000;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 118%;
+    /* or 142px */
+    
+    letter-spacing: 0.045em;
+    
+    color: #000000;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 118%;
+    /* identical to box height, or 118px */
+
+    text-align: center;
+    letter-spacing: 0.045em;
+
+    color: #000000;
+}
+
+.gray-text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 90px;
+    line-height: 118%;
+    letter-spacing: 0.045em;
+
+    /* or 49px */
+    color: #8A959D;
+}
+.soft-grey {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 144.5%;
+    letter-spacing: 0.06em;
+    /* or 49px */
+    color: #b1b1b1;
+}
+
+.soft-grey2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 118%;
+    letter-spacing: 0.045em;
+    /* or 49px */
+    color: #b1b1b1;
+}
+.number {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 118%;
+    /* identical to box height, or 118px */
+    letter-spacing: 0.045em;
+    color: #E5E5E5;
+}
+.visit-button {
+    background: url('popup.svg') no-repeat;
+    background-position: 320px 30px;
+    border: 1px solid #4F4F4F;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+    width: 400.71px;
+    height: 87.23px;
+    /* border: none;
+    display: inline-block;
+    border: none;
+  border-radius: 0px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); */
+  transition: all 0.3s ease 0s;
+}
+.visit-button:hover {
+    background-color: #ffffff;
+    border-radius: 0px;
+    transform: translateY(-7px);
+}
+.download-button {
+    /* background: #FFFFFF; */
+    background: url('download.svg') no-repeat;
+    background-size: 22px;
+    background-position: 330px;
+    border: 1px solid #4F4F4F;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+    width: 400.71px;
+    height: 87.23px;
+    /* border: none;
+    display: inline-block;
+    border: none;
+  border-radius: 0px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); */
+  transition: all 0.3s ease 0s;
+}
+
+
+.download-button:hover {
+    background-color: #ffffff;
+    border-radius: 0px;
+    transform: translateY(-7px);
+}
+
+#cinnabonTitle {
+    background-image: url("cinnabon_header.png");
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    margin-left: -25px;
+    margin-top: -20px;
+    padding-top: 30px;
+}
+
+/* Section Header CSS */
+.sectionHeader {
+    list-style-type: square;
+    margin-left: -18px;
+}
+
+ul.sectionHeader li {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 155.19%;
+    /* or 37px */
+    letter-spacing: 0.045em;
+    color: #000000;
+}
+
+ul.list-unstyled {
+    list-style: square inside url("dash.svg");
+    list-style-position: outside;
+}
+
+.list {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 191.69%;
+        /* or 58px */
+        color: #000000;
+}
+
+/* Images */
+
+.hover:hover {
+    box-shadow: 0 14px 28px rgba(77, 77, 77, 0.1), 0 10px 10px rgba(0,0,0,0.22);
+    transform: translateY(-7px);
+}
+#cinnabon_cover {
+    width: 90%;
+    height: auto;
+}
+.bloomineer-pic {
+    width: 100%;
+}
+
+/*this makes image go to the edge*/
+div.col-md-6 { 
+    padding-right: 0px;
+}
+
+
+.workflow {
+    max-width: 1446px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+#domain1 {
+    max-width: 628.55px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    cursor: zoom-in;
+}
+
+#domain2{
+    width: 488.86px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    cursor: zoom-in;
+}
+
+#domain3{
+    width: 341.55px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    cursor: zoom-in;
+}
+#domain4, #domain5{
+    width: 247.09px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    cursor: zoom-in;
+}
+
+.large-img {
+    width: 90%;
+}
+.compPics {
+    width: 80%;
+    /* height: auto; */
+    cursor: zoom-in;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    cursor: zoom-in;
+}
+
+#insight3 {
+    max-width: 432px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+#cinnabon_process {
+    width: 100%;
+}
+#bkgd {
+    width: 434.2px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Figures */
+
+.figure-caption {
+    font-family: "SF Pro Text", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 155.19%;
+    /* or 16px */
+    color: #4A4A4A;
+}
+/* Carousel */
+#cinnabonCarousel {
+    text-align: center;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    filter: invert(100%);
+}
+
+
+/* Modal */
+.modal-dialog {
+    width: 0%;
+    height: 0%;
+    margin: 2% 0% 0% 20%;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.modal_L {
+    height: auto;
+    width: 60vw;
+    margin: auto;
+    cursor: zoom-out;
+}
+
+/* Navbar CSS */
+
+/* nav a{
+    font-size: 12px;
+    line-height: 133.69%;
+    letter-spacing: 0.2em;
+}
+.bold {
+    font-weight: bold;
+}
+a.nav-link, a.design_sub {
+    color: #767676;
+}
+
+a.nav-link:hover, a.nav-link:active, a.design_sub:hover, a.design_sub:active {
+    color: black;
+    text-decoration: none;
+} */
+
+#copyright {
+    font-family: "SF Pro Text", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #767676;
+}
+
+footer{
+    padding-top: 30px;
+}
+
+footer a{
+    color: #767676;
+}
+
+footer a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+#nextPage, #prevPage {
+    /* text-align: right; */
+    /* margin-right: -13%; */
+    background: #FFFFFF;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    width: 114px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+    justify-content: center;
+}
+
+#nextPage:hover, #prevPage:hover {
+    cursor: pointer;
+    transform: translateY(-7px);
+}
+
+#nextText {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.07em;
+    text-transform: lowercase;
+    font-feature-settings: 'cpsp' on;
+    color: #000000;
+}
+
+@media (min-width: 1440px){
+    #resize1 {
+        max-width: 1440px;
+        margin: auto;
+    }
+
+}
+@media (max-width: 1040px) {
+    .ml-5 {
+        margin-left:0rem!important;
+    }
+}
+@media (max-width:768px) {
+    .ml-5 {
+        margin-left:0rem!important;
+    }
+    div.col-md-2 {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 139.19%;
+        /* or 17px */
+        letter-spacing: 0.015em;
+        color: #4A4A4A;
+    }
+    
+    div.col-md-10 {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 155.19%;
+        /* or 19px */
+        color: #4A4A4A;
+    }
+
+    /* Modal */
+    .modal-dialog {
+        width: 0%;
+        height: 0%;
+        margin: 2% 0% 0% 5%;
+        padding: 0;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .modal_L {
+        height: auto;
+        width: 90vw;
+        margin: auto;
+        cursor: zoom-out;
+    }
+    .ipad-width {
+        width: 800px;
+    }
+    .text-width-smaller {
+        width: 200px;
+    }
+    .text-width-small {
+        width: 300px;
+    }
+    .sub-header {
+        width: 300px;
+    }
+    .soft-grey {
+        font-size: 14px;
+    }
+    .team-text {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    .download-button {
+        width: 300px;
+    }
+     h2 {
+        text-align: center;
+    }
+    .intro-text {
+        font-size: 24px;
+        width: 350px;
+    }
+    #bkgd {
+        width: 100%;
+    }
+
+    #domain1{
+        width: 350px;
+    }
+    #domain2{
+        width: 200px;
+    }
+    #domain3, #domain4, #domain5 {
+        width: 200px;
+    }
+    #dspanalysis {
+        min-width: 100%;
+    }
+    .workflow {
+        min-width: 100%;
+    }
+    .ipad-imgs {
+        margin-left: 60px;
+    }
+    .insight-img {
+        width: 70%;
+        margin-top: 200px;
+    }
+    #prototype1 {
+        width: 90%;
+        height: auto;
+        cursor: zoom-in;
+    }
+
+    #cinnabon_process {
+        width: 90%;
+        height: auto;
+        cursor: zoom-in;
+    }
+
+    #cinnabon_javascript {
+        width: 90%;
+        height: auto;
+        cursor: zoom-in;
+    }
+    #nextPage {
+        /* text-align: right; */
+        margin-right: 0%;
+    }
+    
+}
+
+@media (max-width: 425px) {
+
+    #resize1 {
+        max-width: 425px;
+        margin: auto;
+    }
+    .bloomineer-pic {
+        width: 108%;
+    }
+    
+    .mobile-width {
+        width: 400px;
+    }
+    .visit-button {
+        margin-left: 20px;
+    }
+    .download-button {
+        margin-left: 70px;
+        width: 70%;
+    }
+    h1 {
+        font-size: 60px;
+        margin-left: 30px;
+    }
+    h2 {
+        font-size: 60px;
+        text-align: left;
+        margin-left: 30px;
+    }
+    h3 {
+        font-size: 60px;
+    }
+    .master {
+        text-align: center;
+    }
+    .number {
+        font-size: 70px;
+        margin-left: 40px;
+    }
+   
+    .intro-text {
+        margin-left: 30px;
+    }
+    .text-width, .intro-header, .sub-header, .soft-grey2, .goal-header , .soft-grey, .team-text{
+        margin-left: 30px;
+    }
+
+    .text-width-small, .text-width-smaller {
+        margin-left: 30px;
+        width: 90%;
+    }
+    .workflow {
+        width: 108%;
+    }
+    #bkgd {
+        /* padding-top: 100px; */
+        width: 108%;
+    }
+    #domain1{
+        width: 90%;
+    }
+    #domain2{
+        width: 95%;
+        margin-top: 40px;
+        /* margin-left: 70px; */
+    }
+    #domain3, #domain4, #domain5 {
+        width: 100%;
+    }
+    #domain4 {
+        margin-top: 40px;
+    }
+    #dspanalysis {
+        margin-top: 30px;
+        /* margin-left: 50px; */
+        width: 110%;
+    }
+    .ipad-imgs {
+        margin-left: 0px;
+    }
+    .button, #nextPage {
+        float:right;
+    }
+}
+@media screen and (max-width: 768px) {
+	.parallax_img {
+		background-attachment: inherit;
+	}
+}

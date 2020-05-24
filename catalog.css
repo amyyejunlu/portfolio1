@@ -80,13 +80,27 @@ p {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
-    line-height: 130.5%;
+    font-size: 24px;
+    line-height: 122%;
     /* or 39px */
-    
-    letter-spacing: 0.045em;
+    width: 473.13px;
+    letter-spacing: 0.06em;
     
     color: #000000;
+}
+
+.team-text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 14px;
 }
 .gray-text {
     font-family: 'Roboto', sans-serif;
@@ -167,6 +181,9 @@ figure.dating_figure {
     height: auto;
     width: 100%;
     /* margin-top: 45px; */
+}
+.catalog-padding {
+    padding-right: 0px;
 }
 
 .modal-dialog {
@@ -286,7 +303,7 @@ h1 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 200px;
+    font-size: 100px;
     /* line-height: 155.19%; */
     letter-spacing: 0.08em;
     color: #000000;
@@ -333,6 +350,7 @@ li {
     font-weight: normal;
     font-size: 30px;
     line-height: 130.5%;
+    list-style-type: none;
     /* or 39px */
     letter-spacing: 0.045em;
     color: #000000;
@@ -398,7 +416,7 @@ footer a:hover {
 
 @media (max-width: 1024px){
     h1 {
-        font-size: 180px;
+        font-size: 80px;
     }
     .brand-img {
         max-width: 100%;
@@ -413,7 +431,9 @@ footer a:hover {
         font-size: 24px;
     }
     .intro-text {
-        font-size: 20px;
+        font-size: 24px;
+        line-height: 122%;
+        letter-spacing: 0.06em;
     }
     .gray-text {
         padding-top: 150px;
