@@ -468,15 +468,18 @@ footer a:hover {
     margin: 0px;
 }
 .about-width {
-    width: 325px;
+    width: 340px;
     margin-left: 40px;
 }
-.center-resume, .center-image {
+.center-resume {
     margin-left: 40px;
+}
+.center-image {
+    margin-left: 100px;
 }
 h2 {
-    font-size: 80px;
-    margin-left: 40px;
+    font-size: 90px;
+    margin-left: 80px;
 }
 h3 {
     font-size: 16px;

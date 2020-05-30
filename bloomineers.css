@@ -648,7 +648,9 @@ footer a:hover {
 }
 
 @media (max-width: 425px) {
-
+    .ml-4 {
+        margin-left: 0rem!important;
+    }
     #resize1 {
         max-width: 425px;
         margin: auto;
@@ -662,10 +664,12 @@ footer a:hover {
     }
     .visit-button {
         margin-left: 20px;
+        width: 380px;
     }
     .download-button {
-        margin-left: 70px;
+        margin-left: 20px;
         width: 70%;
+        width: 380px;
     }
     h1 {
         font-size: 60px;
@@ -702,27 +706,28 @@ footer a:hover {
         width: 108%;
     }
     #bkgd {
-        width: 100%;
+        width: 90%;
         margin-left: 30px;
+        margin-top: 90px;
     }
     #domain1{
-        width: 90%;
+        width: 86%;
+        margin-bottom: 15px;
     }
     #domain2{
-        width: 95%;
+        width: 90%;
         margin-top: 40px;
         /* margin-left: 70px; */
     }
     #domain3, #domain4, #domain5 {
-        width: 100%;
+        width: 90%;
     }
     #domain4 {
         margin-top: 40px;
     }
     #dspanalysis {
         margin-top: 30px;
-        /* margin-left: 50px; */
-        width: 110%;
+        width: 100%;
     }
     .ipad-imgs {
         margin-left: 0px;
