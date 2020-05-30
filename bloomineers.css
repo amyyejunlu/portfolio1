@@ -262,7 +262,7 @@ h3 {
     box-sizing: border-box;
     cursor: pointer;
     text-decoration: none;
-    max-width: 400.71px;
+    width: 400.71px;
     height: 87.23px;
     /* border: none;
     display: inline-block;
@@ -587,7 +587,7 @@ footer a:hover {
         font-size: 40px;
     }
     .download-button {
-        width: 00px;
+        /* width: 00px; */
     }
      h2 {
         text-align: center;
