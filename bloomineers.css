@@ -33,7 +33,7 @@
     font-feature-settings: 'cpsp' on;   
     color: #000000;
     background-color: #ffffff;
-    padding: 15px 20px;
+    padding: 15px 18px;
     cursor: pointer;
     text-decoration: none;
     border: none;
@@ -262,7 +262,7 @@ h3 {
     box-sizing: border-box;
     cursor: pointer;
     text-decoration: none;
-    width: 400.71px;
+    max-width: 400.71px;
     height: 87.23px;
     /* border: none;
     display: inline-block;
@@ -350,6 +350,7 @@ div.col-md-6 {
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     cursor: zoom-in;
+    transition: all 0.3s ease 0s;
 }
 
 #domain2{
@@ -357,6 +358,7 @@ div.col-md-6 {
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     cursor: zoom-in;
+    transition: all 0.3s ease 0s;
 }
 
 #domain3{
@@ -364,12 +366,14 @@ div.col-md-6 {
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     cursor: zoom-in;
+    transition: all 0.3s ease 0s;
 }
 #domain4, #domain5{
     width: 247.09px;
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     cursor: zoom-in;
+    transition: all 0.3s ease 0s;
 }
 
 .large-img {
@@ -583,7 +587,7 @@ footer a:hover {
         font-size: 40px;
     }
     .download-button {
-        width: 300px;
+        width: 00px;
     }
      h2 {
         text-align: center;
@@ -594,6 +598,7 @@ footer a:hover {
     }
     #bkgd {
         width: 100%;
+
     }
 
     #domain1{
@@ -609,7 +614,7 @@ footer a:hover {
         min-width: 100%;
     }
     .workflow {
-        min-width: 100%;
+        max-width: 100%;
     }
     .ipad-imgs {
         margin-left: 60px;
@@ -697,8 +702,8 @@ footer a:hover {
         width: 108%;
     }
     #bkgd {
-        /* padding-top: 100px; */
-        width: 108%;
+        width: 100%;
+        margin-left: 30px;
     }
     #domain1{
         width: 90%;

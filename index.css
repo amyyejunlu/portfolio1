@@ -6,6 +6,11 @@
     letter-spacing: 0.06em;
     font-size: 18px;
 }
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
 .button {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -13,13 +18,11 @@
     font-size: 36px;
     display: flex;
     align-items: center;
-    text-align: right;
-    letter-spacing: 0.07em;
     text-transform: lowercase;
     font-feature-settings: 'cpsp' on;   
     color: #000000;
     background-color: #ffffff;
-    padding: 15px 20px;
+    padding: 15px 18px;
     cursor: pointer;
     text-decoration: none;
     border: none;
