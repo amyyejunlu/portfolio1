@@ -409,10 +409,13 @@ footer a:hover {
     }
 
     .cover-img {
-        max-width: 100%;
+        width: 100%;
     }
     .center-image {
-        margin-left: 70px;
+        margin-left: 30px;
+    }
+    .center-resume {
+        margin-left: 0px;
     }
     h3 {
         font-size: 20px;
@@ -423,6 +426,9 @@ footer a:hover {
 @media (max-width:768px) {
     .ml-5 {
         margin-left: 0rem!important;
+    }
+    .cover-img {
+        width: 116%;
     }
     .center-image {
         margin-left: 20px;
@@ -437,7 +443,8 @@ footer a:hover {
  .work-img {
      width: 0%;
  }
- .header-img {
+ .cover-img {
+     width: 100%;
  }
  .button {
      float:right;
@@ -457,6 +464,20 @@ footer a:hover {
 .he_image {
     margin: 0px;
 }
+.about-width {
+    width: 325px;
+    margin-left: 40px;
+}
+.center-resume, .center-image {
+    margin-left: 40px;
+}
+h2 {
+    font-size: 80px;
+    margin-left: 40px;
+}
+h3 {
+    font-size: 16px;
+}
 }
 @media (max-width:375px) {
     #amy, h1 {
@@ -464,7 +485,7 @@ footer a:hover {
         text-align: right;
     }
     h2 {
-        font-size: 40px;
+        font-size: 90px;
     }
     .cover {
         max-width: 300px;
@@ -484,13 +505,20 @@ footer a:hover {
         text-align: right;
     }
     h2 {
-        font-size: 40px;
+        font-size: 80px;
+    }
+    .center-resume {
+        width: 250px;
+        font-size: 16px;
     }
     .cover {
         max-width: 260px;
     }
     .design_cover {
         max-width: 280px;
+    }
+    .about-width {
+        width: 265px;
     }
    .responsive {
     height: calc(10vw * 6);
