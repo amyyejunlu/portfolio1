@@ -433,6 +433,9 @@ footer a:hover {
     .ml-5 {
         margin-left: 0rem!important;
     }
+    div.col-md-5 {
+        display: none!important;
+    }
     .cover-img {
         width: 116%;
     }
@@ -443,7 +446,10 @@ footer a:hover {
         width: 190%;
     }
     .black-dash, .text-dash {
-        margin-left: 0px;
+        margin-left:200px;
+    }
+    h3.mt-2.text-dash {
+        width: 300px;
     }
 }
 
@@ -491,6 +497,9 @@ h2 {
 h3 {
     font-size: 16px;
 }
+h3.mt-2.text-dash {
+    width: 220px;
+}
 }
 @media (max-width:375px) {
     #amy, h1 {
@@ -510,6 +519,9 @@ h3 {
     .responsive {
         height: calc(10vw * 6);
        }
+       h3.mt-2.text-dash {
+        width: 180px;
+    }
 }
 
 @media (max-width:325px) {
@@ -538,5 +550,8 @@ h3 {
    }
    .research-middle {
        margin-left: 0px;
+   }
+   .black-dash, .text-dash {
+       margin-left: 125px;
    }
 }
