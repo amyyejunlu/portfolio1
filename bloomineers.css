@@ -133,14 +133,14 @@ p {
     color: #000000;
 }
 .text-width {
-    max-width: 500px;
+    /* max-width: 500px; */
 }
 .text-width-small {
     width: 430.08px;
 }
 
 .text-width-smaller {
-    width: 406px;
+    /* width: 406px; */
 }
 
 .center-text {
@@ -330,7 +330,7 @@ ul.list-unstyled {
     height: auto;
 }
 .bloomineer-pic {
-    width: 100%;
+    /* width: 100%; */
 }
 
 /*this makes image go to the edge*/
@@ -340,13 +340,13 @@ div.col-md-6 {
 
 
 .workflow {
-    max-width: 1446px;
+    /* max-width: 1446px; */
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
 }
 
 #domain1 {
-    max-width: 628.55px;
+    /* max-width: 628.55px; */
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     cursor: zoom-in;
@@ -354,7 +354,7 @@ div.col-md-6 {
 }
 
 #domain2{
-    width: 488.86px;
+    /* width: 488.86px; */
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     cursor: zoom-in;
@@ -362,14 +362,14 @@ div.col-md-6 {
 }
 
 #domain3{
-    width: 341.55px;
+    /* width: 341.55px; */
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     cursor: zoom-in;
     transition: all 0.3s ease 0s;
 }
 #domain4, #domain5{
-    width: 247.09px;
+    /* width: 247.09px; */
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     cursor: zoom-in;
@@ -566,7 +566,7 @@ footer a:hover {
         cursor: zoom-out;
     }
     .ipad-width {
-        width: 800px;
+        /* width: 800px; */
     }
     .text-width-smaller {
         width: 200px;
@@ -587,7 +587,7 @@ footer a:hover {
         font-size: 40px;
     }
     .download-button {
-        /* width: 00px; */
+        margin-left: 70px;
     }
      h2 {
         text-align: center;
@@ -611,7 +611,7 @@ footer a:hover {
         width: 200px;
     }
     #dspanalysis {
-        min-width: 100%;
+        /* min-width: 100%; */
     }
     .workflow {
         max-width: 100%;
@@ -727,7 +727,7 @@ footer a:hover {
     }
     #dspanalysis {
         margin-top: 30px;
-        width: 100%;
+        /* width: 100%; */
     }
     .ipad-imgs {
         margin-left: 0px;
@@ -736,8 +736,8 @@ footer a:hover {
         float:right;
     }
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
 	.parallax_img {
 		background-attachment: inherit;
 	}
-}
+} */
