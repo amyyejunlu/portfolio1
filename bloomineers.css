@@ -732,7 +732,10 @@ footer a:hover {
     .ipad-imgs {
         margin-left: 0px;
     }
-    .button, #nextPage {
+    .button {
+        float: left;
+    }
+    #nextPage {
         float:right;
     }
 }

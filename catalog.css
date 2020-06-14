@@ -51,7 +51,7 @@
 }
 
 p {
-    width: 500px;
+    /* width: 500px; */
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -402,13 +402,14 @@ footer a:hover {
     font-feature-settings: 'cpsp' on;
     color: #000000;
 }
+.header-margin {
+    margin-top: 125px;
+}
+
 @media (min-width: 1440px){
     #resize1 {
         max-width: 1440px;
         margin: auto;
-    }
-    #lowfi_1, #lowfi_6, #lowfi_8 {
-        /* width: 50%; */
     }
 }
 
@@ -448,7 +449,7 @@ footer a:hover {
         /* margin-top: 45px; */
     }
     h1 {
-        font-size: 140px;
+        font-size: 120px;
     }
     .gray-text {
         padding-top: 150px;
@@ -569,6 +570,9 @@ footer a:hover {
     .need-spacing {
         padding-top: 40px;
     }
+    .mobile-margin {
+        margin-top: 60px;
+    }
 }
 @media (max-width:425px) {
     h1 {
@@ -586,9 +590,9 @@ footer a:hover {
     .number {
         font-size: 70px;
     }
-    .mt-5 {
+    /* .mt-5 {
         margin-top: 0rem!important;
-    }
+    } */
     .pl-5 {
         padding-left: 1rem!important;
     }
@@ -602,7 +606,7 @@ footer a:hover {
         margin-top: 20px;
     }
     p {
-        width: auto;
+        /* width: auto; */
     }
     .brand-img {
         width: 100%;
@@ -611,7 +615,11 @@ footer a:hover {
     .quote {
         width: 90%;
     }
-    .button, #nextPage {
+    .button {
+        float: left;
+    }
+    
+    #nextPage {
         float:right;
     }
     #catalog_cover {
