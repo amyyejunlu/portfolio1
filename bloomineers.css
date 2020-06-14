@@ -614,7 +614,7 @@ footer a:hover {
         /* min-width: 100%; */
     }
     .workflow {
-        max-width: 100%;
+        /* max-width: 100%; */
     }
     .ipad-imgs {
         margin-left: 60px;
@@ -703,7 +703,7 @@ footer a:hover {
         width: 90%;
     }
     .workflow {
-        width: 108%;
+        /* width: 108%; */
     }
     #bkgd {
         width: 90%;
