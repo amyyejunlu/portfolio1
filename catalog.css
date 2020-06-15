@@ -354,6 +354,18 @@ li {
     color: #000000;
 }
 
+.question {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 122%;
+    /* or 29px */
+    letter-spacing: 0.06em;
+    color: #000000;
+
+}
+
 #copyright {
     font-family: "SF Pro Text", sans-serif;
     font-style: normal;
