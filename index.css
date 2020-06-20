@@ -87,6 +87,13 @@ h4 {
     color: #000000;
 
 }
+
+.projects {
+    transition: all 0.3s ease 0s;
+}
+.projects:hover {
+    transform: translateY(-7px);
+}
 .download-button {
     /* background: #FFFFFF; */
     background: url('download.svg') no-repeat;
@@ -188,6 +195,14 @@ p {
     transform: translateY(-7px);
 }
 
+.linkedin {
+   color: black;
+   text-decoration: underline;
+}
+.linkedin:hover {
+    color: black;
+    text-decoration: none;
+ }
 
 /* Carousel */
 #cinnabonCarousel {
