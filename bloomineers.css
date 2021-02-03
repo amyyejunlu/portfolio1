@@ -190,6 +190,27 @@ h3 {
     color: #000000;
 }
 
+.large-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 118%;
+    /* or 94px */ 
+    letter-spacing: 0.045em;
+    color: #000000;
+}
+.med-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 118%;
+    /* or 53px */
+
+    letter-spacing: 0.045em;
+    color: #000000;
+}
 .gray-text {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -345,6 +366,11 @@ div.col-md-6 {
     box-sizing: border-box;
 }
 
+.revised-design {
+    /* max-width: 1446px; */
+    box-sizing: border-box;
+}
+
 #domain1 {
     /* max-width: 628.55px; */
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -376,6 +402,13 @@ div.col-md-6 {
     transition: all 0.3s ease 0s;
 }
 
+#testing {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    cursor: zoom-in;
+    transition: all 0.3s ease 0s;
+
+}
 .large-img {
     width: 90%;
 }
@@ -616,6 +649,7 @@ footer a:hover {
     .workflow {
         /* max-width: 100%; */
     }
+
     .ipad-imgs {
         margin-left: 60px;
     }

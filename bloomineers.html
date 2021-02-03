@@ -11,6 +11,7 @@
     <!-- <link rel="stylesheet" href="navbar-fixed-right.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/fsh0zmr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="shortcut icon" type="image/png" href="favicon.png"/>
     <title>Bloomineers | amy lu</title>
   </head>
@@ -23,23 +24,13 @@
             <a href="index.html"><button class="button ml-3">a</button></a>
         </div>
     </div>
-    
-    <!-- <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-11"></div>
-            <div class="col-md-1">
-                <a href="index.html"><button class="button mt-3">a</button></a>
-            </div>
-        </div>
-    </div>   -->
-
 
 <!-- intro-->    
 <div class="row mx-auto">
     <div class="col-lg-1 col-sm-1"></div>
-    <div class="col-lg-5 col-sm-5 align-self-center">
+    <div class="col-lg-5 col-sm-5 align-self-center animate__animated animate__fadeInLeft">
         <div class="soft-grey">HOW MIGHT WE</div>
-        <h1>design a platform</h1>
+        <h1 class="animate__fadeInLeft">design a platform</h1>
         <p class="intro-text mt-4">that reduces complexity around machine learning experiment management at Bloomberg?
         </p>
         <p class="team-text mt-5"><bold>The Bloomineers</bold>
@@ -76,13 +67,13 @@
                 <p class="mt-4 text-width">Bloomberg has tasked our interdisciplinary team to design a solution for machine learning engineers at the organization within the timeframe of 28 weeks. Applying machine learning at scale has created friction around experiment management, consuming lots of time, money, and resources, thus driving the need to manage some of this complexity.</p>
                 <!-- <p class="text-width">From initial research findings, we’ve identified numerous challenges both within teams and across the organization. </p> -->
                 <p class="text-width">Our goal is to design a platform for managing machine learning experiments and enhance both reproducibility and knowledge sharing to simplify the model training process, allowing for higher success rates of experiments and the delivery of increasingly sophisticated products powered by machine learning.</p>
-                <a href ="https://bloomineers.com"><button class="visit-button mt-5">Visit Project Website</button></a>
+                <a href ="https://nkang2020.github.io/bloomberg-mhci-site/"><button class="visit-button mt-5">Visit Project Website</button></a>
             </div>
         </div>    
     </div>
     <div class="col-md-1"></div>
     <div class="col-md-4 mt-4">
-        <img src="bb_bkgd.PNG" class="mx-auto d-block img-fluid" id="bkgd">
+        <img src="bb_bkgd.PNG" class="mx-auto d-block img-fluid animate__animated animate__fadeInUp" id="bkgd">
     </div>
 </div>
 
@@ -469,35 +460,143 @@
     </div>
 </div>
 
-<!--Designs-->
-<div class="row mt-5 pt-5">
-    <!-- <div class="col-md-1"></div> -->
-        <div class="col-md-10 mt-5 mx-auto">
-         <br>
-         <br>
-         <br>
-         <br>
-         <br>
-         <br>
-         <br>
-         <br>
-         <br>
-         <br>
-         <br>
-        
-            <h3 class="">Designs coming soon</h3>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+<!--Final Designs-->
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5 mt-5">
+        <p class="intro-header">Final Designs</p>     
+    </div>
+</div>  
+<div class="row">
+    <div class="col-lg-1 col-sm-1"></div>
+    <div class="col-lg-5 col-sm-8">
+        <p class="mt-3 text-width">Here is a look at the final designs based the Design System. From left to right: Homepage/Projects page, an individual Project Overview page, and an Experiment page. </p>
+    </div>
+</div>
+
+<!--Final Designs Carousel-->
+<div class="row">
+    <div class="col-sm"> <img src="bb_final_home.jpg" alt="design systems" class="workflow img-fluid mt-5">
         </div>
+    <div class="col-sm">
+        <img src="bb_final_project.jpg" alt="design systems" class="workflow img-fluid mt-5">
+      </div>
+    <div class="col-sm">
+        <img src="bb_final_runs.png" alt="design systems" class="workflow img-fluid mt-5">
+      </div>
+    </div>
+
+
+<!--Revised designs-->
+<div class="row mt-5">
+    <div class="col-md-1"></div>
+    <div class="col-md-5 mt-5">
+        <p class="intro-header">Revised designs</p>     
+    </div>
+</div>  
+<div class="row">
+    <div class="col-lg-1 col-sm-1"></div>
+    <div class="col-lg-5 col-sm-5">
+        <p class="mt-3 text-width">We conducted usability testing of the prototypes with our target users at Bloomberg. The results were unsatisfactory; we saw a high failure rate of task completion. I hypothesized that it was the information architecture that led to the confusion, so I proposed a dashboard approach that was much more robust, reorganizing content according to our users’ mental model. But, due to the insufficient time we have left to complete the project, it was decided too late and risky to make such drastic changes. </p>
+        <p class="text-width">In this diagram we give a synthesized analysis of the pain points and opportunities identified from remote interviews, and other research methods such as love letter/breakup letters and surveys. </p>
+        <p class="text-width">My teammate, Chi and I discussed this further, and we both believed that this new dashboard approach has potential. As one of the research leads, Chi suggested that we conduct A/B testing on the two designs. In two days, we talked to five machine learning engineers. 4 out of 5 preferred the new design.</p>
+    </div>
+    <div class="col-lg-5 col-sm-4 ml-5">
+        <img src="bb_testingresult.png" class="d-block hover img-fluid mx-auto" id="testing" data-toggle="modal" data-target="#testing_enlarged">
+        <div class="modal fade" id="testing_enlarged">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <img src="bb_testingresult.png" class="modal_L" data-dismiss="modal">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Feedback -->
+<div class="row mt-5">
+    <div class="col-lg-1 col-sm-1"></div>
+    <div class="col-lg-10 col-sm-5">
+        <p class="large-text">4 out of 5 engineers <br>preferred the revised design.</p>
+        <p class="med-text">Besides feedback on the cleaner UI, engineers also preferred the new design for its valuable features, such as a To-do List, a list view of their recent runs, as well as a Teams page to easily access work teammates are working on.</p>
+    </div>
+</div>
+
+
+<!--Revised Design Img-->
+<div class="row mt-5">
+    <div class="col-lg-12 col-sm-12">
+        <img src="bb_revised_design.png" alt="revised design" class="revised-design img-fluid mt-5">
+    </div>
+</div>
+
+
+<!--1 & 2 & 3 -->
+<div class="row mt-5">
+    <div class="col-md-1"></div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="number">1</div>
+            <div class="col-md-7 pt-5">
+                <div class="goal-header">Robust information architecture</div>
+                <p class="mt-3">Contrary to the current IA, where the Homepage only shows a list of projects, the new information architecture aimed to optimize efficiency and transparacy, which are key building blocks of an engineer’s workflow. </p>
+                <p class="text-width-small mt-3">On the home screen, we surfaced various tasks an engineer does on an daily basis, such as a report of their recent runs, an overview of the runs they have for an experiment, as well as a list of to-do’s/notes. </p>
+                <p class="text-width-small mt-3">Less relevant tasks are embedded under secondary navigation under Runs, Projects, and Settings. Discover and Teams, which are about discoverability, now sit at the top-level navigation.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <img src="bb_revisedia.png" alt="revised information architecture" class="revised-design img-fluid mt-5">
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-md-1"></div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="number">2</div>
+            <div class="col-md-7 pt-5">
+                <div class="goal-header">To-Do List</div>
+                <p class="mt-3">One of the loves in this revised design is the To-Do List/Notes section, which makes documenting ideas and thoughts about the experiment much swifter. </p>
+                <p class="mt-3">“I constantly make things in notepads, and stuff in the terminal so the To-Dos is very helpful.”</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <img src="bb_todo.png" alt="revised to-do list" class="revised-design img-fluid mt-5">
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-md-1"></div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="number">3</div>
+            <div class="col-md-7 pt-5">
+                <div class="goal-header">Recent runs at a glance</div>
+                <p class="mt-3">From what we learned, engineers don’t switch  projects often, so an overview about the recent runs of a project is helpful in getting to the results more quickly.  </p>
+                <p class="mt-3">“Results are critical to me so showing last exp, last run is good.”</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <img src="bb_recentruns.png" alt="revised runs page" class="revised-design img-fluid mt-5">
+    </div>
+</div>
+
+
+<!--Final Thoughts-->
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5 mt-5">
+        <p class="intro-header">Final Thoughts</p>     
+    </div>
+</div>  
+<div class="row">
+    <div class="col-lg-1 col-sm-1"></div>
+    <div class="col-lg-5 col-sm-8">
+        <p class="mt-3 text-width">Although we didn’t take any actionable steps on this revised design, the exercise proved to be a valuable learning experience. Iterative testing is much needed, and we should always test to learn in order improve our design. </p>
+    </div>
 </div>
 
 
