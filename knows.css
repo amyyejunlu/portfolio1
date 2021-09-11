@@ -6,7 +6,9 @@
     letter-spacing: 0.06em;
     font-size: 18px;
 }
-
+.hr {
+    border: 1px solid #000000;
+}
 #ant_cover {
     max-width: 988px;
 }
@@ -360,9 +362,9 @@ a.nav-link:hover, a.nav-link:active, a.design_sub:hover, a.design_sub:active {
     font-family: "SF Pro Text", sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 19px;
-    color: #767676;
+    color: #4A4A4A;
 }
 
 footer{
@@ -370,7 +372,7 @@ footer{
 }
 
 footer a{
-    color: #767676;
+    color: #4a4a4a;
 }
 
 footer a:hover {

@@ -7,6 +7,9 @@
     font-size: 18px;
 }
 
+.hr {
+    border: 1px solid #000000;
+}
 .parallax_img {
     /* The image used */
     background-image: url("cinnabon_home.png");
@@ -115,13 +118,13 @@ p {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 122.5%;
     /* or 39px */
     width: 527.42px;
     letter-spacing: 0.06em;
     
-    color: #000000;
+    color: #4A4A4A;
 }
 
 .team-text {
@@ -132,6 +135,18 @@ p {
     letter-spacing: 0.06em;
     color: #000000;
 }
+
+.quote-italic {
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 155%;
+    /* or 28px */
+    letter-spacing: 0.06em;
+    color: #4A4A4A;
+}
+
 .text-width {
     /* max-width: 500px; */
 }
@@ -475,6 +490,10 @@ div.col-md-6 {
     cursor: zoom-out;
 }
 
+.before-after {
+    padding-right:0px!important;
+    padding-left:0px!important;
+}
 /* Navbar CSS */
 
 /* nav a{
@@ -498,9 +517,9 @@ a.nav-link:hover, a.nav-link:active, a.design_sub:hover, a.design_sub:active {
     font-family: "SF Pro Text", sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 19px;
-    color: #767676;
+    color: #4A4A4A;
 }
 
 footer{
@@ -508,7 +527,7 @@ footer{
 }
 
 footer a{
-    color: #767676;
+    color: #4a4a4a;
 }
 
 footer a:hover {
@@ -552,11 +571,13 @@ footer a:hover {
     }
 
 }
+
 @media (max-width: 1040px) {
     .ml-5 {
         margin-left:0rem!important;
     }
 }
+
 @media (max-width:768px) {
     .ml-5 {
         margin-left:0rem!important;
@@ -719,6 +740,10 @@ footer a:hover {
     }
     .master {
         text-align: center;
+    }
+    .large-text {
+        font-size: 60px;
+        margin-left: 30px;
     }
     .number {
         font-size: 70px;

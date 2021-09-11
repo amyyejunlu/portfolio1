@@ -20,7 +20,8 @@
 
 <body id="resize1">
     <div class="row sticky-top">
-        <div class="col-md-1 sticky-top mt-3">
+        <div class="col-lg-10 col-md-10 col-sm-10"></div>
+        <div class="col-lg-1 col-md-1 col-sm-1 sticky-top mt-3">
             <a href="index.html"><button class="button ml-3">a</button></a>
         </div>
     </div>
@@ -29,15 +30,15 @@
 <div class="row mx-auto">
     <div class="col-lg-1 col-sm-1"></div>
     <div class="col-lg-5 col-sm-5 align-self-center animate__animated animate__fadeInLeft">
-        <div class="soft-grey">HOW MIGHT WE</div>
-        <h1 class="animate__fadeInLeft">design a platform</h1>
-        <p class="intro-text mt-4">that reduces complexity around machine learning experiment management at Bloomberg?
+        <!-- <div class="soft-grey">HOW MIGHT WE</div> -->
+        <h1 class="animate__fadeInLeft">TRACE</h1>
+        <p class="intro-text mt-4">How might we reduce complexity around machine learning experiment management at Bloomberg?
         </p>
         <p class="team-text mt-5"><bold>The Bloomineers</bold>
         <br>Danielle Shoshani | Neha Chopade | Chi Huang | Norman Kang | Amy Lu </p>
     </div>
     <div class="col-lg-6 col-sm-6">
-        <img src="bloomineers.png" class="bloomineer-pic img-fluid">
+        <img src="trace.png" alt="trace-dashboard" class="bloomineer-pic img-fluid">
     </div>
 </div>   
 
@@ -67,7 +68,7 @@
                 <p class="mt-4 text-width">Bloomberg has tasked our interdisciplinary team to design a solution for machine learning engineers at the organization within the timeframe of 28 weeks. Applying machine learning at scale has created friction around experiment management, consuming lots of time, money, and resources, thus driving the need to manage some of this complexity.</p>
                 <!-- <p class="text-width">From initial research findings, we’ve identified numerous challenges both within teams and across the organization. </p> -->
                 <p class="text-width">Our goal is to design a platform for managing machine learning experiments and enhance both reproducibility and knowledge sharing to simplify the model training process, allowing for higher success rates of experiments and the delivery of increasingly sophisticated products powered by machine learning.</p>
-                <a href ="https://nkang2020.github.io/bloomberg-mhci-site/"><button class="visit-button mt-5">Visit Project Website</button></a>
+                <a href ="https://nkang2020.github.io/bloomberg-mhci-site/" target="_blank"><button class="visit-button mt-5">Visit Project Website</button></a>
             </div>
         </div>    
     </div>
@@ -513,14 +514,30 @@
     </div>
 </div>
 
+<!--Quotes-->
+<div class="row">
+    <div class="col ml-5">
+        <img src="bb_quote1.png" alt="quote 1" width="297px" class="revised-design img-fluid mt-5">
+    </div>
+    <div class="col">
+        <img src="bb_quote2.png" alt="quote 2" width="297px" class="img-fluid mt-5">
+    </div>
+</div>
 <!-- Feedback -->
 <div class="row mt-5">
     <div class="col-lg-1 col-sm-1"></div>
-    <div class="col-lg-10 col-sm-5">
+    <div class="col-lg-10 col-md-10 col-sm-11">
         <p class="large-text">4 out of 5 engineers <br>preferred the revised design.</p>
-        <p class="med-text">Besides feedback on the cleaner UI, engineers also preferred the new design for its valuable features, such as a To-do List, a list view of their recent runs, as well as a Teams page to easily access work teammates are working on.</p>
+
     </div>
 </div>
+<div class="row mt-5">
+    <div class="col-lg-1 col-sm-1"></div>
+    <div class="col-lg-8 col-md-9 col-sm-11">
+        <p class="intro-header mt">Besides feedback on the cleaner UI, engineers also preferred the new design for its valuable features, such as a To-do List, a list view of their recent runs, as well as a Teams page to easily access work teammates are working on.</p>
+    </div>
+</div>
+
 
 
 <!--Revised Design Img-->
@@ -539,7 +556,7 @@
             <div class="number">1</div>
             <div class="col-md-7 pt-5">
                 <div class="goal-header">Robust information architecture</div>
-                <p class="mt-3">Contrary to the current IA, where the Homepage only shows a list of projects, the new information architecture aimed to optimize efficiency and transparacy, which are key building blocks of an engineer’s workflow. </p>
+                <p class="text-width-small mt-3">Contrary to the current IA, where the Homepage only shows a list of projects, the new information architecture aimed to optimize efficiency and transparacy, which are key building blocks of an engineer’s workflow. </p>
                 <p class="text-width-small mt-3">On the home screen, we surfaced various tasks an engineer does on an daily basis, such as a report of their recent runs, an overview of the runs they have for an experiment, as well as a list of to-do’s/notes. </p>
                 <p class="text-width-small mt-3">Less relevant tasks are embedded under secondary navigation under Runs, Projects, and Settings. Discover and Teams, which are about discoverability, now sit at the top-level navigation.</p>
             </div>
@@ -557,13 +574,13 @@
             <div class="number">2</div>
             <div class="col-md-7 pt-5">
                 <div class="goal-header">To-Do List</div>
-                <p class="mt-3">One of the loves in this revised design is the To-Do List/Notes section, which makes documenting ideas and thoughts about the experiment much swifter. </p>
-                <p class="mt-3">“I constantly make things in notepads, and stuff in the terminal so the To-Dos is very helpful.”</p>
+                <p class="text-width-small mt-3">One of the loves in this revised design is the To-Do List/Notes section, which makes documenting ideas and thoughts about the experiment much swifter. </p>
+                <p class="text-width-small quote-italic mt-3">“I constantly make things in notepads, and stuff in the terminal so the To-Dos is very helpful.”</p>
             </div>
         </div>
     </div>
     <div class="col-md-4">
-        <img src="bb_todo.png" alt="revised to-do list" class="revised-design img-fluid mt-5">
+        <img src="to-do.png" width="250px" alt="revised to-do list" class="revised-design img-fluid mt-5">
     </div>
 </div>
 
@@ -574,14 +591,23 @@
             <div class="number">3</div>
             <div class="col-md-7 pt-5">
                 <div class="goal-header">Recent runs at a glance</div>
-                <p class="mt-3">From what we learned, engineers don’t switch  projects often, so an overview about the recent runs of a project is helpful in getting to the results more quickly.  </p>
-                <p class="mt-3">“Results are critical to me so showing last exp, last run is good.”</p>
+                <p class="text-width-small mt-3">From what we learned, engineers don’t switch  projects often, so an overview about the recent runs of a project is helpful in getting to the results more quickly.  </p>
+                <p class="text-width-small quote-italic mt-3">“Results are critical to me so showing last experiment/last run is good.”</p>
             </div>
         </div>
     </div>
     <div class="col-md-4">
         <img src="bb_recentruns.png" alt="revised runs page" class="revised-design img-fluid mt-5">
     </div>
+</div>
+
+<!--Before & After-->
+<div class="row mt-5">
+    <div class="col-sm before-after "> <img src="bb_before.png" alt="Before" class="img-fluid mt-5">
+        </div>
+    <div class="col-sm before-after">
+        <img src="bb_after.png" alt="After" class="img-fluid mt-5">
+      </div>
 </div>
 
 
@@ -600,14 +626,7 @@
 </div>
 
 
-
-
-
-
-   
-                       
-
-                   
+                    
 
 <!--- Footer -->
 <footer class="mt-5 pt-5">
@@ -625,17 +644,23 @@
             </div>
             <div class="col-md-2 text-md-right">
                 <div class="" id="nextPage">
-                    <a id="nextText" href="catalog.html">next &nbsp;</a>
-                    <a href="catalog.html"><img src="arrow-right.svg"></a>
+                    <a id="nextText" href="cat.html">next &nbsp;</a>
+                    <a href="cat.html"><img src="arrow-right.svg"></a>
                     </div>
             </div>
         </div>
     </div>
+<br>
+<br>
+<br>
+<br>
+<hr class="mt-5 hr">
+                   
     <!--Social Media-->
     <div class="container mt-5 mb-4">
         <div class="row">
             <div class="mx-auto text-md-left text-center">
-                <p id="copyright">© Designed and Coded by Amy Lu 2020</p>
+                <p id="copyright">© Designed and Coded by Amy Lu 2021</p>
             </div>
         </div>
         <div class="row">
