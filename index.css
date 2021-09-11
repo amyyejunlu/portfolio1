@@ -76,7 +76,7 @@
 
 
 h2 {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 150px;
@@ -91,7 +91,7 @@ h2 {
 }
 
 h3 {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -114,7 +114,7 @@ h3 {
 }
 
 .description {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
