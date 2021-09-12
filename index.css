@@ -193,7 +193,7 @@ h3 {
 }
 
 .date {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
