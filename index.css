@@ -38,7 +38,7 @@
 }
 
 .header {
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-size: 250px;
     font-style: normal;
     font-weight: 700;
