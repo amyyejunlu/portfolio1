@@ -6,6 +6,17 @@
     letter-spacing: 0.06em;
     font-size: 18px;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
 .sticky {
     position: -webkit-sticky;
     position: sticky;
@@ -17,7 +28,6 @@
     font-weight: bold;
     font-size: 36px;
     display: flex;
-    /* letter-spacing: 0.07em; */
     text-transform: lowercase;
     font-feature-settings: 'cpsp' on;   
     color: #000000;
@@ -45,11 +55,171 @@
     line-height: 175px;
     letter-spacing: 0.05em;
     color: #000000;
+}
 
+.header-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.header-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 87.5%;
+    letter-spacing: 0.05em;
+    color: #000000;
+    text-transform: lowercase;
+    font-feature-settings: 'cpsp' on;
+    margin: 0;
+}
+
+.speech-bubble {
+    position: relative;
+    max-width: 350px;
+    box-sizing: border-box;
+}
+
+.speech-bubble-image {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .hr {
     border: 1px solid #000000;
+}
+
+.divider-line {
+    border: 0;
+    border-top: 1px solid #000000;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.project-divider {
+    border: 0;
+    border-top: 1px solid #000000;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.main-content {
+    position: relative;
+    padding: 0;
+}
+
+.main-content .row {
+    margin: 0;
+    display: flex;
+    align-items: stretch;
+}
+
+.header-section {
+    padding: 60px 0;
+}
+
+.header-section .row {
+    margin: 0;
+}
+
+.header-section .col-xl-10,
+.header-section .col-lg-10,
+.header-section .col-md-11,
+.header-section .col-sm-11 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.column-with-divider {
+    position: relative;
+    padding: 0;
+    border-right: 1px solid #000000;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-column-container {
+    justify-content: stretch;
+}
+
+.left-column-project {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-column-project h3 + .description {
+    margin-top: 16px;
+}
+
+.kajabi-column-container {
+    justify-content: stretch;
+}
+
+.kajabi-card {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Consistent 40px spacing between description and CTA buttons on desktop */
+@media (min-width: 992px) {
+    .project-card .description + .link-button,
+    .project-card .description + a .link-button,
+    .project-card .description + button.link-button {
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    .column-with-divider:last-child {
+        border-right: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .main-content .row {
+        flex-direction: column;
+    }
+    
+    .column-with-divider {
+        border-right: none;
+        border-bottom: 1px solid #000000;
+    }
+    
+    .column-with-divider:last-child {
+        border-bottom: none;
+    }
+    
+    .left-column-project,
+    .kajabi-card {
+        flex: none;
+        height: auto;
+    }
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.no-gutters > .col,
+.no-gutters > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
 }
 .visit-button {
     background-position: 320px 30px;
@@ -59,17 +229,11 @@
     text-decoration: none;
     width: 250px;
     height: 65px;
-    background-color: ;
+    background-color: #FFFFFF;
     font-size: 16px;
-    /* border: none;
-    display: inline-block;
-    border: none;
-  border-radius: 0px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); */
   transition: all 0.3s ease 0s;
 }
 .visit-button:hover {
-    /* background-color: #ffffff; */
     border-radius: 0px;
     transform: translateY(-7px);
 }
@@ -81,8 +245,6 @@ h2 {
     font-weight: bold;
     font-size: 150px;
     line-height: 70%;
-    /* identical to box height, or 105px */
-
     letter-spacing: 0.05em;
     text-transform: lowercase;
     font-feature-settings: 'cpsp' on;
@@ -95,11 +257,13 @@ h3 {
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
-    /* line-height: 118%; */
-    /* or 42px */
-    
     letter-spacing: 0.045em;
     color: #000000;
+}
+
+.project-card h3 {
+    margin-top: 8px;
+    margin-bottom: 0;
 }
 
 .intro-header {
@@ -108,7 +272,6 @@ h3 {
     font-weight: bold;
     font-size: 30px;
     line-height: 118%;
-    /* or 35px */
     letter-spacing: 0.045em;
     color: #000000;
 }
@@ -117,11 +280,94 @@ h3 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 155%;
-    /* or 34px */
     letter-spacing: 0.06em;
     color: #4A4A4A;
+    margin-top: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.main-content {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.project-card {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    padding: 40px;
+}
+
+.contact-section {
+    padding: 40px;
+}
+
+.bloomberg-logo-container,
+.kajabi-logo-container,
+.cmu-logo-container {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.bloomberg-logo,
+.kajabi-logo,
+.cmu-logo {
+    height: 24px;
+    width: auto;
+}
+
+
+.contact-title {
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 136%;
+    letter-spacing: 0.09em;
+    color: #2B2B2B;
+    text-transform: lowercase;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    transition: all 0.3s ease 0s;
+}
+
+.contact-link:hover {
+    color: #4A4A4A;
+    text-decoration: underline;
+}
+
+.contact-emoji {
+    font-size: 20px;
+    line-height: 1;
 }
 .projects {
     transition: all 0.3s ease 0s;
@@ -131,39 +377,96 @@ h3 {
 }
 
 .comingsoon-button {
-    /* background-size: 22px; */
     background: #FFFFFF;
-    background-position: 250px;
     border: 1px solid #CBCBCB;
+    border-radius: 40px;
     color: #CBCBCB;
     box-sizing: border-box;
     text-decoration: none;
-    width: 312.71px;
-    height: 87.23px;
-    cursor: text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    cursor: default;
 }
 
 .link-button {
     background: #FFFFFF;
-    background-size: 22px;
-    background-position: 250px;
     border: 1px solid #4F4F4F;
+    border-radius: 40px;
     box-sizing: border-box;
     cursor: pointer;
-    text-decoration: none;
-    width: 312.71px;
-    height: 87.23px;
-    /* border: none;
-    display: inline-block;
-    border: none;
-  border-radius: 0px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); */
-  transition: all 0.3s ease 0s;
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    color: #000000;
+    transition: all 0.3s ease 0s;
 }
+
 .link-button:hover {
-    background-color: #ffffff;
-    border-radius: 0px;
-    transform: translateY(-7px);
+    background-color: #000;
+    color: #fff !important;
+    text-decoration: none !important;
+    transform: translateY(-2px);
+}
+
+/* Remove underline from anchor tags containing link-button */
+a:has(.link-button),
+a:has(.link-button):hover,
+a:has(.link-button):focus,
+a:has(.link-button):active,
+a:has(.link-button):visited {
+    text-decoration: none !important;
+}
+
+/* Fallback for browsers that don't support :has() - target all links in project cards */
+.project-card > a,
+.project-card > a:hover,
+.project-card > a:focus,
+.project-card > a:active,
+.project-card > a:visited {
+    text-decoration: none !important;
+    display: block;
+}
+
+/* Also target links that contain buttons */
+a[href*="bloomineers.html"],
+a[href*="cat.html"],
+a[href*="knows.html"] {
+    text-decoration: none !important;
+}
+
+a[href*="bloomineers.html"]:hover,
+a[href*="cat.html"]:hover,
+a[href*="knows.html"]:hover {
+    text-decoration: none !important;
+}
+
+a .link-button,
+a:hover .link-button,
+a:focus .link-button,
+a:active .link-button {
+    text-decoration: none !important;
+}
+
+a:hover .link-button:hover {
+    text-decoration: none !important;
 }
 
 .download-button {
@@ -198,11 +501,9 @@ h3 {
     font-weight: normal;
     font-size: 12px;
     line-height: 155.19%;
-    /* identical to box height, or 19px */
-    
     letter-spacing: 0.06em;
-    
     color: #4A4A4A;
+    margin-bottom: 8px;
 }
 p {
     font-family: 'Roboto', sans-serif;
@@ -210,7 +511,6 @@ p {
     font-weight: normal;
     font-size: 18px;
     line-height: 155%;
-    /* or 28px */  
     letter-spacing: 0.06em;
     color: #4A4A4A;
 }
@@ -228,8 +528,6 @@ p {
     font-weight: normal;
     font-size: 14px;
     line-height: 186.69%;
-    /* or 26px */
-    
     letter-spacing: 0.07em;
     
     color: #797979;
@@ -277,7 +575,7 @@ p {
     text-decoration: none;
 }
 
-h1, #amy {
+#amy {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -290,7 +588,6 @@ h1, #amy {
     text-transform: lowercase;
     font-feature-settings: 'cpsp' on;
     color: #000000;
-    /* text-align: left; */
     text-decoration: none;
 }
 
@@ -318,7 +615,6 @@ h1 a {
     font-weight: 900;
     font-size: 70px;
     line-height: 157.19%;
-    /* or 62px */
     letter-spacing: 0.07em;
 }
 
@@ -326,16 +622,22 @@ h1 a {
 
 
 #copyright {
-    font-family: "SF Pro Text", sans-serif;
+    font-family: 'Roboto Mono', monospace;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
-    color: #4A4A4A;
+    font-size: 14px;
+    line-height: 136%;
+    letter-spacing: 0.09em;
+    color: #2B2B2B;
 }
 
 footer {
-    padding-top: 30px;
+    padding: 40px 0;
+}
+
+footer .container {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 footer a{
@@ -346,19 +648,6 @@ footer a:hover {
     color: black;
     text-decoration: none;
 }
-/* @media (max-width:768px) {
-    .responsive {
-        height: 238px;
-        width: 335px;
-    }
-}
-
-@media (max-width:576px) {
-    .responsive {
-        height: calc(238px * 0.8);
-        width: calc(335px * 0.8);
-    }
-} */
 @media (min-width: 1440px){
     #resize1 {
         max-width: 1440px;
@@ -373,28 +662,17 @@ footer a:hover {
     .description {
         width: 325px;
     }
-    .comingsoon-button{
-        margin-top: 87px!important;
-    }
-    .pd {
-       
-    }
 }
     
 @media (max-width:1024px) {
     .extra-column {
         display: none!important;
-        /* visibility: hidden; */
-    }
-    .pd {
-        /* margin-left: 100px!important; */
-        /* text-align: end; */
     }
     .center-resume {
         margin-left: 0px;
     }
-    h1, .header {
-        font-size: 180px;
+    h1, .header, .header-name {
+        font-size: 150px;
         margin-left:0px!important;
     }
     h2 {
@@ -402,27 +680,167 @@ footer a:hover {
         text-align: left;
         margin-left:0px!important;
     }
+    .header-container {
+        flex-wrap: nowrap;
+    }
+    .speech-bubble {
+        max-width: 250px;
+        flex-shrink: 1;
+    }
+    .speech-bubble-image {
+        width: 100%;
+        height: auto;
+    }
     .description {
         width: 374px;
     }
-   
 }
 @media (max-width:768px) {
-   .pd {
-       margin-left: 30px;
+    .header-section {
+        padding: 40px 0;
    }
-   .description {
-    width: 300px;
-}
-    h1, .header {
-        font-size: 150px;
+    
+    .header-container {
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 15px;
+    }
+    h1, .header, .header-name {
+        font-size: 120px;
+        white-space: nowrap;
     }
     h2 {
         font-size: 80px;
         margin-left:24px!important;
     }
-    .text {
-        /* width: 300px; */
+    .speech-bubble {
+        max-width: 200px;
+        flex-shrink: 1;
+        margin-top: 0;
+    }
+    .speech-bubble-image {
+        width: 100%;
+        height: auto;
+    }
+    .project-card,
+    .contact-section {
+        padding: 30px 20px;
+    }
+    .description {
+        width: 100%;
+        max-width: 100%;
+    }
+    .link-button,
+    .comingsoon-button {
+        width: 100%;
+        height: 40px;
+        border-radius: 40px;
+    }
+    
+    /* Reorganize layout for 768px: Bloomberg+Catalog on same row, Kajabi+Contact on same row */
+    .main-content .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    
+    /* Override Bootstrap column widths at 768px */
+    .main-content .row > [class*="col-"] {
+        max-width: 100%;
+        flex: none;
+        width: auto;
+    }
+    
+    /* Make left column display its children as grid items */
+    .left-column-container {
+        display: contents;
+    }
+    
+    /* Bloomberg - top left */
+    .left-column-container .project-card:first-of-type {
+        grid-column: 1;
+        grid-row: 1;
+        border-right: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+        width: 100%;
+    }
+    
+    /* Hide divider between Bloomberg and cat-a-log */
+    .left-column-container .project-divider {
+        display: none;
+    }
+    
+    /* cat-a-log - top right */
+    .left-column-container .project-card:last-of-type {
+        grid-column: 2;
+        grid-row: 1;
+        border-bottom: 1px solid #000000;
+        width: 100%;
+    }
+    
+    /* Kajabi - middle left */
+    .kajabi-column-container {
+        grid-column: 1;
+        grid-row: 2;
+        border-right: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+        border-top: none;
+        border-left: none;
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+        box-sizing: border-box;
+    }
+    
+    /* Right column container - make it display contents so children can be grid items */
+    .column-with-divider:last-child {
+        display: contents;
+        max-width: 100%;
+        flex: none;
+        width: auto;
+    }
+    
+    /* Contact - middle right */
+    .column-with-divider:last-child .contact-section {
+        grid-column: 2;
+        grid-row: 2;
+        border-bottom: 1px solid #000000;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Ensure Kajabi card fills its container */
+    .kajabi-column-container .kajabi-card {
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* Hide divider between Contact and CMU */
+    .column-with-divider:last-child .project-divider {
+        display: none;
+    }
+    
+    /* CMU - bottom, same width as other cards (left column) */
+    .column-with-divider:last-child .project-card {
+        grid-column: 1;
+        grid-row: 3;
+        border-right: 1px solid #000000;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Remove borders from column containers since we're using grid */
+    .column-with-divider {
+        border-right: none;
+        border-bottom: none;
+    }
+    
+    /* Ensure Kajabi container borders are not overridden */
+    .kajabi-column-container.column-with-divider {
+        border-right: 1px solid #000000 !important;
+        border-bottom: 1px solid #000000 !important;
     }
 }
 
@@ -433,40 +851,137 @@ footer a:hover {
 }
 
 @media (max-width:425px) {
-
+    .header-section {
+        padding: 30px 0;
+    }
 
     .a-button {
         float:left;
     }
-    .he_image {
-        margin: 0px;
+    .header-container {
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 10px;
     }
-    .about-width {
-        width: 340px;
-        margin-left: 40px;
-    }
-    .center-resume {
-        margin-left: 40px;
-    }
-    .center-image {
-        margin-left: 100px;
-    }
-    h1, .header {
-        font-size: 100px;
-        /* margin-left: 25px; */
-        /* margin-top: 10px; */
+    h1, .header, .header-name {
+        font-size: 80px;
+        line-height: 1;
+        white-space: nowrap;
     }
     h2 {
         font-size: 60px;
     }
-
-    .text {
-        /* margin-left: 24px!important; */
+    h3 {
+        font-size: 28px;
+    }
+    .speech-bubble {
+        display: none;
+    }
+    
+    /* Mobile: Full width single column layout */
+    .main-content .row {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: none;
+        grid-template-rows: none;
+    }
+    
+    /* Reset grid positioning for mobile */
+    .left-column-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .left-column-container .project-card:first-of-type,
+    .left-column-container .project-card:last-of-type {
+        grid-column: auto;
+        grid-row: auto;
+        border-right: none;
+        width: 100%;
+    }
+    
+    .left-column-container .project-divider {
+        display: block;
+        border-top: 1px solid #000000;
+        margin: 0;
+    }
+    
+    .kajabi-column-container {
+        grid-column: auto;
+        grid-row: auto;
+        border-right: none;
+        border-bottom: none;
+        border-top: 1px solid #000000;
+        width: 100%;
+    }
+    
+    .column-with-divider:last-child {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .column-with-divider:last-child .contact-section,
+    .column-with-divider:last-child .project-card {
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+        border-bottom: none;
+        border-top: none;
+    }
+    
+    .column-with-divider:last-child .contact-section {
+        border-bottom: none;
+        border-top: none;
+    }
+    
+    .column-with-divider:last-child .project-divider {
+        display: block;
+        border-top: 1px solid #000000;
+        margin: 0;
+        border-bottom: none;
+    }
+    
+    /* Remove borders from column containers on mobile - use project-divider instead */
+    .column-with-divider {
+        border-bottom: none;
+        border-right: none;
+    }
+    
+    .column-with-divider:last-child {
+        border-bottom: none;
+    }
+    
+    /* Remove bottom borders from project cards on mobile */
+    .left-column-container .project-card:first-of-type,
+    .left-column-container .project-card:last-of-type,
+    .kajabi-column-container .kajabi-card,
+    .column-with-divider:last-child .project-card {
+        border-bottom: none;
     }
     .description {
-        width: 400px;
+        width: 100%;
+        font-size: 16px;
     }
-
+    .contact-title {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 136%;
+        letter-spacing: 0.09em;
+        color: #2B2B2B;
+        text-align: left;
+    }
+    .project-card,
+    .contact-section {
+        padding: 25px 15px;
+    }
+    .link-button,
+    .comingsoon-button {
+        width: 100%;
+        height: 40px;
+        border-radius: 40px;
+        font-size: 14px;
+    }
     .pl-4 {
         padding-left: 0px!important;
     }
@@ -475,42 +990,57 @@ footer a:hover {
 
 
 @media (max-width:375px) {
-    h2 {
-        font-size: 90px;
-    }
-    .cover {
-        max-width: 300px;
-    }
-    .design_cover {
-        max-width: 320px;
-
-    }
-    .responsive {
-        height: calc(10vw * 6);
-       }
-    h1, .header {
-        font-size: 80px;
+    h1, .header, .header-name {
+        font-size: 70px;
+        white-space: nowrap;
     }
     h2 {
         font-size: 60px;
-        /* text-align: left; */
-        /* margin-left: 30px; */
     }
-    h3.mt-2.text-dash {
-        width: 180px;
+    h3 {
+        font-size: 24px;
+    }
+    .contact-title {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 136%;
+        letter-spacing: 0.09em;
+        color: #2B2B2B;
+        text-align: left;
+       }
+    
+    #copyright {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 136%;
+        letter-spacing: 0.09em;
+        color: #2B2B2B;
+    }
+    .description {
+        font-size: 16px;
+    }
+    .link-button,
+    .comingsoon-button {
+        width: 100%;
+        height: 40px;
+        border-radius: 40px;
+        font-size: 13px;
     }
     .ml-5 {
         margin-left:0 !important;
     }
-    .wave, h2, .pd {
-        margin-left: 0!important;
-    }
 }
 
 @media (max-width:325px) {
-    h1 {
+    h1, .header, .header-name {
         font-size: 100px;
+        white-space: nowrap;
         /* text-align: right; */
+    }
+    .speech-bubble {
+        display: none;
     }
     h2 {
         font-size: 80px;
@@ -532,4 +1062,23 @@ footer a:hover {
         padding-left: 0px!important;
     }
 
+}
+
+/* Close button hover styles */
+#kajabi-close-btn:hover,
+#bloomberg-close-btn:hover,
+#cat-close-btn:hover,
+#knows-close-btn:hover {
+    background-color: #DCDCDC !important;
+}
+
+/* Catalog title styling */
+.catalog-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 0.06em;
+    color: #000000;
+    margin: 0;
+    text-align: left;
 }
