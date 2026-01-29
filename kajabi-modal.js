@@ -51,7 +51,7 @@
                 <hr style="border: 0; border-top: 1px solid #000; margin: 0; width: 100%;">
             </div>
             <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 64px;">
-                Re-architected the transaction details page to support growing complexity from Kajabi Payments, introducing a clearer information hierarchy that improved scannability, clarity, and access to critical purchase information. Fully rolled out with positive feedback and expected reductions in support tickets and external tool dependency.
+                Re-architected the transaction details page to support growing complexity from Kajabi Payments, introducing a clearer information hierarchy that improved scannability, clarity, and access to critical purchase information. Fully rolled out with positive feedback and reductions in support tickets and external tool dependency.
             </p>
             <video src="kajabi_transaction details.mp4" alt="Transaction Details" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5;" controls autoplay loop muted></video>
         </div>
