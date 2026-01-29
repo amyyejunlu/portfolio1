@@ -111,6 +111,9 @@
                             margin-left: auto;
                             margin-right: auto;
                         }
+                        .kajabi-section .text-base.text-gray-600 {
+                            max-width: 700px;
+                        }
                         .kajabi-hero-container {
                             height: 930px;
                         }
