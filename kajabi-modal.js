@@ -124,6 +124,41 @@
                             min-height: 400px;
                         }
                     }
+                    @media (max-width: 768px) {
+                        #kajabi-modal-content {
+                            padding-left: 20px;
+                            padding-right: 20px;
+                        }
+                        .kajabi-section > div:first-child > div:first-child {
+                            display: flex !important;
+                            align-items: center !important;
+                            justify-content: space-between !important;
+                            flex-wrap: wrap !important;
+                            gap: 16px !important;
+                        }
+                        .kajabi-section h2 {
+                            text-align: left !important;
+                            flex: 1 1 auto;
+                            margin: 0 !important;
+                            font-size: 24px !important;
+                            min-width: 0;
+                            word-wrap: break-word;
+                        }
+                        .kajabi-section > div:first-child > div:first-child > p {
+                            text-align: right !important;
+                            flex: 0 0 auto;
+                            margin: 0 !important;
+                            font-size: 14px !important;
+                            white-space: nowrap;
+                        }
+                        .kajabi-section > div:first-child > hr {
+                            margin: 0 !important;
+                            width: 100% !important;
+                        }
+                        .kajabi-section .text-base.text-gray-600 {
+                            text-align: left !important;
+                        }
+                    }
                     .kajabi-hero-image {
                         transition: transform 0.3s ease-out;
                     }
