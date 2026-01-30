@@ -725,6 +725,15 @@
                             display: block !important;
                         }
                         
+                        /* Fix header logo size on mobile - keep it small like kajabi logo */
+                        #knows-modal-content > div:first-child img {
+                            width: auto !important;
+                            height: 48px !important;
+                            max-width: 100% !important;
+                            margin-top: 0 !important;
+                            margin-bottom: 0 !important;
+                        }
+                        
                         /* Fix hero image */
                         .knows-hero-image,
                         #ant_cover {
@@ -880,6 +889,15 @@
                             margin-bottom: 24px !important;
                             padding-left: 0 !important;
                             padding-right: 0 !important;
+                        }
+                        
+                        /* Fix header logo size on small phones - keep it small like kajabi logo */
+                        #knows-modal-content > div:first-child img {
+                            width: auto !important;
+                            height: 48px !important;
+                            max-width: 100% !important;
+                            margin-top: 0 !important;
+                            margin-bottom: 0 !important;
                         }
                         
                         /* Row spacing on small phones */
