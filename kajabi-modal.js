@@ -83,7 +83,8 @@
             <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 64px;">
                 Designed an affiliate transactions and payouts system that has enabled $347k+ in affiliate commissions paid and $4.3M in affiliate driven GMV since Sep launch.
             </p>
-            <video src="kajabi_affiliates muted.mp4" alt="Affiliates" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5;" controls autoplay loop muted playsinline></video>
+            <video src="kajabi_affiliates muted.mp4" alt="Affiliates" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5; margin-bottom: 64px;" controls autoplay loop muted playsinline></video>
+            <video src="kajabi_leaderboard.mp4" alt="Leaderboard" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5;" controls autoplay loop muted playsinline></video>
         </div>
     `;
             
