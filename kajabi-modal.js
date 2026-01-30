@@ -38,7 +38,7 @@
             <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 64px;">
                 Redesigned Kajabi Payments onboarding to provide a fully integrated in-app experience, de-emphasizing the connection to an external partner. After 100% rollout on Nov 7, adoption increased 11.77%, from 23.3% to 55% penetration.
             </p>
-            <video src="kajabi_onboarding.mp4" alt="Payments Onboarding" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5;" controls autoplay loop muted></video>
+            <video src="kajabi_onboarding.mp4" alt="Payments Onboarding" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5;" controls autoplay loop muted playsinline></video>
         </div>
 
         <!-- Section 2: Transaction Details Page Revamp -->
@@ -53,7 +53,7 @@
             <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 64px;">
                 Re-architected the transaction details page to support growing complexity from Kajabi Payments, introducing a clearer information hierarchy that improved scannability, clarity, and access to critical purchase information. Fully rolled out with positive feedback and reductions in support tickets and external tool dependency.
             </p>
-            <video src="kajabi_transaction details.mp4" alt="Transaction Details" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5;" controls autoplay loop muted></video>
+            <video src="kajabi_transaction details.mp4" alt="Transaction Details" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5;" controls autoplay loop muted playsinline></video>
         </div>
 
         <!-- Section 3: Analytics -->
@@ -68,7 +68,7 @@
             <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 64px;">
                 Since 2023, I redesigned Kajabi's Payments dashboard and, in 2025, expanded into platform-wide Analytics, creating flexible, shared, systematized patterns across the app.
             </p>
-            <video src="kajabi_analytics.mp4" alt="Analytics" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5;" controls autoplay loop muted></video>
+            <video src="kajabi_analytics.mp4" alt="Analytics" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5;" controls autoplay loop muted playsinline></video>
         </div>
 
         <!-- Section 4: Affiliates Revamp -->
@@ -83,7 +83,7 @@
             <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 64px;">
                 Designed an affiliate transactions and payouts system that has enabled $347k+ in affiliate commissions paid and $4.3M in affiliate driven GMV since Sep launch.
             </p>
-            <video src="kajabi_affiliates muted.mp4" alt="Affiliates" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5;" controls autoplay loop muted></video>
+            <video src="kajabi_affiliates muted.mp4" alt="Affiliates" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5;" controls autoplay loop muted playsinline></video>
         </div>
     `;
             
@@ -158,6 +158,19 @@
                         .kajabi-section .text-base.text-gray-600 {
                             text-align: left !important;
                         }
+                        
+                        /* Prevent videos from going fullscreen on mobile */
+                        #kajabi-modal-content video {
+                            object-fit: contain !important;
+                            max-width: 100% !important;
+                            height: auto !important;
+                        }
+                    }
+                    
+                    /* Prevent fullscreen for all screen sizes */
+                    #kajabi-modal-content video {
+                        -webkit-playsinline: true;
+                        playsinline: true;
                     }
                     .kajabi-hero-image {
                         transition: transform 0.3s ease-out;
@@ -181,6 +194,50 @@
                         heroImage.style.transform = `rotate(${fixedRotation}deg) translateY(${translateY}px) scale(1.2)`;
                     });
                 }
+                
+                // Prevent videos from going fullscreen on mobile
+                const videos = modalContent.querySelectorAll('video');
+                videos.forEach(function(video) {
+                    // Ensure playsinline is set (critical for iOS)
+                    video.setAttribute('playsinline', '');
+                    video.setAttribute('webkit-playsinline', '');
+                    video.playsInline = true;
+                    
+                    // Prevent fullscreen on iOS Safari
+                    video.addEventListener('webkitbeginfullscreen', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        video.pause();
+                        video.play();
+                        return false;
+                    }, { passive: false });
+                    
+                    // Prevent fullscreen API calls
+                    if (video.requestFullscreen) {
+                        const originalRequestFullscreen = video.requestFullscreen;
+                        video.requestFullscreen = function() {
+                            return Promise.reject(new Error('Fullscreen disabled'));
+                        };
+                    }
+                    
+                    // Exit fullscreen if it somehow gets triggered
+                    video.addEventListener('fullscreenchange', function() {
+                        if (document.fullscreenElement === video || 
+                            document.webkitFullscreenElement === video ||
+                            document.mozFullScreenElement === video ||
+                            document.msFullscreenElement === video) {
+                            if (document.exitFullscreen) {
+                                document.exitFullscreen();
+                            } else if (document.webkitExitFullscreen) {
+                                document.webkitExitFullscreen();
+                            } else if (document.mozCancelFullScreen) {
+                                document.mozCancelFullScreen();
+                            } else if (document.msExitFullscreen) {
+                                document.msExitFullscreen();
+                            }
+                        }
+                    });
+                });
             }, 100);
         }
     }

@@ -572,6 +572,329 @@
                 `;
                 document.head.appendChild(style);
             }
+            
+            // Add mobile responsive styles
+            if (!document.getElementById('knows-modal-mobile-styles')) {
+                const mobileStyle = document.createElement('style');
+                mobileStyle.id = 'knows-modal-mobile-styles';
+                mobileStyle.textContent = `
+                    /* Mobile styles for Knows modal */
+                    @media (max-width: 768px) {
+                        /* Prevent horizontal scrolling */
+                        #knows-modal-content {
+                            overflow-x: hidden !important;
+                            box-sizing: border-box !important;
+                            padding-left: 20px !important;
+                            padding-right: 20px !important;
+                        }
+                        
+                        /* Ensure all elements use box-sizing */
+                        #knows-modal-content *,
+                        #knows-modal-content *::before,
+                        #knows-modal-content *::after {
+                            box-sizing: border-box !important;
+                        }
+                        
+                        /* Reduce header padding on mobile - override inline styles */
+                        #knows-modal-content > div:first-child {
+                            padding-top: 60px !important;
+                            padding-bottom: 60px !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                        }
+                        
+                        /* Override mx-auto on mobile to prevent centering issues */
+                        #knows-modal-content .mx-auto {
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                        
+                        /* Consistent padding for all content sections */
+                        #knows-modal-content .row {
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-bottom: 32px !important;
+                        }
+                        
+                        /* Spacing between major sections */
+                        #knows-modal-content .row.mt-5 {
+                            margin-top: 32px !important;
+                            margin-bottom: 32px !important;
+                        }
+                        
+                        #knows-modal-content .row.pt-5 {
+                            padding-top: 32px !important;
+                            margin-bottom: 32px !important;
+                        }
+                        
+                        #knows-modal-content [class*="col-"] {
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            width: 100% !important;
+                            max-width: 100% !important;
+                        }
+                        
+                        /* Make text responsive with consistent padding and spacing */
+                        #knows-modal-content p {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-bottom: 16px !important;
+                            word-wrap: break-word !important;
+                            overflow-wrap: break-word !important;
+                            word-break: break-word !important;
+                        }
+                        
+                        /* Headings with spacing */
+                        .intro-header {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-bottom: 8px !important;
+                            margin-top: 24px !important;
+                        }
+                        
+                        .small-gray-text,
+                        .gray-text,
+                        .med-gray-text {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-bottom: 8px !important;
+                            word-wrap: break-word !important;
+                            overflow-wrap: break-word !important;
+                            word-break: break-word !important;
+                        }
+                        
+                        /* Remove bottom margin from last paragraph in a section */
+                        #knows-modal-content p:last-child {
+                            margin-bottom: 0 !important;
+                        }
+                        
+                        /* First paragraph after heading should have less top margin */
+                        #knows-modal-content .intro-header + p,
+                        #knows-modal-content .small-gray-text + p {
+                            margin-top: 0 !important;
+                        }
+                        
+                        /* Prevent any element from exceeding container width */
+                        #knows-modal-content > * {
+                            max-width: 100% !important;
+                            overflow-x: hidden !important;
+                        }
+                        
+                        /* Remove negative margins */
+                        .ml-5,
+                        .ml-4,
+                        .ml-3,
+                        .ml-2,
+                        .ml-1 {
+                            margin-left: 0 !important;
+                        }
+                        
+                        /* Hide or reduce spacer columns */
+                        #knows-modal-content .col-md-1,
+                        #knows-modal-content .col-lg-1 {
+                            display: none !important;
+                        }
+                        
+                        /* Make images responsive with consistent padding and spacing */
+                        #knows-modal-content img {
+                            max-width: 100% !important;
+                            width: 100% !important;
+                            height: auto !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-top: 24px !important;
+                            margin-bottom: 24px !important;
+                            display: block !important;
+                        }
+                        
+                        /* Fix hero image */
+                        .knows-hero-image,
+                        #ant_cover {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-top: 24px !important;
+                            margin-bottom: 24px !important;
+                        }
+                        
+                        /* Fix carousel images */
+                        .he_image {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                        
+                        /* Fix visualization images */
+                        .viz_thumb {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-top: 24px !important;
+                            margin-bottom: 24px !important;
+                        }
+                        
+                        /* Fix problem images */
+                        .figure-img {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                        
+                        /* Fix video */
+                        #knows_video {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-top: 24px !important;
+                            margin-bottom: 24px !important;
+                        }
+                        
+                        /* Ensure containers don't overflow */
+                        #knows-modal-content .container,
+                        #knows-modal-content .container-fluid {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                        
+                        /* Fix carousel container */
+                        #knowsCarousel {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                        }
+                        
+                        /* Fix blue background section */
+                        .blue-bkgd {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                        }
+                        
+                        /* Fix mobile-margin class */
+                        .mobile-margin {
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                        
+                        /* Fix website questions section */
+                        .websiteQuestions {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-bottom: 16px !important;
+                            word-wrap: break-word !important;
+                            overflow-wrap: break-word !important;
+                            word-break: break-word !important;
+                        }
+                    }
+                    
+                    @media (max-width: 425px) {
+                        /* Additional mobile phone specific styles */
+                        #knows-modal-content {
+                            padding-left: 15px !important;
+                            padding-right: 15px !important;
+                            overflow-x: hidden !important;
+                        }
+                        
+                        /* Further reduce header padding on small phones */
+                        #knows-modal-content > div:first-child {
+                            padding-top: 40px !important;
+                            padding-bottom: 40px !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                        }
+                        
+                        /* Adjust font sizes for readability */
+                        .intro-header {
+                            font-size: 24px !important;
+                        }
+                        
+                        /* Ensure all columns are full width with no padding */
+                        #knows-modal-content [class*="col-sm-"],
+                        #knows-modal-content [class*="col-md-"],
+                        #knows-modal-content [class*="col-lg-"] {
+                            flex: 0 0 100% !important;
+                            max-width: 100% !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                        
+                        /* Ensure all text and images have consistent padding and spacing */
+                        #knows-modal-content p {
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-bottom: 16px !important;
+                            width: 100% !important;
+                            max-width: 100% !important;
+                        }
+                        
+                        /* Headings spacing on small phones */
+                        #knows-modal-content .intro-header {
+                            margin-top: 24px !important;
+                            margin-bottom: 8px !important;
+                        }
+                        
+                        /* Ensure all images have consistent sizing and spacing */
+                        #knows-modal-content img {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-top: 24px !important;
+                            margin-bottom: 24px !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                        }
+                        
+                        /* Row spacing on small phones */
+                        #knows-modal-content .row {
+                            margin-bottom: 32px !important;
+                        }
+                        
+                        #knows-modal-content .row.mt-5 {
+                            margin-top: 32px !important;
+                            margin-bottom: 32px !important;
+                        }
+                    }
+                `;
+                document.head.appendChild(mobileStyle);
+            }
         }
     }
     
