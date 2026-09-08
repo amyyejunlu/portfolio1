@@ -1,22 +1,108 @@
 // Kajabi Modal Content Generator
 (function() {
+    function loadModalCSS(cssFile) {
+        if (!document.getElementById('kajabi-modal-css')) {
+            const link = document.createElement('link');
+            link.id = 'kajabi-modal-css';
+            link.rel = 'stylesheet';
+            link.href = cssFile;
+            document.head.appendChild(link);
+        }
+    }
+
+    function bindKajabiBehaviors(root, scrollRoot) {
+        const heroImage = root.querySelector('#kajabi-hero-image') || document.getElementById('kajabi-hero-image');
+
+        if (heroImage && scrollRoot) {
+            scrollRoot.addEventListener('scroll', function() {
+                const scrolled = scrollRoot === window ? (window.scrollY || document.documentElement.scrollTop) : scrollRoot.scrollTop;
+                const parallaxSpeed = 0.5;
+                const translateY = scrolled * parallaxSpeed;
+                const fixedRotation = -22.26;
+                heroImage.style.transform = `rotate(${fixedRotation}deg) translateY(${translateY}px) scale(1.2)`;
+            });
+        }
+
+        const videos = root.querySelectorAll('video');
+        videos.forEach(function(video) {
+            video.setAttribute('playsinline', '');
+            video.setAttribute('webkit-playsinline', '');
+            video.playsInline = true;
+
+            var canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+            video.controls = !canHover;
+            if (canHover) {
+                var host = video.parentElement;
+                if (host && !host.classList.contains('kajabi-capital-phone') && !host.classList.contains('kajabi-video-hover')) {
+                    var wrap = document.createElement('div');
+                    wrap.className = 'kajabi-video-hover';
+                    host.insertBefore(wrap, video);
+                    wrap.appendChild(video);
+                    host = wrap;
+                }
+                host.addEventListener('mouseenter', function() {
+                    video.controls = true;
+                });
+                host.addEventListener('mouseleave', function() {
+                    video.controls = false;
+                });
+            }
+
+            video.addEventListener('webkitbeginfullscreen', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                video.pause();
+                video.play();
+                return false;
+            }, { passive: false });
+
+            if (video.requestFullscreen) {
+                video.requestFullscreen = function() {
+                    return Promise.reject(new Error('Fullscreen disabled'));
+                };
+            }
+
+            video.addEventListener('fullscreenchange', function() {
+                if (document.fullscreenElement === video ||
+                    document.webkitFullscreenElement === video ||
+                    document.mozFullScreenElement === video ||
+                    document.msFullscreenElement === video) {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    } else if (document.mozCancelFullScreen) {
+                        document.mozCancelFullScreen();
+                    } else if (document.msExitFullscreen) {
+                        document.msExitFullscreen();
+                    }
+                }
+            });
+        });
+    }
+
     function initModalContent() {
+        loadModalCSS('kajabi.css');
+
         const modalContent = document.getElementById('kajabi-modal-content');
-        
-        if (!modalContent) {
-            // Retry if element not ready
+        const kajabiPage = document.querySelector('.kajabi-page');
+
+        if (!modalContent && !kajabiPage) {
             setTimeout(initModalContent, 100);
             return;
         }
-        
-        // Only set content if it's empty
+
+        if (kajabiPage && !modalContent) {
+            bindKajabiBehaviors(kajabiPage, window);
+            return;
+        }
+
         if (modalContent.innerHTML.trim() === '' || modalContent.innerHTML.includes('Content will be generated')) {
-            // Generate modal content
             modalContent.innerHTML = `
         <!-- Header Section -->
         <div class="kajabi-header" style="padding-top: 200px; padding-bottom: 200px; text-align: center;">
             <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px;">
-                <p style="font-family: 'Public Sans', sans-serif; font-weight: 300; font-size: 16px; letter-spacing: 0.05em; color: #303030; margin: 0;">sept 2020 - present</p>
+                <p style="font-family: 'Public Sans', sans-serif; font-weight: 300; font-size: 16px; letter-spacing: 0.05em; color: #303030; margin: 0;">sept 2020 - may 2026</p>
                 <img src="kajabi logo.png" alt="Kajabi" style="height: 48px; width: auto;">
             </div>
         </div>
@@ -26,7 +112,114 @@
             <img src="kajabi_hero.jpg" alt="Kajabi Overview" id="kajabi-hero-image" class="kajabi-hero-image" style="width: 100%; height: 100%; object-fit: cover; transform: rotate(-22.26deg) scale(1.2); transform-origin: left center;">
         </div>
 
-        <!-- Section 1: Payments Onboarding -->
+        <!-- checkout -->
+        <div class="kajabi-section" style="margin-bottom: 200px;">
+            <div style="margin-bottom: 16px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                    <h2 class="text-3xl font-bold lowercase" style="font-family: 'Roboto', sans-serif; font-size: 32px; letter-spacing: 0.045em; margin: 0;">checkout</h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; letter-spacing: 0.06em; margin: 0; color: #000;">oct 2025 - may 2026</p>
+                </div>
+                <hr style="border: 0; border-top: 1px solid #000; margin: 0; width: 100%;">
+            </div>
+            <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 4rem;">
+                Enabled merchant upsells and order bumps to lift average order value at checkout.
+            </p>
+            <div class="kajabi-media-block">
+                <div class="kajabi-media-row">
+                    <video src="kajabi_checkout_upsell_merchant.mp4" alt="Merchant upsell creation" class="kajabi-media" autoplay loop muted playsinline></video>
+                    <video src="kajabi_checkout_upsell_customer.mp4" alt="Customer checkout upsell" class="kajabi-media" autoplay loop muted playsinline></video>
+                </div>
+                <p class="kajabi-caption">On the left, the merchant's upsell creation experience; on the right, the upsell customers see at checkout.</p>
+            </div>
+            <div class="kajabi-media-block">
+                <div class="kajabi-media-row">
+                    <video src="kajabi_checkout_bump_merchant.mp4" alt="Merchant order bump creation" class="kajabi-media" autoplay loop muted playsinline></video>
+                    <video src="kajabi_checkout_bump_customer.mp4" alt="Customer checkout order bump" class="kajabi-media" autoplay loop muted playsinline></video>
+                </div>
+                <p class="kajabi-caption">On the left, the merchant's order bump creation experience; on the right, the order bump customers see at checkout.</p>
+            </div>
+        </div>
+
+        <!-- media library -->
+        <div class="kajabi-section" style="margin-bottom: 200px;">
+            <div style="margin-bottom: 16px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                    <h2 class="text-3xl font-bold lowercase" style="font-family: 'Roboto', sans-serif; font-size: 32px; letter-spacing: 0.045em; margin: 0;">media library</h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; letter-spacing: 0.06em; margin: 0; color: #000;">apr 2026</p>
+                </div>
+                <hr style="border: 0; border-top: 1px solid #000; margin: 0; width: 100%;">
+            </div>
+            <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 4rem;">
+                AI-prototyped concept for managing custom Media Library views.
+            </p>
+            <div class="kajabi-media-block">
+                <video src="kajabi_media_library.mp4" alt="Media Library views" class="kajabi-media" autoplay loop muted playsinline></video>
+                <p class="kajabi-caption">Built using V0 to demo the micro-interactions for creating, saving, removing, and deleting views.</p>
+            </div>
+        </div>
+
+        <!-- affiliates revamp -->
+        <div class="kajabi-section" style="margin-bottom: 200px;">
+            <div style="margin-bottom: 16px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                    <h2 class="text-3xl font-bold lowercase" style="font-family: 'Roboto', sans-serif; font-size: 32px; letter-spacing: 0.045em; margin: 0;">affiliates revamp</h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; letter-spacing: 0.06em; margin: 0; color: #000;">jan - sep 2025</p>
+                </div>
+                <hr style="border: 0; border-top: 1px solid #000; margin: 0; width: 100%;">
+            </div>
+            <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 4rem;">
+                Reimagined the affiliate experience: payout system, resource tools, and a bounty program.
+            </p>
+            <div class="kajabi-media-block">
+                <video src="kajabi_leaderboard.mp4" alt="Affiliate leaderboard and metrics" class="kajabi-media" autoplay loop muted playsinline></video>
+                <p class="kajabi-caption">Added new set of metrics to the overview, such as leaderboard and top selling offers.</p>
+            </div>
+            <div class="kajabi-media-block">
+                <video src="kajabi_affiliates_memo.mp4" alt="Affiliate settings and resources" class="kajabi-media" autoplay loop muted playsinline></video>
+                <p class="kajabi-caption">Under Settings, ability to add a memo and resources to communicate with affiliates.</p>
+            </div>
+            <div class="kajabi-media-block">
+                <video src="kajabi_affiliates_bounty.mp4" alt="Affiliate bounty program" class="kajabi-media" autoplay loop muted playsinline></video>
+                <p class="kajabi-caption">A bounty program letting customers set up time-bound rewards for their affiliates.</p>
+            </div>
+            <div class="kajabi-media-block">
+                <video src="kajabi_affiliates muted.mp4" alt="Upcoming affiliate payouts on transactions" class="kajabi-media" autoplay loop muted playsinline></video>
+                <p class="kajabi-caption">Upcoming automatic and manual affiliate payouts, shown on the transactions page.</p>
+            </div>
+            <div class="kajabi-media-block">
+                <div class="kajabi-media-row">
+                    <video src="kajabi_affiliates_payout_schedule.mp4" alt="Manual payout schedule setup" class="kajabi-media" autoplay loop muted playsinline></video>
+                    <video src="kajabi_affiliates_payout_manual.mp4" alt="Completing a manual affiliate payment" class="kajabi-media" autoplay loop muted playsinline></video>
+                </div>
+                <p class="kajabi-caption">Setting up the schedule for manual payouts, and how customers complete a manual payment to their affiliates.</p>
+            </div>
+        </div>
+
+        <!-- kajabi capital -->
+        <div class="kajabi-section" style="margin-bottom: 200px;">
+            <div style="margin-bottom: 16px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                    <h2 class="text-3xl font-bold lowercase" style="font-family: 'Roboto', sans-serif; font-size: 32px; letter-spacing: 0.045em; margin: 0;">kajabi capital</h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; letter-spacing: 0.06em; margin: 0; color: #000;">sep - dec 2025</p>
+                </div>
+                <hr style="border: 0; border-top: 1px solid #000; margin: 0; width: 100%;">
+            </div>
+            <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 4rem;">
+                Shipped Kajabi Capital, an end-to-end loan experience, partnering with Parafin.
+            </p>
+            <div class="kajabi-media-block">
+                <div class="kajabi-capital-row">
+                    <img src="kajabi_capital_dashboard.png" alt="Kajabi Capital dashboard entry point" class="kajabi-media kajabi-capital-dashboard">
+                    <img src="kajabi_capital_marketing.png" alt="Kajabi Capital marketing page" class="kajabi-media kajabi-capital-marketing">
+                    <div class="kajabi-capital-phone">
+                        <video src="kajabi_capital_mobile.mp4" alt="Kajabi Capital mobile designs" class="kajabi-media" autoplay loop muted playsinline></video>
+                    </div>
+                </div>
+                <p class="kajabi-caption">Dashboard entry point, marketing page, and mobile designs.</p>
+            </div>
+        </div>
+
+        <!-- payments onboarding -->
         <div class="kajabi-section" style="margin-bottom: 200px;">
             <div style="margin-bottom: 16px;">
                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
@@ -35,28 +228,55 @@
                 </div>
                 <hr style="border: 0; border-top: 1px solid #000; margin: 0; width: 100%;">
             </div>
-            <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 64px;">
-                Redesigned Kajabi Payments onboarding to provide a fully integrated in-app experience, de-emphasizing the connection to an external partner. After 100% rollout on Nov 7, adoption increased 11.77%, from 23.3% to 55% penetration.
+            <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 4rem;">
+                Redesigned Kajabi Payments onboarding to provide a fully integrated in-app experience. After 100% rollout on Nov 7, adoption increased 11.77%, from 23.3% to 35% penetration.
             </p>
-            <video src="kajabi_onboarding.mp4" alt="Payments Onboarding" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5;" controls autoplay loop muted playsinline></video>
+            <div class="kajabi-media-block">
+                <video src="kajabi_onboarding.mp4" alt="Payments Onboarding" class="kajabi-media" autoplay loop muted playsinline></video>
+                <p class="kajabi-caption">A look at the rebranded Kajabi Payments onboarding experience, where the user selects UAE, which happened to align with Kajabi's launch in the region.</p>
+            </div>
         </div>
 
-        <!-- Section 2: Transaction Details Page Revamp -->
+        <!-- payouts -->
         <div class="kajabi-section" style="margin-bottom: 200px;">
             <div style="margin-bottom: 16px;">
                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
-                    <h2 class="text-3xl font-bold lowercase" style="font-family: 'Roboto', sans-serif; font-size: 32px; letter-spacing: 0.045em; margin: 0;">transaction details page revamp</h2>
-                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; letter-spacing: 0.06em; margin: 0; color: #000;">nov - dec 2024</p>
+                    <h2 class="text-3xl font-bold lowercase" style="font-family: 'Roboto', sans-serif; font-size: 32px; letter-spacing: 0.045em; margin: 0;">payouts</h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; letter-spacing: 0.06em; margin: 0; color: #000;">2024 - 2026</p>
                 </div>
                 <hr style="border: 0; border-top: 1px solid #000; margin: 0; width: 100%;">
             </div>
-            <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 64px;">
-                Re-architected the transaction details page to support growing complexity from Kajabi Payments, introducing a clearer information hierarchy that improved scannability, clarity, and access to critical purchase information. Fully rolled out with positive feedback and reductions in support tickets and external tool dependency.
+            <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 4rem;">
+                Designed to support multiple bank accounts as well as instant payouts.
             </p>
-            <video src="kajabi_transaction details.mp4" alt="Transaction Details" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5;" controls autoplay loop muted playsinline></video>
+            <div class="kajabi-media-block">
+                <div class="kajabi-media-row">
+                    <img src="kajabi_payouts_accounts.png" alt="Multiple bank accounts on Payouts" class="kajabi-media">
+                    <img src="kajabi_payouts_instant.png" alt="Instant payouts feature" class="kajabi-media">
+                </div>
+                <p class="kajabi-caption">On the left shows multiple bank accounts, and on the right is the instant payouts feature.</p>
+            </div>
         </div>
 
-        <!-- Section 3: Analytics -->
+        <!-- disputes -->
+        <div class="kajabi-section" style="margin-bottom: 200px;">
+            <div style="margin-bottom: 16px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                    <h2 class="text-3xl font-bold lowercase" style="font-family: 'Roboto', sans-serif; font-size: 32px; letter-spacing: 0.045em; margin: 0;">disputes</h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; letter-spacing: 0.06em; margin: 0; color: #000;">sep - nov 2024</p>
+                </div>
+                <hr style="border: 0; border-top: 1px solid #000; margin: 0; width: 100%;">
+            </div>
+            <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 4rem;">
+                Created a system for customers to manage and take action on disputed payments.
+            </p>
+            <div class="kajabi-media-block">
+                <video src="kajabi_disputes.mp4" alt="Disputed transactions" class="kajabi-media" autoplay loop muted playsinline></video>
+                <p class="kajabi-caption">Disputed transactions at various stages.</p>
+            </div>
+        </div>
+
+        <!-- analytics -->
         <div class="kajabi-section" style="margin-bottom: 200px;">
             <div style="margin-bottom: 16px;">
                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
@@ -65,197 +285,66 @@
                 </div>
                 <hr style="border: 0; border-top: 1px solid #000; margin: 0; width: 100%;">
             </div>
-            <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 64px;">
+            <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 4rem;">
                 Since 2023, I redesigned Kajabi's Payments dashboard and, in 2025, expanded into platform-wide Analytics, creating flexible, shared, systematized patterns across the app.
             </p>
-            <video src="kajabi_analytics.mp4" alt="Analytics" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5;" controls autoplay loop muted playsinline></video>
+            <div class="kajabi-media-block">
+                <video src="kajabi_analytics.mp4" alt="Payments dashboard" class="kajabi-media" autoplay loop muted playsinline></video>
+                <p class="kajabi-caption">The redesigned Payments dashboard.</p>
+            </div>
+            <div class="kajabi-media-block">
+                <div class="kajabi-media-grid">
+                    <img src="kajabi_analytics_chart_1.png" alt="Subscription payment retention over time" class="kajabi-media">
+                    <img src="kajabi_analytics_chart_2.png" alt="Unsubscribed contacts from marketing emails" class="kajabi-media">
+                    <img src="kajabi_analytics_chart_3.png" alt="Contacts breakdown by engagement" class="kajabi-media">
+                    <img src="kajabi_analytics_chart_4.png" alt="Canceled subscriptions over time" class="kajabi-media">
+                    <img src="kajabi_analytics_chart_5.png" alt="Payment plans over time" class="kajabi-media">
+                    <img src="kajabi_analytics_chart_6.png" alt="Monthly recurring revenue from payment plans" class="kajabi-media">
+                </div>
+                <p class="kajabi-caption">Some of the data visualization charts I designed for the Analytics team.</p>
+            </div>
         </div>
 
-        <!-- Section 4: Affiliates Revamp -->
+        <!-- transaction details page revamp -->
         <div class="kajabi-section" style="margin-bottom: 200px;">
             <div style="margin-bottom: 16px;">
                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
-                    <h2 class="text-3xl font-bold lowercase" style="font-family: 'Roboto', sans-serif; font-size: 32px; letter-spacing: 0.045em; margin: 0;">affiliates revamp</h2>
-                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; letter-spacing: 0.06em; margin: 0; color: #000;">jun - sep 2025</p>
+                    <h2 class="text-3xl font-bold lowercase" style="font-family: 'Roboto', sans-serif; font-size: 32px; letter-spacing: 0.045em; margin: 0;">transaction details page revamp</h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; letter-spacing: 0.06em; margin: 0; color: #000;">nov - dec 2024</p>
                 </div>
                 <hr style="border: 0; border-top: 1px solid #000; margin: 0; width: 100%;">
             </div>
-            <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 64px;">
-                Designed an affiliate transactions and payouts system that has enabled $347k+ in affiliate commissions paid and $4.3M in affiliate driven GMV since Sep launch.
+            <p class="text-base text-gray-600" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 155%; letter-spacing: 0.06em; margin-top: 16px; margin-bottom: 4rem;">
+                Redesigned the transaction details page's hierarchy for clearer, easier scannability.
             </p>
-            <video src="kajabi_affiliates muted.mp4" alt="Affiliates" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5; margin-bottom: 64px;" controls autoplay loop muted playsinline></video>
-            <video src="kajabi_leaderboard.mp4" alt="Leaderboard" class="w-full h-auto" style="border-radius: 16px; border: 1px solid #E5E5E5;" controls autoplay loop muted playsinline></video>
+            <div class="kajabi-media-block">
+                <video src="kajabi_transaction details.mp4" alt="Transaction Details" class="kajabi-media" autoplay loop muted playsinline></video>
+                <p class="kajabi-caption">A snapshot of what a customer sees after clicking into a sale, with the full breakdown of that purchase.</p>
+            </div>
         </div>
     `;
-            
-            // Add CSS styles for centering and max-width
-            if (!document.getElementById('kajabi-modal-styles')) {
-                const style = document.createElement('style');
-                style.id = 'kajabi-modal-styles';
-                style.textContent = `
-                    .kajabi-header {
-                        text-align: center;
-                    }
-                    .kajabi-hero-container {
-                        margin-bottom: 200px;
-                        left: 0;
-                        right: 0;
-                    }
-                    @media (min-width: 1440px) {
-                        .kajabi-header {
-                            max-width: 1000px;
-                            margin-left: auto;
-                            margin-right: auto;
-                        }
-                        .kajabi-section {
-                            max-width: 1000px;
-                            margin-left: auto;
-                            margin-right: auto;
-                        }
-                        .kajabi-section .text-base.text-gray-600 {
-                            max-width: 700px;
-                        }
-                        .kajabi-hero-container {
-                            height: 930px;
-                        }
-                    }
-                    @media (max-width: 1439px) {
-                        .kajabi-hero-container {
-                            height: calc(930px * (100vw / 1440px));
-                            min-height: 400px;
-                        }
-                    }
-                    @media (max-width: 768px) {
-                        #kajabi-modal-content {
-                            padding-left: 20px;
-                            padding-right: 20px;
-                        }
-                        .kajabi-section > div:first-child > div:first-child {
-                            display: flex !important;
-                            align-items: center !important;
-                            justify-content: space-between !important;
-                            flex-wrap: wrap !important;
-                            gap: 16px !important;
-                        }
-                        .kajabi-section h2 {
-                            text-align: left !important;
-                            flex: 1 1 auto;
-                            margin: 0 !important;
-                            font-size: 24px !important;
-                            min-width: 0;
-                            word-wrap: break-word;
-                        }
-                        .kajabi-section > div:first-child > div:first-child > p {
-                            text-align: right !important;
-                            flex: 0 0 auto;
-                            margin: 0 !important;
-                            font-size: 14px !important;
-                            white-space: nowrap;
-                        }
-                        .kajabi-section > div:first-child > hr {
-                            margin: 0 !important;
-                            width: 100% !important;
-                        }
-                        .kajabi-section .text-base.text-gray-600 {
-                            text-align: left !important;
-                        }
-                        
-                        /* Prevent videos from going fullscreen on mobile */
-                        #kajabi-modal-content video {
-                            object-fit: contain !important;
-                            max-width: 100% !important;
-                            height: auto !important;
-                        }
-                    }
-                    
-                    /* Prevent fullscreen for all screen sizes */
-                    #kajabi-modal-content video {
-                        -webkit-playsinline: true;
-                        playsinline: true;
-                    }
-                    .kajabi-hero-image {
-                        transition: transform 0.3s ease-out;
-                    }
-                `;
-                document.head.appendChild(style);
-            }
-            
-            // Add parallax effect to hero image
-            setTimeout(function() {
-                const heroImage = document.getElementById('kajabi-hero-image');
-                const modalContent = document.getElementById('kajabi-modal-content');
-                
-                if (heroImage && modalContent) {
-                    modalContent.addEventListener('scroll', function() {
-                        const scrolled = modalContent.scrollTop;
-                        const parallaxSpeed = 0.5;
-                        const translateY = scrolled * parallaxSpeed;
-                        const fixedRotation = -22.26;
-                        
-                        heroImage.style.transform = `rotate(${fixedRotation}deg) translateY(${translateY}px) scale(1.2)`;
-                    });
-                }
-                
-                // Prevent videos from going fullscreen on mobile
-                const videos = modalContent.querySelectorAll('video');
-                videos.forEach(function(video) {
-                    // Ensure playsinline is set (critical for iOS)
-                    video.setAttribute('playsinline', '');
-                    video.setAttribute('webkit-playsinline', '');
-                    video.playsInline = true;
-                    
-                    // Prevent fullscreen on iOS Safari
-                    video.addEventListener('webkitbeginfullscreen', function(e) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        video.pause();
-                        video.play();
-                        return false;
-                    }, { passive: false });
-                    
-                    // Prevent fullscreen API calls
-                    if (video.requestFullscreen) {
-                        const originalRequestFullscreen = video.requestFullscreen;
-                        video.requestFullscreen = function() {
-                            return Promise.reject(new Error('Fullscreen disabled'));
-                        };
-                    }
-                    
-                    // Exit fullscreen if it somehow gets triggered
-                    video.addEventListener('fullscreenchange', function() {
-                        if (document.fullscreenElement === video || 
-                            document.webkitFullscreenElement === video ||
-                            document.mozFullScreenElement === video ||
-                            document.msFullscreenElement === video) {
-                            if (document.exitFullscreen) {
-                                document.exitFullscreen();
-                            } else if (document.webkitExitFullscreen) {
-                                document.webkitExitFullscreen();
-                            } else if (document.mozCancelFullScreen) {
-                                document.mozCancelFullScreen();
-                            } else if (document.msExitFullscreen) {
-                                document.msExitFullscreen();
-                            }
-                        }
-                    });
-                });
-            }, 100);
         }
+
+        setTimeout(function() {
+            bindKajabiBehaviors(modalContent, modalContent);
+        }, 100);
     }
-    
+
     // Initialize content when DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initModalContent);
     } else {
         initModalContent();
     }
-    
+
     // Initialize Preline overlay plugin after scripts load
     function initPreline() {
+        if (!document.getElementById('kajabi-modal')) {
+            return;
+        }
         if (window.HSOverlay) {
             window.HSOverlay.autoInit();
         } else {
-            // Retry if Preline not loaded yet
             setTimeout(initPreline, 100);
         }
     }
@@ -269,14 +358,21 @@
     
     // Add manual click handler
     function setupModalHandlers() {
-        const button = document.querySelector('button[data-hs-overlay="#kajabi-modal"]');
         const modal = document.getElementById('kajabi-modal');
+        if (!modal) {
+            return;
+        }
+
+        const button = document.querySelector('[data-hs-overlay="#kajabi-modal"]');
         const closeBtn = document.getElementById('kajabi-close-btn');
         
-        if (button && modal) {
+        if (!button) {
+            return;
+        }
+
+        if (button) {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
-                // Show modal
                 modal.style.display = 'block';
                 modal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
@@ -303,9 +399,6 @@
                     closeModal();
                 }
             });
-        } else {
-            // Retry if elements not ready
-            setTimeout(setupModalHandlers, 100);
         }
     }
     

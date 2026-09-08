@@ -442,19 +442,31 @@ a:has(.link-button):visited {
 .project-card > a:active,
 .project-card > a:visited {
     text-decoration: none !important;
+}
+
+.project-card > a:not(.link-button) {
     display: block;
+}
+
+.project-card > a.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
 }
 
 /* Also target links that contain buttons */
 a[href*="bloomineers.html"],
 a[href*="cat.html"],
-a[href*="knows.html"] {
+a[href*="knows.html"],
+a[href*="kajabi.html"] {
     text-decoration: none !important;
 }
 
 a[href*="bloomineers.html"]:hover,
 a[href*="cat.html"]:hover,
-a[href*="knows.html"]:hover {
+a[href*="knows.html"]:hover,
+a[href*="kajabi.html"]:hover {
     text-decoration: none !important;
 }
 

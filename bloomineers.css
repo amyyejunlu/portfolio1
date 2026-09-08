@@ -7,6 +7,48 @@
     font-size: 18px;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.bloomberg-close-btn {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 9999px;
+    border: none;
+    background: #ffffff;
+    color: #1f2937;
+    text-decoration: none;
+}
+
+.bloomberg-close-btn:hover {
+    background-color: #DCDCDC;
+}
+
+.bloomberg-close-btn .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+#bloomberg-page {
+    overflow-x: hidden;
+}
+
 .hr {
     border: 1px solid #000000;
 }
@@ -803,3 +845,562 @@ footer a:hover {
 		background-attachment: inherit;
 	}
 } */
+
+/* Synced from bloomberg-modal.js for standalone page */
+
+                    @media (min-width: 768px) {
+                        .bloomberg-description {
+                            max-width: 453px;
+                        }
+                    }
+                
+
+                    .bloomberg-hero-image {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                    @media (min-width: 1440px) {
+                        .bloomberg-hero-image {
+                            width: 1200px;
+                        }
+                        :is(#bloomberg-modal-content, #bloomberg-page) {
+                            padding-bottom: 200px;
+                        }
+                    }
+                    @media (max-width: 1439px) {
+                        .bloomberg-hero-image {
+                            width: calc(1200px * (100vw / 1440px));
+                        }
+                        :is(#bloomberg-modal-content, #bloomberg-page) {
+                            padding-bottom: calc(200px * (100vw / 1440px));
+                        }
+                    }
+                
+
+                    /* Mobile styles for Bloomberg modal */
+                    @media (max-width: 768px) {
+                        /* Prevent horizontal scrolling */
+                        :is(#bloomberg-modal-content, #bloomberg-page) {
+                            overflow-x: hidden !important;
+                            box-sizing: border-box !important;
+                            padding-left: 20px !important;
+                            padding-right: 20px !important;
+                        }
+                        
+                        /* Ensure all elements use box-sizing */
+                        :is(#bloomberg-modal-content, #bloomberg-page) *,
+                        :is(#bloomberg-modal-content, #bloomberg-page) *::before,
+                        :is(#bloomberg-modal-content, #bloomberg-page) *::after {
+                            box-sizing: border-box !important;
+                        }
+                        
+                        /* Reduce header padding on mobile - override inline styles */
+                        :is(#bloomberg-modal-content, #bloomberg-page) > div:first-child {
+                            padding-top: 60px !important;
+                            padding-bottom: 60px !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                        }
+                        
+                        /* Override mx-auto on mobile to prevent centering issues */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .mx-auto {
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                        
+                        /* Consistent padding for all content sections with spacing */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row {
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-bottom: 32px !important;
+                        }
+                        
+                        /* Spacing between major sections */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row.mt-5 {
+                            margin-top: 32px !important;
+                            margin-bottom: 32px !important;
+                        }
+                        
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row.pt-5 {
+                            padding-top: 32px !important;
+                            margin-bottom: 32px !important;
+                        }
+                        
+                        /* Reduce spacing between bb_bkgd image and My Role section */
+                        :is(#bloomberg-modal-content, #bloomberg-page) #bkgd {
+                            margin-bottom: 16px !important;
+                        }
+                        
+                        /* Reduce spacing for My Role section row - target rows that don't have mx-auto */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row.mt-5:not(.mx-auto) {
+                            margin-top: 16px !important;
+                        }
+                        
+                        /* Reduce pt-5 and mt-5 spacing inside My Role section */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-lg-6"][class*="col-md-10"].pt-5 {
+                            padding-top: 16px !important;
+                        }
+                        
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-lg-6"][class*="col-md-10"] .row > [class*="col-lg-10"][class*="col-md-8"].mt-5 {
+                            margin-top: 16px !important;
+                        }
+                        
+                        /* Reduce spacing for Research Overview section */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row.mt-5.pt-5 {
+                            margin-top: 16px !important;
+                            padding-top: 16px !important;
+                        }
+                        
+                        /* Reduce spacing for the row containing Research Overview heading */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row.mt-5.pt-5 > [class*="col-md-5"].mt-5 {
+                            margin-top: 0 !important;
+                        }
+                        
+                        :is(#bloomberg-modal-content, #bloomberg-page) [class*="col-"] {
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            width: 100% !important;
+                            max-width: 100% !important;
+                        }
+                        
+                        /* Make text-width classes responsive with consistent padding and spacing */
+                        .text-width,
+                        .text-width-small,
+                        .text-width-smaller,
+                        .intro-text {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-bottom: 16px !important;
+                            word-wrap: break-word !important;
+                            overflow-wrap: break-word !important;
+                            word-break: break-word !important;
+                        }
+                        
+                        /* Paragraph spacing */
+                        :is(#bloomberg-modal-content, #bloomberg-page) p {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-bottom: 16px !important;
+                            word-wrap: break-word !important;
+                            overflow-wrap: break-word !important;
+                            word-break: break-word !important;
+                        }
+                        
+                        /* Headings with spacing */
+                        .intro-header,
+                        .intro-header2 {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-bottom: 8px !important;
+                            margin-top: 24px !important;
+                        }
+                        
+                        .sub-header,
+                        .goal-header {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-bottom: 8px !important;
+                        }
+                        
+                        /* Remove bottom margin from last paragraph in a section */
+                        :is(#bloomberg-modal-content, #bloomberg-page) p:last-child {
+                            margin-bottom: 0 !important;
+                        }
+                        
+                        /* First paragraph after heading should have less top margin */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .intro-header + p,
+                        :is(#bloomberg-modal-content, #bloomberg-page) .intro-header2 + p,
+                        :is(#bloomberg-modal-content, #bloomberg-page) .sub-header + p,
+                        :is(#bloomberg-modal-content, #bloomberg-page) .goal-header + p {
+                            margin-top: 0 !important;
+                        }
+                        
+                        /* First image in a section should respect container spacing */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row img:first-child {
+                            margin-top: 0 !important;
+                        }
+                        
+                        /* Last element in a row should have consistent bottom margin */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-"]:last-child {
+                            margin-bottom: 0 !important;
+                        }
+                        
+                        /* Prevent any element from exceeding container width */
+                        :is(#bloomberg-modal-content, #bloomberg-page) > * {
+                            max-width: 100% !important;
+                            overflow-x: hidden !important;
+                        }
+                        
+                        /* Make buttons responsive with consistent padding and spacing */
+                        .visit-button,
+                        .download-button {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-top: 24px !important;
+                            margin-bottom: 24px !important;
+                            background-position: calc(100% - 20px) 30px !important;
+                        }
+                        
+                        /* Remove negative margins */
+                        .ml-5,
+                        .ml-4,
+                        .ml-3,
+                        .ml-2,
+                        .ml-1 {
+                            margin-left: 0 !important;
+                        }
+                        
+                        /* Hide or reduce spacer columns */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .col-lg-1,
+                        :is(#bloomberg-modal-content, #bloomberg-page) .col-md-1,
+                        :is(#bloomberg-modal-content, #bloomberg-page) .col-sm-0 {
+                            display: none !important;
+                        }
+                        
+                        /* Hide logo on mobile */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .logo,
+                        :is(#bloomberg-modal-content, #bloomberg-page) .logo img,
+                        :is(#bloomberg-modal-content, #bloomberg-page) [class*="col-lg-2"][class*="col-sm-1"].logo {
+                            display: none !important;
+                        }
+                        
+                        /* Make the text column take full width when logo is hidden */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-lg-10"][class*="col-sm-10"] {
+                            flex: 0 0 100% !important;
+                            max-width: 100% !important;
+                        }
+                        
+                        /* Make images responsive with consistent padding and spacing */
+                        :is(#bloomberg-modal-content, #bloomberg-page) img {
+                            max-width: 100% !important;
+                            width: 100% !important;
+                            height: auto !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-top: 24px !important;
+                            margin-bottom: 24px !important;
+                            display: block !important;
+                        }
+                        
+                        /* Fix domain images */
+                        #domain1,
+                        #domain2,
+                        #domain3,
+                        #domain4,
+                        #domain5 {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                        
+                        /* Fix workflow and design images */
+                        .workflow,
+                        .revised-design {
+                            max-width: 100% !important;
+                            width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                        
+                        /* Fix insight images - width and alignment */
+                        .insight-img {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                        
+                        /* Fix background image */
+                        #bkgd {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                        
+                        /* Fix carousel images */
+                        .compPics {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                        
+                        /* Fix hero image with spacing */
+                        .bloomberg-hero-image {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-top: 24px !important;
+                            margin-bottom: 24px !important;
+                        }
+                        
+                        /* Spacing for carousel container */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .container {
+                            margin-top: 24px !important;
+                            margin-bottom: 24px !important;
+                        }
+                        
+                        /* Current State Analysis section - add spacing between text and image */
+                        /* Add bottom margin to text columns that come before image columns */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-lg-5"],
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-sm-5"],
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-md-5"] {
+                            margin-bottom: 32px !important;
+                        }
+                        
+                        /* Add top margin to image columns when they stack below text on mobile */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-lg-6"],
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-sm-6"],
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-md-5"].ipad-imgs {
+                            margin-top: 32px !important;
+                        }
+                        
+                        /* Target the specific dspanalysis image - ensure it has proper spacing */
+                        :is(#bloomberg-modal-content, #bloomberg-page) #dspanalysis {
+                            margin-top: 0 !important;
+                            margin-bottom: 24px !important;
+                        }
+                        
+                        /* Insight sections - ensure proper spacing between text and images */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .insight-img {
+                            margin-top: 0 !important;
+                            margin-bottom: 24px !important;
+                        }
+                        
+                        /* Ensure the last paragraph in text columns doesn't have extra bottom margin */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-lg-5"] p:last-child,
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-sm-5"] p:last-child,
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-md-5"] p:last-child {
+                            margin-bottom: 0 !important;
+                        }
+                        
+                        /* Fix ipad-imgs margin */
+                        .ipad-imgs {
+                            margin-left: 0 !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                        }
+                        
+                        /* Ensure containers don't overflow */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .container {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                    }
+                    
+                    @media (max-width: 425px) {
+                        /* Additional mobile phone specific styles */
+                        :is(#bloomberg-modal-content, #bloomberg-page) {
+                            padding-left: 15px !important;
+                            padding-right: 15px !important;
+                            overflow-x: hidden !important;
+                        }
+                        
+                        /* Further reduce header padding on small phones */
+                        :is(#bloomberg-modal-content, #bloomberg-page) > div:first-child {
+                            padding-top: 40px !important;
+                            padding-bottom: 40px !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                        }
+                        
+                        /* Make buttons full width on small phones */
+                        .visit-button,
+                        .download-button {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                        
+                        /* Adjust font sizes for readability */
+                        .intro-header {
+                            font-size: 24px !important;
+                        }
+                        
+                        .intro-header2 {
+                            font-size: 20px !important;
+                        }
+                        
+                        /* Fix number styling */
+                        .number {
+                            font-size: 60px !important;
+                        }
+                        
+                        /* Ensure all columns are full width with no padding */
+                        :is(#bloomberg-modal-content, #bloomberg-page) [class*="col-sm-"],
+                        :is(#bloomberg-modal-content, #bloomberg-page) [class*="col-md-"],
+                        :is(#bloomberg-modal-content, #bloomberg-page) [class*="col-lg-"] {
+                            flex: 0 0 100% !important;
+                            max-width: 100% !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                        
+                        /* Hide logo on small phones */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .logo,
+                        :is(#bloomberg-modal-content, #bloomberg-page) .logo img,
+                        :is(#bloomberg-modal-content, #bloomberg-page) [class*="col-lg-2"][class*="col-sm-1"].logo {
+                            display: none !important;
+                        }
+                        
+                        /* Make the text column take full width when logo is hidden */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-lg-10"][class*="col-sm-10"] {
+                            flex: 0 0 100% !important;
+                            max-width: 100% !important;
+                        }
+                        
+                        /* Stack insight sections vertically */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row.mt-5.pt-5 {
+                            flex-direction: column !important;
+                        }
+                        
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row.mt-5.pt-5 > [class*="col-"] {
+                            margin-bottom: 20px !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+                        
+                        /* Ensure all text and images have consistent padding and spacing */
+                        :is(#bloomberg-modal-content, #bloomberg-page) p,
+                        :is(#bloomberg-modal-content, #bloomberg-page) .text-width,
+                        :is(#bloomberg-modal-content, #bloomberg-page) .text-width-small,
+                        :is(#bloomberg-modal-content, #bloomberg-page) .text-width-smaller {
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-bottom: 16px !important;
+                            width: 100% !important;
+                            max-width: 100% !important;
+                        }
+                        
+                        /* Headings spacing on small phones */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .intro-header,
+                        :is(#bloomberg-modal-content, #bloomberg-page) .intro-header2 {
+                            margin-top: 24px !important;
+                            margin-bottom: 8px !important;
+                        }
+                        
+                        /* Ensure all images have consistent sizing and spacing */
+                        :is(#bloomberg-modal-content, #bloomberg-page) img {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-top: 24px !important;
+                            margin-bottom: 24px !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                        }
+                        
+                        /* Buttons spacing on small phones */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .visit-button,
+                        :is(#bloomberg-modal-content, #bloomberg-page) .download-button {
+                            margin-top: 24px !important;
+                            margin-bottom: 24px !important;
+                        }
+                        
+                        /* Row spacing on small phones */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row {
+                            margin-bottom: 32px !important;
+                        }
+                        
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row.mt-5 {
+                            margin-top: 32px !important;
+                            margin-bottom: 32px !important;
+                        }
+                        
+                        /* Reduce spacing between bb_bkgd image and My Role section on small phones */
+                        :is(#bloomberg-modal-content, #bloomberg-page) #bkgd {
+                            margin-bottom: 16px !important;
+                        }
+                        
+                        /* Reduce spacing for My Role section row on small phones */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row.mt-5:not(.mx-auto) {
+                            margin-top: 16px !important;
+                        }
+                        
+                        /* Reduce pt-5 and mt-5 spacing inside My Role section on small phones */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-lg-6"][class*="col-md-10"].pt-5 {
+                            padding-top: 16px !important;
+                        }
+                        
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-lg-6"][class*="col-md-10"] .row > [class*="col-lg-10"][class*="col-md-8"].mt-5 {
+                            margin-top: 16px !important;
+                        }
+                        
+                        /* Reduce spacing for Research Overview section on small phones */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row.mt-5.pt-5 {
+                            margin-top: 16px !important;
+                            padding-top: 16px !important;
+                        }
+                        
+                        /* Reduce spacing for the row containing Research Overview heading on small phones */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row.mt-5.pt-5 > [class*="col-md-5"].mt-5 {
+                            margin-top: 0 !important;
+                        }
+                        
+                        /* Current State Analysis and Insight sections spacing on small phones */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-lg-5"],
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-sm-5"],
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-md-5"] {
+                            margin-bottom: 32px !important;
+                        }
+                        
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-lg-6"],
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-sm-6"],
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-md-5"].ipad-imgs {
+                            margin-top: 32px !important;
+                        }
+                        
+                        :is(#bloomberg-modal-content, #bloomberg-page) #dspanalysis {
+                            margin-top: 0 !important;
+                            margin-bottom: 24px !important;
+                        }
+                        
+                        /* Insight sections - ensure proper spacing between text and images */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .insight-img {
+                            margin-top: 0 !important;
+                            margin-bottom: 24px !important;
+                        }
+                        
+                        /* Ensure the last paragraph in text columns doesn't have extra bottom margin */
+                        :is(#bloomberg-modal-content, #bloomberg-page) .row > [class*="col-md-5"] p:last-child {
+                            margin-bottom: 0 !important;
+                        }
+                    }
+                

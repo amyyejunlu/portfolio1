@@ -959,9 +959,6 @@
                     closeModal();
                 }
             });
-        } else {
-            // Retry if elements not ready
-            setTimeout(setupModalHandlers, 100);
         }
     }
     
