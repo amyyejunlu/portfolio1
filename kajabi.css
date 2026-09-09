@@ -225,7 +225,8 @@ body {
         margin-right: auto;
     }
     .kajabi-section .kajabi-project-desc {
-        max-width: 700px;
+        max-width: none;
+        width: 100%;
     }
     .kajabi-hero-container {
         height: 930px;

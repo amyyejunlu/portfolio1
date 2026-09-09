@@ -175,6 +175,11 @@ body {
     height: 100%;
 }
 
+.kajabi-card .description {
+    width: 100%;
+    max-width: 100%;
+}
+
 /* Consistent 40px spacing between description and CTA buttons on desktop */
 @media (min-width: 992px) {
     .project-card .description + .link-button,
@@ -311,7 +316,8 @@ h3 {
 
 .bloomberg-logo-container,
 .kajabi-logo-container,
-.cmu-logo-container {
+.cmu-logo-container,
+.mesh-logo-container {
     display: flex;
     align-items: center;
     margin-top: 8px;
@@ -320,7 +326,8 @@ h3 {
 
 .bloomberg-logo,
 .kajabi-logo,
-.cmu-logo {
+.cmu-logo,
+.mesh-logo {
     height: 24px;
     width: auto;
 }
@@ -457,14 +464,14 @@ a:has(.link-button):visited {
 
 /* Also target links that contain buttons */
 a[href*="bloomineers.html"],
-a[href*="cat.html"],
+a[href*="mesh.html"],
 a[href*="knows.html"],
 a[href*="kajabi.html"] {
     text-decoration: none !important;
 }
 
 a[href*="bloomineers.html"]:hover,
-a[href*="cat.html"]:hover,
+a[href*="mesh.html"]:hover,
 a[href*="knows.html"]:hover,
 a[href*="kajabi.html"]:hover {
     text-decoration: none !important;
@@ -1217,13 +1224,3 @@ footer a:hover {
     background-color: #DCDCDC !important;
 }
 
-/* Catalog title styling */
-.catalog-title {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-    letter-spacing: 0.06em;
-    color: #000000;
-    margin: 0;
-    text-align: left;
-}

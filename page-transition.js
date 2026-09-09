@@ -1,7 +1,7 @@
 (function () {
     var STORAGE_KEY = 'portfolio-transition';
     var DURATION = 320;
-    var PROJECT_PAGES = ['kajabi.html', 'bloomineers.html', 'cat.html', 'knows.html'];
+    var PROJECT_PAGES = ['kajabi.html', 'bloomineers.html', 'mesh.html', 'knows.html'];
 
     try {
         var kind = sessionStorage.getItem(STORAGE_KEY);
