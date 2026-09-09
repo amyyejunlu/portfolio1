@@ -63,6 +63,34 @@
                 }
             });
         });
+
+        if ('IntersectionObserver' in window) {
+            var videoObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    var video = entry.target;
+                    if (entry.isIntersecting) {
+                        var playPromise = video.play();
+                        if (playPromise && typeof playPromise.catch === 'function') {
+                            playPromise.catch(function () {});
+                        }
+                    } else {
+                        video.pause();
+                    }
+                });
+            }, { rootMargin: '200px 0px', threshold: 0.01 });
+
+            root.querySelectorAll('video').forEach(function (video) {
+                videoObserver.observe(video);
+            });
+        } else {
+            root.querySelectorAll('video').forEach(function (video) {
+                video.preload = 'metadata';
+                var playPromise = video.play();
+                if (playPromise && typeof playPromise.catch === 'function') {
+                    playPromise.catch(function () {});
+                }
+            });
+        }
     }
 
     var page = document.querySelector('.kajabi-page');
