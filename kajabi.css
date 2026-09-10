@@ -279,16 +279,17 @@ body {
         aspect-ratio: auto;
     }
     .kajabi-capital-phone {
-        width: calc(175 / 411 * 100%);
-        max-width: 12rem;
+        width: 100%;
+        max-width: 100%;
         height: auto;
-        justify-self: start;
+        justify-self: stretch;
         aspect-ratio: 175 / 376;
     }
     .kajabi-capital-phone .kajabi-media {
         object-fit: cover !important;
         width: 100% !important;
         height: 100% !important;
+        max-width: none !important;
     }
     .kajabi-media-grid {
         grid-template-columns: 1fr;
@@ -298,5 +299,11 @@ body {
         object-fit: contain !important;
         max-width: 100% !important;
         height: auto !important;
+    }
+    .kajabi-capital-phone video {
+        object-fit: cover !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
     }
 }
