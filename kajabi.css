@@ -62,12 +62,16 @@ body {
 }
 
 .kajabi-project-date {
+    margin: 0;
+    color: #424242;
+    font-feature-settings: 'cpsp' on;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    font-weight: normal;
-    letter-spacing: 0.06em;
-    margin: 0;
-    color: #000;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-transform: lowercase;
 }
 
 .kajabi-project-title {
@@ -80,13 +84,99 @@ body {
 }
 
 .kajabi-project-desc {
+    margin: 0;
+    color: #424242;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    font-style: normal;
     font-weight: 400;
-    line-height: 155%;
-    letter-spacing: 0.06em;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+.kajabi-project-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+    margin-bottom: 4rem;
+}
+
+.kajabi-project-intro .kajabi-project-heading {
+    margin-bottom: 0;
+}
+
+.kajabi-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    align-self: stretch;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.kajabi-project-intro .kajabi-stats {
+    margin-bottom: 0;
+}
+
+.kajabi-stats-row {
+    display: flex;
+    align-items: stretch;
+    align-self: stretch;
+    width: 100%;
+    border: 1px solid #E5E5E5;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.kajabi-stat {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex: 1 0 0;
+    text-align: center;
+}
+
+.kajabi-stat + .kajabi-stat {
+    border-left: 1px solid #E5E5E5;
+}
+
+.kajabi-stat-value {
     margin: 0;
-    color: #4B5563;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+
+.kajabi-stat-label {
+    margin: 0;
+    color: #424242;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+.kajabi-stats-footnote {
+    margin: 0;
+    color: #727272;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.4px;
 }
 
 .kajabi-project-divider {
@@ -258,14 +348,18 @@ body {
         min-width: 0;
         word-wrap: break-word;
     }
-    .kajabi-project-date {
-        font-size: 14px;
-    }
     .kajabi-project-heading {
         align-items: flex-start;
     }
     .kajabi-section .kajabi-project-desc {
         text-align: left !important;
+    }
+    .kajabi-stats-row {
+        flex-direction: column;
+    }
+    .kajabi-stat + .kajabi-stat {
+        border-left: 0;
+        border-top: 1px solid #E5E5E5;
     }
     .kajabi-media-row {
         flex-direction: column;
