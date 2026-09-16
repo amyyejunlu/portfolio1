@@ -225,6 +225,190 @@ body {
     margin: 1rem 0 0 0;
 }
 
+.kajabi-story-block {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-self: stretch;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.kajabi-story-block:last-child {
+    margin-bottom: 0;
+}
+
+.kajabi-story-row {
+    display: grid;
+    grid-template-columns: 168px minmax(0, 1fr);
+    column-gap: 24px;
+    align-items: start;
+    align-self: stretch;
+    width: 100%;
+}
+
+.kajabi-story-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0;
+    color: #424242;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+.kajabi-story-icon {
+    flex-shrink: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.kajabi-story-body {
+    margin: 0;
+    color: #424242;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+.kajabi-story-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: #424242;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+.kajabi-story-list li + li {
+    margin-top: 8px;
+}
+
+.kajabi-story-outcome {
+    list-style: none;
+    padding-left: 0;
+}
+
+.kajabi-story-outcome li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.kajabi-story-outcome li::before {
+    content: "✔️";
+    flex-shrink: 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.kajabi-story-split {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+    width: 100%;
+}
+
+.kajabi-story-split > .kajabi-media {
+    flex: 1.15 1 0;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: top center;
+}
+
+.kajabi-story-split-stack {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    min-width: 0;
+}
+
+.kajabi-story-split-stack > .kajabi-media {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: top center;
+}
+
+.kajabi-story-decisions {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+    width: 100%;
+}
+
+.kajabi-story-decisions-media {
+    flex: 1 1 652px;
+    max-width: 652px;
+    min-width: 0;
+    border-radius: 16px;
+    border: 1px solid #E5E5E5;
+    overflow: hidden;
+    background: #fff;
+    line-height: 0;
+}
+
+.kajabi-story-decisions-media .kajabi-media {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+}
+
+.kajabi-tradeoff {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: center;
+    padding: 16px;
+    flex: 0 0 316px;
+    width: 316px;
+    height: 158px;
+    border-radius: 10px;
+    border: 1px solid #E5E5EA;
+    background: #F6F6F6;
+    box-sizing: border-box;
+}
+
+.kajabi-tradeoff-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+    min-width: 0;
+    text-align: left;
+}
+
+.kajabi-tradeoff .kajabi-story-label {
+    display: block;
+    align-self: stretch;
+    font-weight: 700;
+    text-align: left;
+}
+
+.kajabi-tradeoff .kajabi-story-body {
+    text-align: left;
+}
+
 .kajabi-media-row {
     display: flex;
     gap: 1rem;
@@ -353,6 +537,38 @@ body {
     }
     .kajabi-section .kajabi-project-desc {
         text-align: left !important;
+    }
+    .kajabi-story-row {
+        grid-template-columns: 1fr;
+        row-gap: 8px;
+    }
+    .kajabi-story-split {
+        flex-direction: column;
+    }
+    .kajabi-story-split > .kajabi-media {
+        flex: none;
+    }
+    .kajabi-story-split-stack {
+        flex: none;
+        justify-content: flex-start;
+    }
+    .kajabi-story-decisions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+    }
+    .kajabi-story-decisions-media {
+        flex: none;
+        max-width: none;
+        width: 100%;
+    }
+    .kajabi-tradeoff {
+        flex: none;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        min-height: 158px;
+        align-self: stretch;
     }
     .kajabi-stats-row {
         flex-direction: column;
