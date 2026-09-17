@@ -299,6 +299,90 @@ body {
     margin-top: 8px;
 }
 
+.kajabi-findings {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+}
+
+.kajabi-finding {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+    width: 100%;
+}
+
+.kajabi-finding-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    min-width: 0;
+}
+
+.kajabi-finding-title {
+    margin: 0;
+    color: #424242;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+.kajabi-finding-title strong {
+    font-weight: 700;
+}
+
+.kajabi-quote-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid #E5E5EA;
+    background: #F6F6F6;
+    box-sizing: border-box;
+}
+
+.kajabi-quote-card p,
+.kajabi-quote-card li {
+    margin: 0;
+    color: #424242;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+}
+
+.kajabi-quote-card ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.kajabi-quote-card li + li {
+    margin-top: 8px;
+}
+
+.kajabi-finding > .kajabi-media {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border: 0;
+}
+
+.kajabi-finding-media-sm {
+    max-width: 75%;
+    justify-self: start;
+}
+
 .kajabi-story-outcome {
     list-style: none;
     padding-left: 0;
@@ -560,6 +644,12 @@ body {
     .kajabi-story-row {
         grid-template-columns: 1fr;
         row-gap: 8px;
+    }
+    .kajabi-finding {
+        grid-template-columns: 1fr;
+    }
+    .kajabi-finding-media-sm {
+        max-width: 100%;
     }
     .kajabi-story-split {
         flex-direction: column;
