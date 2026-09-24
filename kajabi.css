@@ -214,6 +214,17 @@ body {
     border: 1px solid #E5E5E5;
 }
 
+.kajabi-media-plain {
+    border: 0;
+    border-radius: 0;
+}
+
+.kajabi-media-quote {
+    width: 60%;
+    max-width: 638px;
+    height: auto;
+}
+
 .kajabi-caption {
     color: #727272;
     font-family: 'Roboto', sans-serif;
@@ -283,6 +294,13 @@ body {
     letter-spacing: 0.5px;
 }
 
+.kajabi-story-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+}
+
 .kajabi-story-list {
     margin: 0;
     padding-left: 1.25rem;
@@ -297,6 +315,24 @@ body {
 
 .kajabi-story-list li + li {
     margin-top: 8px;
+}
+
+.kajabi-story-list-detail li::marker {
+    font-weight: 700;
+}
+
+.kajabi-story-list-detail li + li {
+    margin-top: 16px;
+}
+
+.kajabi-story-list-detail li strong {
+    display: block;
+    font-weight: 700;
+}
+
+.kajabi-story-list-detail li p {
+    margin: 0;
+    font-weight: 400;
 }
 
 .kajabi-findings {
@@ -401,6 +437,14 @@ body {
     line-height: 24px;
 }
 
+.kajabi-story-outcome li > span {
+    min-width: 0;
+}
+
+.kajabi-story-outcome strong {
+    font-weight: 700;
+}
+
 .kajabi-story-split {
     display: flex;
     gap: 1rem;
@@ -497,6 +541,30 @@ body {
     text-align: left;
 }
 
+.kajabi-tradeoff-banner {
+    flex: none;
+    align-self: stretch;
+    width: 100%;
+    height: auto;
+}
+
+.kajabi-tradeoff-banner .kajabi-tradeoff-copy {
+    align-items: stretch;
+    gap: 12px;
+}
+
+.kajabi-tradeoff-list {
+    align-self: stretch;
+}
+
+.kajabi-tradeoff-list li::marker {
+    font-weight: 700;
+}
+
+.kajabi-tradeoff-list strong {
+    font-weight: 700;
+}
+
 .kajabi-media-row {
     display: flex;
     gap: 1rem;
@@ -525,10 +593,129 @@ body {
     flex: 1.738 1 0;
 }
 
+.kajabi-media-row-reusable > .kajabi-media:first-child {
+    flex: 1.938 1 0;
+}
+
+.kajabi-media-row-reusable > .kajabi-media:last-child {
+    flex: 2.433 1 0;
+}
+
+.kajabi-media-row-template > .kajabi-media:first-child {
+    flex: 0.704 1 0;
+}
+
+.kajabi-media-row-template > .kajabi-media:last-child {
+    flex: 2.008 1 0;
+}
+
 .kajabi-video-hover {
     display: block;
+    position: relative;
     width: 100%;
     line-height: 0;
+}
+
+.kajabi-video-enlarge {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.kajabi-video-hover:hover .kajabi-video-enlarge,
+.kajabi-capital-phone:hover .kajabi-video-enlarge,
+.kajabi-video-enlarge:focus-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (hover: none) {
+    .kajabi-video-enlarge {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+video::-webkit-media-controls-fullscreen-button {
+    display: none !important;
+}
+
+.kajabi-video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+}
+
+.kajabi-video-modal[hidden] {
+    display: none;
+}
+
+.kajabi-video-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: #000;
+    opacity: 0.6;
+}
+
+.kajabi-video-modal-dialog {
+    position: relative;
+    z-index: 1;
+    width: min(1100px, 100%);
+}
+
+.kajabi-video-modal-player {
+    display: block;
+    width: 100%;
+    max-height: calc(100vh - 6rem);
+    background: #000;
+    border-radius: 12px;
+}
+
+.kajabi-video-modal-close {
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
+    border: 0;
+    border-radius: 9999px;
+    background: #fff;
+    color: #1f2937;
+    cursor: pointer;
+}
+
+.kajabi-video-modal-close:hover {
+    background: #DCDCDC;
+}
+
+body.kajabi-video-modal-open {
+    overflow: hidden;
+}
+
+body.kajabi-video-modal-open .kajabi-close-btn {
+    visibility: hidden;
 }
 
 .kajabi-capital-row {
@@ -690,8 +877,16 @@ body {
         flex-direction: column;
         gap: 1rem;
     }
+    .kajabi-media-quote {
+        width: 100%;
+        max-width: none;
+    }
     .kajabi-media-row-aspect > .kajabi-media-col:first-child,
-    .kajabi-media-row-aspect > .kajabi-media-col:last-child {
+    .kajabi-media-row-aspect > .kajabi-media-col:last-child,
+    .kajabi-media-row-reusable > .kajabi-media:first-child,
+    .kajabi-media-row-reusable > .kajabi-media:last-child,
+    .kajabi-media-row-template > .kajabi-media:first-child,
+    .kajabi-media-row-template > .kajabi-media:last-child {
         flex: 1 1 auto;
     }
     .kajabi-capital-row {

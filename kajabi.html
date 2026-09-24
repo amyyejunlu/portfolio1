@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Amy Lu, Product Designer at Kajabi: checkout, media library, affiliates, Kajabi Capital, payments onboarding, payouts, disputes, analytics, and transaction details.">
+    <meta name="description" content="Amy Lu, Product Designer at Kajabi: upsells, order bumps, media library, affiliates, Kajabi Capital, payments onboarding, payouts, disputes, analytics, and transaction details.">
     <link rel="stylesheet" href="kajabi.css">
     <link rel="stylesheet" href="page-transition.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,8 +38,15 @@
             <div class="kajabi-project-intro">
             <div class="kajabi-project-heading">
                 <p class="kajabi-project-date">oct 2025 - may 2026</p>
-                <h2 class="kajabi-project-title">kajabi checkout</h2>
-                <p class="kajabi-project-desc">Enabled merchant upsells and order bumps to lift average order value at checkout.</p>
+                <h2 class="kajabi-project-title">checkout: upsells</h2>
+            </div>
+            <div class="kajabi-story-row">
+                <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎯</span> Context &amp; Role</p>
+                <div class="kajabi-story-copy">
+                    <p class="kajabi-story-body">Kajabi gives creators everything they need to sell courses, coaching, memberships, and digital products in one place. Upsells are a key revenue lever, but the experience hadn’t been updated in years. The generic template with limited customization made the upsell feel disconnected from a creator’s brand at a critical moment → right after checkout.</p>
+                    <p class="kajabi-story-body">The revamp introduced real customization: fonts, colors, and styling alongside a rebuilt creation flow and new analytics. Beta ran from March 2026, followed by GA in April.</p>
+                    <p class="kajabi-story-body">I was the solo designer, owning the end-to-end experience for creating upsells, linking them to offers, and customizing the upsell page. I also shipped three rounds of UI polish. I wasn’t originally staffed on the project. I took it on top of my payments work after the checkout designer transitioned off the team.</p>
+                </div>
             </div>
             <div class="kajabi-stats">
                 <div class="kajabi-stats-row">
@@ -48,7 +55,7 @@
                         <p class="kajabi-stat-label">Average conversion rate</p>
                     </div>
                     <div class="kajabi-stat">
-                        <p class="kajabi-stat-value">$257K</p>
+                        <p class="kajabi-stat-value">$256K</p>
                         <p class="kajabi-stat-label">Total GMV</p>
                     </div>
                     <div class="kajabi-stat">
@@ -65,6 +72,147 @@
                     <video src="kajabi_checkout_upsell_customer.mp4" alt="Customer checkout upsell" class="kajabi-media" preload="none" loop muted playsinline></video>
                 </div>
                 <p class="kajabi-caption">On the left, the merchant's upsell creation experience; on the right, the upsell customers see at checkout.</p>
+            </div>
+            <div class="kajabi-story-block">
+                <div class="kajabi-story-row">
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">💡</span> Problem</p>
+                    <ol class="kajabi-story-list kajabi-story-list-detail">
+                        <li>
+                            <strong>Limited customization.</strong>
+                            <p>Outdated, generic templates made upsells feel disconnected from a creator’s brand, limiting their ability to create a compelling post-purchase experience and optimize for conversion and AOV.</p>
+                        </li>
+                        <li>
+                            <strong>Creating upsells was tedious and repetitive.</strong>
+                            <p>Upsells weren’t reusable. Creators had to manually create a new upsell from an offer each time, making it time-consuming to maintain and scale their upsell strategy.</p>
+                        </li>
+                        <li>
+                            <strong>No performance visibility.</strong>
+                            <p>There were no upsell-specific analytics, leaving creators without visibility into conversion or revenue impact and no clear way to understand what was working.</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="kajabi-media-block">
+                    <img src="kajabi_upsell_quote.png" alt="Customer quote on limited customization and the manual upsell process" class="kajabi-media kajabi-media-quote">
+                    <p class="kajabi-caption">Quote from our customer on limited customization and manual process.</p>
+                </div>
+            </div>
+            <div class="kajabi-story-block">
+                <div class="kajabi-story-row">
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎨</span> Key decisions</p>
+                    <ol class="kajabi-story-list kajabi-story-list-detail" start="1">
+                        <li>
+                            <strong>Redesign the upsell template to match the creator’s brand.</strong>
+                            <p>The existing upsell page relied on a rigid, generic template, with limited customization, that made it look disconnected from the rest of a creator’s site. I redesigned the template with updated controls that gave creators meaningful control over the page, including layout, typography, colors, imagery, content, and sections. Rather than adding a long list of one-off settings, we brought the upsell experience into the same flexible Builder model creators already use elsewhere in Kajabi.</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="kajabi-media-block">
+                    <div class="kajabi-media-row kajabi-media-row-template">
+                        <img src="kajabi_upsell_creation.png" alt="Current upsell creation experience" class="kajabi-media">
+                        <img src="kajabi_upsell_annotated.png" alt="Upsell page customers see, annotated to the creation controls" class="kajabi-media">
+                    </div>
+                    <p class="kajabi-caption">On the left is current upsell creation experience. The one next to it is the upsell page customers see, with annotations pointing to what the controls map to.</p>
+                </div>
+                <div class="kajabi-tradeoff kajabi-tradeoff-banner">
+                    <span class="kajabi-story-icon" aria-hidden="true">💡</span>
+                    <div class="kajabi-tradeoff-copy">
+                        <p class="kajabi-story-label">How much customization is enough?</p>
+                        <p class="kajabi-story-body">We wanted creators to make the page feel like their own without turning upsell creation into another complex page-building experience, so with my PM partner, we decided to:</p>
+                        <ol class="kajabi-story-list kajabi-tradeoff-list">
+                            <li><strong>Customize the essentials:</strong> Give creators control over images, copy, colors, and fonts.</li>
+                            <li><strong>Keep conversion-critical elements opinionated:</strong> Keep the 2-column layout and pricing presentation fixed so creators don’t have to worry about pricing best practices.</li>
+                            <li><strong>Make setup faster:</strong> Automatically pull in the brand colors and fonts from their site, and use AI to generate a bulleted description so new upsells are ready to publish.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="kajabi-media-block">
+                    <img src="kajabi_upsell_branded.jpeg" alt="Updated upsell page with branding applied" class="kajabi-media">
+                    <p class="kajabi-caption">The updated, modernized upsell page with branding already applied and additional customization options if creators want to customize further.</p>
+                </div>
+            </div>
+            <div class="kajabi-story-block">
+                <div class="kajabi-story-row">
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎨</span> Key decisions</p>
+                    <ol class="kajabi-story-list kajabi-story-list-detail" start="2">
+                        <li>
+                            <strong>Make upsells reusable.</strong>
+                            <p>Previously, creators had to recreate an upsell for each offer. We separated the upsell from the offer so creators could create it once and reuse it across multiple offers. This also meant changes could be made centrally and automatically reflected wherever the upsell was used, making the system easier to maintain and scale.</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="kajabi-media-block">
+                    <div class="kajabi-media-row kajabi-media-row-reusable">
+                        <img src="kajabi_upsell_reusable_1.png" alt="Upsell created once, separate from the offer" class="kajabi-media kajabi-media-plain">
+                        <img src="kajabi_upsell_reusable_2.png" alt="The same upsell reused across offers" class="kajabi-media kajabi-media-plain">
+                    </div>
+                </div>
+            </div>
+            <div class="kajabi-story-block">
+                <div class="kajabi-story-row">
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎨</span> Key decisions</p>
+                    <ol class="kajabi-story-list kajabi-story-list-detail" start="3">
+                        <li>
+                            <strong>Give creators visibility into performance.</strong>
+                            <p>An upsell is only useful if creators can understand whether it’s working. We added purchases, conversion rate, and revenue at both the overall and individual upsell level, giving creators a way to measure performance and iterate on their offers.</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="kajabi-media-block">
+                    <img src="kajabi_upsell_metrics.png" alt="Individual upsell page with purchases, conversion rate, and revenue" class="kajabi-media">
+                    <p class="kajabi-caption">An individual upsell page where we now surface metrics such as purchases, conversion rate, and revenue.</p>
+                </div>
+            </div>
+            <div class="kajabi-story-block">
+                <div class="kajabi-story-row">
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎨</span> Key decisions</p>
+                    <ol class="kajabi-story-list kajabi-story-list-detail" start="4">
+                        <li>
+                            <strong>Call the experience “Upsells”.</strong>
+                            <p>The biggest challenge in this project was landing on the correct verbiage for the upsell creation experience as it relates to Offers. We explored several naming directions, including “Upsells &amp; Downsells” and “Post-Purchase Offers”. After some debate and back-and-forth, we landed on “Upsells” because it was the most familiar term for creators. This simplified the mental model, but meant treating downsells as a use case of the same page rather than a separate page type. The tradeoff that we made is de-emphasizing the distinction between upsells and downsells upfront. We assumed creators would use the same reusable page for both, giving us a more flexible system that could eventually support an upsell funnel builder—where the same page can function as either an upsell or downsell depending on where it appears in the funnel.</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="kajabi-media-block">
+                    <img src="kajabi_upsell_naming.png" alt="Final design named Upsells" class="kajabi-media">
+                </div>
+                <div class="kajabi-media-block">
+                    <video src="kajabi_checkout_upsell_merchant.mp4" alt="Merchant upsell creation" class="kajabi-media" preload="none" loop muted playsinline></video>
+                    <p class="kajabi-caption">Final design where we landed on Upsells and also bundled Offers and Upsells under the new umbrella → Pricing.</p>
+                </div>
+            </div>
+            <div class="kajabi-story-block">
+                <div class="kajabi-story-row">
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🚀</span> Outcome</p>
+                    <ul class="kajabi-story-list kajabi-story-outcome">
+                        <li><span><strong>10.88% conversion rate.</strong> More than 1 in 10 presented upsells converted, with a 12.71% conversion rate at the first upsell step and 4.29% at the first downsell step.</span></li>
+                        <li><span><strong>$256K GMV in the first month.</strong> The new experience processed $256,237 in GMV within its first month, with an average accepted upsell value of $123 and downsell value of $58.</span></li>
+                        <li><span><strong>10,639 accounts enabled.</strong> The experience reached 10,639 accounts across 15,708 sites, representing 60% of accounts with at least one upsell.</span></li>
+                        <li><span><strong>28K+ upsells migrated or created.</strong> Creators migrated or created 28,233 upsells, with 17,487 actively published.</span></li>
+                        <li><span><strong>Attach rate continued to grow post-launch.</strong> Upsell attach rate increased from 2.09% to 2.50% between March and June, a 0.36 percentage-point increase YoY. Combined upsell + downsell attach rate reached 2.63%, up 0.39pp YoY.</span></li>
+                        <li><span><strong>Revenue continued to grow YoY.</strong> Upsell GMV reached $8.7M YTD, up 11% YoY, while downsell GMV reached $331K, up 28% YoY.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="kajabi-story-block">
+                <div class="kajabi-story-row">
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">💭</span> Reflection</p>
+                    <div class="kajabi-story-copy">
+                        <p class="kajabi-story-body">This project was a strong example of what’s possible when design and engineering collaborate closely from the start. Aside from our Commerce squad, we also got help from another engineer in Kajabi who had deeper expertise in Kajabi’s themes and templates, which helped us navigate the technical complexity of the template redesign.</p>
+                        <p class="kajabi-story-body">I also pushed myself beyond the typical designer role by diving into the code and learning how to contribute to production PRs. Working directly with engineers taught me better practices for structuring, reviewing, and shipping UI changes, and gave me a much stronger understanding and empathy of what it takes to bring a design from Figma into a production system.</p>
+                        <p class="kajabi-story-body">The strongest signal for me was that the product continued to gain traction after launch, not just through the initial migration, but through steadily increasing attach rates. That reinforced that the redesign wasn’t simply a visual refresh; it created an experience creators continued to use and build on.</p>
+                        <p class="kajabi-story-body">Overall, the project reinforced how much stronger the work becomes when design, product, and engineering are solving the problem together. It also gave me more confidence working directly in the codebase and thinking about the full path from design decision to shipped product.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="kajabi-project-divider">
+
+        <section class="kajabi-section">
+            <div class="kajabi-project-heading">
+                <p class="kajabi-project-date">oct 2025 - may 2026</p>
+                <h2 class="kajabi-project-title">checkout: order bumps</h2>
+                <p class="kajabi-project-desc">Enabled order bumps at checkout to lift average order value.</p>
             </div>
             <div class="kajabi-media-block">
                 <div class="kajabi-media-row">
