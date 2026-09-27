@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="kajabi-hero-container" style="position: relative; overflow: hidden; width: 100vw; max-width: 1440px; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); height: 930px; border-top: 1px solid #E5E5E5; border-bottom: 1px solid #E5E5E5; box-sizing: border-box;">
+        <div class="kajabi-hero-container">
             <img src="kajabi_hero.jpg" alt="Kajabi Overview" id="kajabi-hero-image" class="kajabi-hero-image" style="width: 100%; height: 100%; object-fit: cover; transform: rotate(-22.26deg) scale(1.2); transform-origin: left center;">
         </div>
 
@@ -338,6 +338,12 @@
                     </ul>
                 </div>
             </div>
+            <div class="kajabi-story-block">
+                <div class="kajabi-story-row">
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">💭</span> Reflection</p>
+                    <p class="kajabi-story-body">This was one of my favorite 0-to-1 projects. The lack of an existing system gave me a lot of creative freedom, but it’s also what made it one of the more complex builds I’ve worked on. We surfaced a lot of edge cases as we went, particularly around automatic payouts, for example, PayPal requiring re-authentication even when a customer already had it connected, which meant some real last-minute scrambling to redesign around it. If I were starting this today, I think the real opportunity is using AI to map the system’s edge cases upfront, rather than discovering them mid-build.</p>
+                </div>
+            </div>
         </section>
 
         <hr class="kajabi-project-divider">
@@ -441,9 +447,19 @@
             <div class="kajabi-story-block">
                 <div class="kajabi-story-row">
                     <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">💡</span> Problem</p>
-                    <ol class="kajabi-story-list">
-                        <li>Onboarding was fragmented and non-linear: users connected Stripe first, got bounced back to Kajabi with “incomplete setup” errors, and often never finished — thinking they were done.</li>
-                        <li>Stripe gave barely any education about which business type or structure to choose from.</li>
+                    <ol class="kajabi-story-list kajabi-story-list-detail">
+                        <li>
+                            <strong>Split across two products</strong>
+                            <p>The onboarding experience needed to hand off seamlessly to Stripe to complete business and identity verification (spanning two separate products), not one flow fully within our control.</p>
+                        </li>
+                        <li>
+                            <strong>Lack of guidance &amp; help</strong>
+                            <p>Stripe gave barely any education about which business type/structure to choose from. If customers put in the wrong business information that doesn’t match IRS or local corporate records, Stripe’s automated verification system will reject them and will trigger a verification hold on their payouts. CX receive around 9 requests per month to remedy crucial portions of onboarding on behalf of the customer.</p>
+                        </li>
+                        <li>
+                            <strong>Fragmented experience</strong>
+                            <p>Current onboarding was fragmented and non-linear. Customers connected Stripe first, got bounced back to Kajabi with “incomplete setup” errors, and often never finished — thinking they were done.</p>
+                        </li>
                     </ol>
                 </div>
                 <div class="kajabi-story-split">

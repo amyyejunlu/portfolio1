@@ -183,7 +183,6 @@ body {
     border: 0;
     border-top: 1px solid #000;
     width: 100vw;
-    max-width: 1440px;
     height: 0;
     margin-top: 0;
     margin-bottom: 6.25rem;
@@ -193,9 +192,17 @@ body {
 }
 
 .kajabi-hero-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: calc(930px * (100vw / 1440px));
+    min-height: 400px;
     margin-bottom: 200px;
-    left: 0;
-    right: 0;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    border-top: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+    box-sizing: border-box;
 }
 
 .kajabi-media-block {
@@ -791,21 +798,6 @@ body.kajabi-video-modal-open .kajabi-close-btn {
     .kajabi-section .kajabi-project-desc {
         max-width: none;
         width: 100%;
-    }
-    .kajabi-hero-container {
-        height: 930px;
-    }
-    .kajabi-project-divider {
-        width: 1440px;
-        margin-left: calc(50% - 720px);
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1439px) {
-    .kajabi-hero-container {
-        height: calc(930px * (100vw / 1440px));
-        min-height: 400px;
     }
 }
 
