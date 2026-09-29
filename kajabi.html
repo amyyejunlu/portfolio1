@@ -265,7 +265,11 @@
             </div>
             <div class="kajabi-story-row">
                 <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎯</span> Context &amp; Role</p>
-                <p class="kajabi-story-body">Owned end-to-end design of Kajabi’s new affiliate payouts system. Partnered with PM from discovery through launch. Business driver: 2025 strategy to grow GMV - 22% of customers ran affiliate programs but only 6% used Kajabi’s built-in feature (~$130M off-platform GMV opportunity).</p>
+                <div class="kajabi-story-copy">
+                    <p class="kajabi-story-body">I owned the 0→1 end-to-end design of Kajabi’s new affiliate payouts system, partnering with PM and Eng on the discovery, design, and launch in Sep 2025. Business driver: 2025 strategy to grow GMV - 22% of customers ran affiliate programs but only 6% used Kajabi’s built-in feature (~$130M off-platform GMV opportunity).</p>
+                    <p class="kajabi-story-body">A brief context on affiliate programs: Kajabi heroes (our customers) run affiliate programs to promote their courses, drive more sales, and reach new customers. The affiliates in exchange receive commission, which in turn creates an effective, performance-based marketing channel with low upfront cost.</p>
+                    <p class="kajabi-story-body">As of 2023, 22% of the customer base (12k) is running an affiliate program, but only 6% of 22% of heroes are utilizing Kajabi’s affiliate feature. In 2023, Kajabi heroes processed 15M in commissions for their affiliates on a 52M gross payments volume. It is estimated that we could bring in approximately $130 million in additional off-platform GMV onto Kajabi by revamping affiliate payouts and automating the manual workflow.</p>
+                </div>
             </div>
             <div class="kajabi-stats">
                 <div class="kajabi-stats-row">
@@ -290,41 +294,140 @@
             </div>
             <div class="kajabi-story-block">
                 <div class="kajabi-story-row">
-                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">💡</span> Problem</p>
-                    <p class="kajabi-story-body">Creators had no way to efficiently manage payouts. Payouts being manual was the top pain point. Customers really wanted the option for Kajabi to automate this and help them pay out their affiliates on their behalf.</p>
-                </div>
-                <div class="kajabi-media-row kajabi-media-row-aspect">
-                    <div class="kajabi-media-col">
-                        <img src="kajabi_affiliates_payout_problem_1.png" alt="Example report customers download today" class="kajabi-media">
-                        <p class="kajabi-caption">Example report customers download today, then cross-check against transactions manually.</p>
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">📚</span> Research</p>
+                    <div class="kajabi-story-sequence">
+                        <div class="kajabi-story-copy">
+                            <p class="kajabi-story-body">To understand the domain, I initiated a mind-mapping exercise with my PM in December, before we kicked off the project in January. We basically put everything we knew about affiliates onto a whiteboard, which helped me map out the current workflow and identify areas where we needed to do more research.</p>
+                            <p class="kajabi-story-body">The journey of setting up the affiliate program looked like this: they start off with affiliate registration, create a landing page to promote their program then qualify them using our survey tool. After the affiliates join the program, they then set up share links and coupons for the affiliates to use. They would announce via Kajabi’s email campaigns or Facebook posts about a new campaign that they’d like affiliates to participate in. The last step is commission reconciliation, which required the customer to manually track the commissions, account for outside bonuses, refunds, failed payments, usually waiting 60 days or more, download the PayPal Mass Payout report, then uploading it to PayPal, which then sends the payments to the affiliates. We are targeting this segment of the customer journey in this project and looking to automate it for customers.</p>
+                        </div>
+                        <div class="kajabi-journey">
+                            <div class="kajabi-journey-card kajabi-journey-card-register">
+                                <span class="kajabi-journey-num">1</span>
+                                <div class="kajabi-journey-body">
+                                    <p class="kajabi-journey-title">Affiliate registration</p>
+                                    <ul>
+                                        <li>Create a landing page aka “Affiliate signup page”</li>
+                                        <li>Qualify affiliates based on audience or register them manually</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="kajabi-journey-card kajabi-journey-card-commissions">
+                                <span class="kajabi-journey-num">2</span>
+                                <div class="kajabi-journey-body">
+                                    <p class="kajabi-journey-title">Set up commissions</p>
+                                    <ul>
+                                        <li>Set up share links and coupons for affiliates to use</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="kajabi-journey-card kajabi-journey-card-incentive">
+                                <span class="kajabi-journey-num">3</span>
+                                <div class="kajabi-journey-body">
+                                    <p class="kajabi-journey-title">Incentive affiliates</p>
+                                    <ul>
+                                        <li>Announce via email campaigns or Facebook posts about a new campaign or bounty program</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="kajabi-journey-card kajabi-journey-card-reconcile">
+                                <span class="kajabi-journey-num">4</span>
+                                <div class="kajabi-journey-body">
+                                    <p class="kajabi-journey-title">Commission reconciliation</p>
+                                    <ul>
+                                        <li>Track and edit commissions</li>
+                                        <li>Account for errors or outside bonuses and prizes</li>
+                                        <li>Usually wait at least 60 days b/c of potential refunds</li>
+                                        <li>Upload PayPal Mass Payout report to PayPal</li>
+                                        <li>PayPal will send automatic payments to affiliates</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="kajabi-story-body">Even though this was a comprehensive journey mapping of the end to end workflow for a customer running an affiliate program, and may seem like unnecessary since for this project we are only looking at payouts, but this exercise was helpful for me to quickly get ramped up on affiliates, share the knowledge with key stakeholders, gain empathy, and provided a foundation as we looked into other affiliate projects, which was also done during the same time we were working on payouts.</p>
+                        <div class="kajabi-media-block">
+                            <img src="kajabi_affiliates_whiteboard_front.jpg" alt="Front of the affiliate workflow whiteboard" class="kajabi-media">
+                            <p class="kajabi-caption">Front of the whiteboarding exercise on the current affiliate workflow.</p>
+                        </div>
+                        <div class="kajabi-media-block">
+                            <img src="kajabi_affiliates_whiteboard_back.jpg" alt="Back of the affiliate workflow whiteboard" class="kajabi-media">
+                            <p class="kajabi-caption">Back of the whiteboarding exercise on the current affiliate workflow.</p>
+                        </div>
                     </div>
-                    <div class="kajabi-media-col">
-                        <img src="kajabi_affiliates_payout_problem_2.png" alt="Customer walking through a competitor’s payout feature" class="kajabi-media">
-                        <p class="kajabi-caption">Screenshot of a customer walking through a competitor’s payout feature</p>
+                </div>
+            </div>
+            <div class="kajabi-story-block">
+                <div class="kajabi-story-row">
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">💡</span> Problem</p>
+                    <div class="kajabi-story-sequence">
+                        <ol class="kajabi-story-list">
+                            <li><strong>Current process is manual and labor intensive:</strong> Creators had no way to efficiently manage payouts. Current process required them to double check the affiliate email and transaction amount and then submit a mass payout excel sheet via PayPal.</li>
+                        </ol>
+                        <div class="kajabi-media-block kajabi-media-block-narrow">
+                            <img src="kajabi_affiliates_payout_problem_1.png" alt="Example report customers download today" class="kajabi-media">
+                            <p class="kajabi-caption">Example report customers download today, then cross-check against transactions manually.</p>
+                        </div>
+                        <ol class="kajabi-story-list" start="2">
+                            <li><strong>Customers prefer to have both Manual and Automatic payouts,</strong> to have more control over how they like to pay their affiliates the commission.</li>
+                        </ol>
+                        <div class="kajabi-media-block kajabi-media-block-narrow">
+                            <img src="kajabi_affiliates_payout_problem_2.png" alt="Customer walking through a competitor’s payout feature" class="kajabi-media">
+                            <p class="kajabi-caption">Screenshot of a customer walking through a competitor’s payout feature</p>
+                        </div>
+                        <ol class="kajabi-story-list" start="3">
+                            <li><strong>A large number of Kajabi heroes</strong> pay out their affiliates on a designated date of the month.</li>
+                        </ol>
+                        <div class="kajabi-media-block kajabi-media-block-narrow">
+                            <img src="kajabi_affiliates_facebook.png" alt="Customer post about paying affiliates on a set date" class="kajabi-media">
+                            <p class="kajabi-caption">Insights from a customer thread on Facebook on how they keep track of affiliate payments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kajabi-story-block">
+                <div class="kajabi-story-row">
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎨</span> Designs</p>
+                    <div class="kajabi-story-sequence">
+                        <div class="kajabi-story-copy">
+                            <p class="kajabi-story-body">From the problem definitions, I landed on the core product components for the affiliate payouts flow:</p>
+                            <ol class="kajabi-story-list">
+                                <li>A system that supports both Manual and Automatic payout</li>
+                                <li>A payout flow for Manual that allows customer to cross-check transactions</li>
+                                <li>Setting a schedule for Manual</li>
+                                <li>Setting a schedule for Automatic (set payout date on a specific day of the month)</li>
+                                <li>View and export transactions and payouts</li>
+                            </ol>
+                            <p class="kajabi-story-body">I started by designing for both manual and automatic payouts together, so the system could account for both from the start, then sequenced implementation with manual shipping first and automatic following shortly after.</p>
+                            <p class="kajabi-story-body">For initial designs I used AI prototyping tools to do some generative brainstorming. I prompted it with the key product components and had it generate an initial affiliate payout flow. I find AI really useful for brainstorming because it gives me a quick baseline of what the product could look like. Then I can take those initial ideas, evaluate them, get feedback from stakeholders, and then dive into each component to refine the experience further.</p>
+                            <p class="kajabi-story-body">For example, in this Process Affiliate Payouts modal, customers can have hundreds of payouts to process, so a small table within a modal isn’t going to work for that volume of information. It’s also not ideal for cross-checking transactions, because the modal can easily be closed and there’s limited space to review everything side by side.</p>
+                        </div>
+                        <div class="kajabi-media-block">
+                            <div class="kajabi-media-row">
+                                <img src="kajabi_affiliates_ai_1.png" alt="AI generated affiliate payout exploration" class="kajabi-media">
+                                <img src="kajabi_affiliates_ai_2.png" alt="AI generated affiliate payout exploration" class="kajabi-media">
+                            </div>
+                            <p class="kajabi-caption">AI generated output of initial explorations based on key product components.</p>
+                        </div>
+                        <div class="kajabi-media-block">
+                            <div class="kajabi-iteration-row">
+                                <img src="kajabi_affiliates_iteration_1.png" alt="Early exploration of automatic and manual payouts" class="kajabi-media">
+                                <div class="kajabi-iteration-stack">
+                                    <img src="kajabi_affiliates_iteration_2.png" alt="Upcoming manual and automatic payout cards" class="kajabi-media">
+                                    <img src="kajabi_affiliates_iteration_3.png" alt="Scheduled automatic payments card" class="kajabi-media">
+                                </div>
+                            </div>
+                            <p class="kajabi-caption">I explored a few different ways to present automatic and manual payouts.</p>
+                        </div>
+                        <div class="kajabi-media-block">
+                            <img src="kajabi_affiliates_both_schedule.png" alt="Transactions dashboard with Automatic and Manual payout entry points" class="kajabi-media">
+                            <p class="kajabi-caption">Final design of the Transactions dashboard offering quick entry points to both Automatic and Manual payout.</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="kajabi-story-block">
                 <div class="kajabi-story-row">
                     <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎨</span> Key decisions</p>
-                    <ol class="kajabi-story-list">
-                        <li>A system that supports both Manual and Automatic payout</li>
-                        <li>A payout flow for Manual that allows customer to cross-check transactions</li>
-                        <li>Setting a schedule for Manual</li>
-                        <li>Setting a schedule for Automatic</li>
-                        <li>View and export transactions and payouts</li>
-                    </ol>
-                </div>
-                <div class="kajabi-media-block">
-                    <img src="kajabi_affiliates_both_schedule.png" alt="Manual and Automatic payout dashboard widgets" class="kajabi-media">
-                    <p class="kajabi-caption">Dashboard widgets that offer quick entry points for Manual and Automatic payout.</p>
-                </div>
-                <div class="kajabi-media-block">
-                    <div class="kajabi-media-row">
-                        <video src="kajabi_affiliates_payout_schedule.mp4" alt="Manual payout schedule setup" class="kajabi-media" preload="none" loop muted playsinline></video>
-                        <video src="kajabi_affiliates_payout_manual.mp4" alt="Completing a manual affiliate payment" class="kajabi-media" preload="none" loop muted playsinline></video>
-                    </div>
-                    <p class="kajabi-caption">Setting up the schedule for manual payouts, and how customers complete a manual payment to their affiliates.</p>
+                    <p class="kajabi-story-body kajabi-decision-note"><strong>“Manual payment due” becomes “Manual payout due”</strong> I initially advocated for keeping the word ‘Payments,’ because from my perspective, the customer is making a payment to their affiliates, so I felt the term mapped more directly to the action. But after several discussions with the PMs, we ultimately decided that ‘Payments’ could be confusing because it introduces another piece of terminology for customers to learn. By using ‘Payouts’ consistently throughout the experience, we were able to create a more streamlined mental model and align it with the Payouts tab below, where customers can see a history of payouts made through either automatic or manual payout methods.</p>
                 </div>
             </div>
             <div class="kajabi-story-block">

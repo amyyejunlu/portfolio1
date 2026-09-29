@@ -672,6 +672,10 @@ footer a:hover {
         max-width: 1440px;
         margin: auto;
     }
+    /* Contact / CMU rule sits in the right column, which ends at the 1440px content edge. Extend it through the centered margin to the viewport. */
+    .column-with-divider:last-child .project-divider {
+        width: calc(100% + (100vw - 1440px) / 2);
+    }
     .about-center {
         margin-left: 35px;
     }
