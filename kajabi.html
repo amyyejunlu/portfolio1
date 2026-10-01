@@ -173,10 +173,17 @@
                     </ol>
                 </div>
                 <div class="kajabi-media-block">
-                    <img src="kajabi_upsell_naming.png" alt="Final design named Upsells" class="kajabi-media">
-                </div>
-                <div class="kajabi-media-block">
-                    <video src="kajabi_checkout_upsell_merchant.mp4" alt="Merchant upsell creation" class="kajabi-media" preload="none" loop muted playsinline></video>
+                    <div class="kajabi-naming-stack">
+                        <button type="button" class="kajabi-naming-card">
+                            <img src="kajabi_upsell_naming_downsells.png" alt="Naming direction: Upsells and downsells">
+                        </button>
+                        <button type="button" class="kajabi-naming-card">
+                            <img src="kajabi_upsell_naming_postpurchase.png" alt="Naming direction: Post-purchase sales pages">
+                        </button>
+                        <div class="kajabi-naming-front">
+                            <video src="kajabi_checkout_upsell_merchant.mp4" alt="Merchant upsell creation" class="kajabi-media" preload="none" loop muted playsinline></video>
+                        </div>
+                    </div>
                     <p class="kajabi-caption">Final design where we landed on Upsells and also bundled Offers and Upsells under the new umbrella → Pricing.</p>
                 </div>
             </div>
@@ -215,6 +222,12 @@
                 <h2 class="kajabi-project-title">checkout: order bumps</h2>
                 <p class="kajabi-project-desc">Enabled order bumps at checkout to lift average order value.</p>
             </div>
+            <div class="kajabi-story-row">
+                <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎯</span> Context &amp; Role</p>
+                <div class="kajabi-story-copy">
+                    <p class="kajabi-story-body">Kajabi’s checkout order bumps let creators offer add-on products right on the checkout page, before purchase. As the solo designer on the Commerce team, I took this on following the upsells work and redesigned both the creator setup/linking flows and the buyer-facing experience.</p>
+                </div>
+            </div>
             <div class="kajabi-stats">
                 <div class="kajabi-stats-row">
                     <div class="kajabi-stat">
@@ -233,11 +246,75 @@
             </div>
             </div>
             <div class="kajabi-media-block">
-                <div class="kajabi-media-row">
-                    <video src="kajabi_checkout_bump_merchant.mp4" alt="Merchant order bump creation" class="kajabi-media" preload="none" loop muted playsinline></video>
-                    <video src="kajabi_checkout_bump_customer.mp4" alt="Customer checkout order bump" class="kajabi-media" preload="none" loop muted playsinline></video>
+                <div class="kajabi-media-stage">
+                    <video src="kajabi_checkout_bump_customer.mov" alt="Customer checkout with order bumps" class="kajabi-media" preload="none" loop muted playsinline></video>
                 </div>
-                <p class="kajabi-caption">On the left, the merchant's order bump creation experience; on the right, the order bump customers see at checkout.</p>
+            </div>
+            <div class="kajabi-story-block kajabi-problem-block">
+                <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">💡</span> Problem</p>
+                <ol class="kajabi-story-list kajabi-bump-list">
+                        <li>
+                            <div class="kajabi-problem-split">
+                                <p><strong>Order bumps was limited to just 1 at checkout.</strong> Creators sell in bundles (a course plus a workbook, a template pack plus a coaching call), but checkout only allowed a single order bump, so they couldn’t merchandise the way they actually sell. For every checkout that doesn’t leverage the add-on features real GMV is being left behind.</p>
+                                <div class="kajabi-problem-figure">
+                                    <img src="kajabi_checkout_bump_problem_1.png" alt="Current order bump configuration allowing a single bump" class="kajabi-media">
+                                    <p class="kajabi-caption">Current order bump configuration: Only one bump is allowed, with limited customization to the description, not the image.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="kajabi-problem-split">
+                                <p><strong>Customization was limited.</strong> Since an order bump is an offer attached to checkout, creators wanted to customize its image for each instance without changing the original parent offer.</p>
+                                <div class="kajabi-problem-figure">
+                                    <img src="kajabi_checkout_bump_problem_2.png" alt="Production checkout with an order bump enabled" class="kajabi-media">
+                                    <p class="kajabi-caption">Production checkout with order bump enabled: Typography and visual hierarchy are lacking.</p>
+                                </div>
+                            </div>
+                        </li>
+                </ol>
+            </div>
+            <div class="kajabi-story-block">
+                <div class="kajabi-story-row">
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎨</span> Key decisions</p>
+                    <ol class="kajabi-story-list kajabi-bump-list" start="1">
+                        <li><strong>Bet on basket depth, not conversion.</strong> We allowed 2+ bumps per checkout, betting that the real lever was basket depth rather than reach. The data backed it: attach rate moved only modestly (23.2% → 25.0%, +1.9pt), but bumps per attaching order jumped from 1.00 to 1.41 (+40%), and average bump revenue at checkout rose from $31 to $45 (+45%). When a multi-bump offer converts, buyers take more than one, so the feature is working exactly as designed.</li>
+                    </ol>
+                </div>
+                <div class="kajabi-media-block">
+                    <video src="kajabi_checkout_bump_customer.mp4" alt="Final checkout design with order bumps" class="kajabi-media" preload="none" loop muted playsinline></video>
+                    <p class="kajabi-caption">Final design showing the adding of order bumps at checkout.</p>
+                </div>
+            </div>
+            <div class="kajabi-story-block">
+                <div class="kajabi-story-row">
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎨</span> Key decisions</p>
+                    <ol class="kajabi-story-list kajabi-bump-list" start="2">
+                        <li><strong>Reorganized the information architecture to give order bumps a proper home.</strong> After the Upsells work shipped, the “Cross-selling” tab was renamed “Purchase flow” and grouped Upsells, Post-purchase, and Automations together. But that grouping didn’t actually fit order bumps — bumps live entirely within checkout, not in the post-purchase flow the rest of that tab was organized around. I went ahead and restructured the information hierarchy for offers as a whole, so that creating an offer felt intuitive and order bumps had a home that matched where they actually function, not just where they were originally filed.</li>
+                    </ol>
+                </div>
+                <div class="kajabi-media-block">
+                    <video src="kajabi_checkout_bump_merchant.mp4" alt="Order bumps grouped with Checkout" class="kajabi-media" preload="none" loop muted playsinline></video>
+                    <p class="kajabi-caption">Order bumps now grouped with Checkout.</p>
+                </div>
+            </div>
+            <div class="kajabi-story-block">
+                <div class="kajabi-story-row">
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🚀</span> Outcome</p>
+                    <ul class="kajabi-story-list kajabi-story-outcome">
+                        <li><span><strong>+40% increase in average bumps per attaching order.</strong> Bumps per attaching order went from 1.00 → 1.41.</span></li>
+                        <li><span><strong>+45% bump revenue at checkout.</strong> Average bump revenue at checkout went up from $31 → $45.</span></li>
+                        <li><span><strong>+26% average order value.</strong> For 2+ bumps with at least one recurring offer, the average order value went up from $144 → $181.</span></li>
+                        <li><span><strong>Attach rate increased 1.8pt from 23.32% (single) → 25.0% (2+ bumps).</strong></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="kajabi-story-block">
+                <div class="kajabi-story-row">
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">💭</span> Reflection</p>
+                    <div class="kajabi-story-copy">
+                        <p class="kajabi-story-body">Due to dev resourcing and scope constraints, we weren’t able to implement the information architecture changes as I had proposed. It was deprioritized to a later phase, once there’s a clearer business case to justify a broader UX overhaul of the information architecture rather than a narrower, order-bumps-specific fix. The next step I’d advocate for is building the business case directly: running a usability test or pulling quantitative data comparing offer creation before and after a restructured information architecture. That would let us show concretely how much the flow simplifies, and how much faster a returning user can create an offer compared to today. With that evidence in hand, it becomes much easier to justify prioritizing the broader IA overhaul rather than tacking it to an order bump project.</p>
+                    </div>
+                </div>
             </div>
         </section>
 

@@ -152,6 +152,20 @@
             }
         });
 
+        root.querySelectorAll('.kajabi-naming-card').forEach(function (card) {
+            card.addEventListener('click', function () {
+                var open = card.classList.contains('is-open');
+                root.querySelectorAll('.kajabi-naming-card.is-open').forEach(function (other) {
+                    other.classList.remove('is-open');
+                    other.setAttribute('aria-expanded', 'false');
+                });
+                if (!open) {
+                    card.classList.add('is-open');
+                    card.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
         if ('IntersectionObserver' in window) {
             var videoObserver = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry) {

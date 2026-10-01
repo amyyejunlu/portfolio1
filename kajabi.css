@@ -237,6 +237,64 @@ body {
     margin-left: 1.25rem;
 }
 
+.kajabi-media-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E5E5E5;
+    border-radius: 16px;
+    padding: 48px 24px;
+}
+
+.kajabi-media-stage > .kajabi-video-hover,
+.kajabi-media-stage > .kajabi-media {
+    width: min(420px, 100%);
+}
+
+.kajabi-media-stage .kajabi-media {
+    width: 100%;
+    height: auto;
+}
+
+.kajabi-problem-split {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    column-gap: 54px;
+    align-items: start;
+}
+
+.kajabi-problem-figure {
+    min-width: 0;
+}
+
+.kajabi-story-list.kajabi-bump-list li + li {
+    margin-top: 32px;
+}
+
+.kajabi-bump-list li::marker {
+    font-weight: 700;
+}
+
+.kajabi-bump-list strong {
+    font-weight: 700;
+}
+
+.kajabi-bump-list p {
+    margin: 0;
+}
+
+.kajabi-bump-list .kajabi-caption {
+    margin-top: 1rem;
+}
+
+.kajabi-bump-list .kajabi-media {
+    margin-top: 1rem;
+}
+
+.kajabi-problem-split .kajabi-media {
+    margin-top: 0;
+}
+
 .kajabi-caption {
     color: #727272;
     font-family: 'Roboto', sans-serif;
@@ -859,6 +917,60 @@ body.kajabi-video-modal-open .kajabi-close-btn {
     visibility: hidden;
 }
 
+.kajabi-naming-stack {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.kajabi-naming-card {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.kajabi-naming-card:nth-child(2) {
+    z-index: 2;
+    margin-top: calc(135px - 100% * 1350 / 2160);
+}
+
+.kajabi-naming-card:hover,
+.kajabi-naming-card:focus-visible {
+    transform: translateY(-12px);
+}
+
+.kajabi-naming-card.is-open,
+.kajabi-naming-card.is-open:hover,
+.kajabi-naming-card.is-open:focus-visible {
+    z-index: 5;
+    transform: none;
+}
+
+.kajabi-naming-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 16px;
+    border: 1px solid #E5E5E5;
+    transition: box-shadow 0.25s ease;
+}
+
+.kajabi-naming-card.is-open img {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+.kajabi-naming-front {
+    position: relative;
+    z-index: 3;
+    margin-top: calc(135px - 100% * 1350 / 2160);
+}
+
 .kajabi-capital-row {
     display: grid;
     grid-template-columns: 411fr 368fr 175fr;
@@ -974,6 +1086,13 @@ body.kajabi-video-modal-open .kajabi-close-btn {
     }
     .kajabi-finding-media-sm {
         max-width: 100%;
+    }
+    .kajabi-media-stage > .kajabi-video-hover,
+    .kajabi-media-stage > .kajabi-media {
+        width: 100%;
+    }
+    .kajabi-problem-split {
+        grid-template-columns: 1fr;
     }
     .kajabi-story-split {
         flex-direction: column;
