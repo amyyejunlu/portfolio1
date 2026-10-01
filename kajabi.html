@@ -34,7 +34,7 @@
             <img src="kajabi_hero.jpg" alt="Kajabi Overview" id="kajabi-hero-image" class="kajabi-hero-image" style="width: 100%; height: 100%; object-fit: cover; transform: rotate(-22.26deg) scale(1.2); transform-origin: left center;">
         </div>
 
-        <section class="kajabi-section">
+        <section class="kajabi-section" id="kajabi-upsells">
             <div class="kajabi-project-intro">
             <div class="kajabi-project-heading">
                 <p class="kajabi-project-date">oct 2025 - may 2026</p>
@@ -215,7 +215,7 @@
 
         <hr class="kajabi-project-divider">
 
-        <section class="kajabi-section">
+        <section class="kajabi-section" id="kajabi-order-bumps">
             <div class="kajabi-project-intro">
             <div class="kajabi-project-heading">
                 <p class="kajabi-project-date">oct 2025 - may 2026</p>
@@ -276,8 +276,11 @@
             <div class="kajabi-story-block">
                 <div class="kajabi-story-row">
                     <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎨</span> Key decisions</p>
-                    <ol class="kajabi-story-list kajabi-bump-list" start="1">
-                        <li><strong>Bet on basket depth, not conversion.</strong> We allowed 2+ bumps per checkout, betting that the real lever was basket depth rather than reach. The data backed it: attach rate moved only modestly (23.2% → 25.0%, +1.9pt), but bumps per attaching order jumped from 1.00 to 1.41 (+40%), and average bump revenue at checkout rose from $31 to $45 (+45%). When a multi-bump offer converts, buyers take more than one, so the feature is working exactly as designed.</li>
+                    <ol class="kajabi-story-list kajabi-story-list-detail kajabi-bump-list" start="1">
+                        <li>
+                            <strong>Bet on basket depth, not conversion.</strong>
+                            <p>We allowed 2+ bumps per checkout, betting that the real lever was basket depth rather than reach. The data backed it: attach rate moved only modestly (23.2% → 25.0%, +1.9pt), but bumps per attaching order jumped from 1.00 to 1.41 (+40%), and average bump revenue at checkout rose from $31 to $45 (+45%). When a multi-bump offer converts, buyers take more than one, so the feature is working exactly as designed.</p>
+                        </li>
                     </ol>
                 </div>
                 <div class="kajabi-media-block">
@@ -288,8 +291,11 @@
             <div class="kajabi-story-block">
                 <div class="kajabi-story-row">
                     <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎨</span> Key decisions</p>
-                    <ol class="kajabi-story-list kajabi-bump-list" start="2">
-                        <li><strong>Reorganized the information architecture to give order bumps a proper home.</strong> After the Upsells work shipped, the “Cross-selling” tab was renamed “Purchase flow” and grouped Upsells, Post-purchase, and Automations together. But that grouping didn’t actually fit order bumps — bumps live entirely within checkout, not in the post-purchase flow the rest of that tab was organized around. I went ahead and restructured the information hierarchy for offers as a whole, so that creating an offer felt intuitive and order bumps had a home that matched where they actually function, not just where they were originally filed.</li>
+                    <ol class="kajabi-story-list kajabi-story-list-detail kajabi-bump-list" start="2">
+                        <li>
+                            <strong>Reorganized the information architecture to give order bumps a proper home.</strong>
+                            <p>After the Upsells work shipped, the “Cross-selling” tab was renamed “Purchase flow” and grouped Upsells, Post-purchase, and Automations together. But that grouping didn’t actually fit order bumps — bumps live entirely within checkout, not in the post-purchase flow the rest of that tab was organized around. I went ahead and restructured the information hierarchy for offers as a whole, so that creating an offer felt intuitive and order bumps had a home that matched where they actually function, not just where they were originally filed.</p>
+                        </li>
                     </ol>
                 </div>
                 <div class="kajabi-media-block">
@@ -320,7 +326,7 @@
 
         <hr class="kajabi-project-divider">
 
-        <section class="kajabi-section">
+        <section class="kajabi-section" id="kajabi-media-library">
             <div class="kajabi-project-heading">
                 <p class="kajabi-project-date">apr 2026</p>
                 <h2 class="kajabi-project-title">media library</h2>
@@ -334,7 +340,7 @@
 
         <hr class="kajabi-project-divider">
 
-        <section class="kajabi-section">
+        <section class="kajabi-section" id="kajabi-affiliate-payouts">
             <div class="kajabi-project-intro">
             <div class="kajabi-project-heading">
                 <p class="kajabi-project-date">jan - sep 2025</p>
@@ -432,73 +438,75 @@
                     </div>
                 </div>
             </div>
-            <div class="kajabi-story-block">
-                <div class="kajabi-story-row">
-                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">💡</span> Problem</p>
-                    <div class="kajabi-story-sequence">
-                        <ol class="kajabi-story-list">
-                            <li><strong>Current process is manual and labor intensive:</strong> Creators had no way to efficiently manage payouts. Current process required them to double check the affiliate email and transaction amount and then submit a mass payout excel sheet via PayPal.</li>
-                        </ol>
-                        <div class="kajabi-media-block kajabi-media-block-narrow">
-                            <img src="kajabi_affiliates_payout_problem_1.png" alt="Example report customers download today" class="kajabi-media">
-                            <p class="kajabi-caption">Example report customers download today, then cross-check against transactions manually.</p>
+            <div class="kajabi-story-block kajabi-problem-block">
+                <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">💡</span> Problem</p>
+                <ol class="kajabi-story-list kajabi-bump-list">
+                    <li>
+                        <div class="kajabi-problem-split">
+                            <p><strong>Current process is manual and labor intensive:</strong> Creators had no way to efficiently manage payouts. Current process required them to double check the affiliate email and transaction amount and then submit a mass payout excel sheet via PayPal.</p>
+                            <div class="kajabi-problem-figure">
+                                <img src="kajabi_affiliates_payout_problem_1.png" alt="Example report customers download today" class="kajabi-media">
+                                <p class="kajabi-caption">Example report customers download today, then cross-check against transactions manually.</p>
+                            </div>
                         </div>
-                        <ol class="kajabi-story-list" start="2">
-                            <li><strong>Customers prefer to have both Manual and Automatic payouts,</strong> to have more control over how they like to pay their affiliates the commission.</li>
-                        </ol>
-                        <div class="kajabi-media-block kajabi-media-block-narrow">
-                            <img src="kajabi_affiliates_payout_problem_2.png" alt="Customer walking through a competitor’s payout feature" class="kajabi-media">
-                            <p class="kajabi-caption">Screenshot of a customer walking through a competitor’s payout feature</p>
+                    </li>
+                    <li>
+                        <div class="kajabi-problem-split">
+                            <p><strong>Customers prefer to have both Manual and Automatic payouts,</strong> to have more control over how they like to pay their affiliates the commission.</p>
+                            <div class="kajabi-problem-figure">
+                                <img src="kajabi_affiliates_payout_problem_2.png" alt="Customer walking through a competitor’s payout feature" class="kajabi-media">
+                                <p class="kajabi-caption">Screenshot of a customer walking through a competitor’s payout feature</p>
+                            </div>
                         </div>
-                        <ol class="kajabi-story-list" start="3">
-                            <li><strong>A large number of Kajabi heroes</strong> pay out their affiliates on a designated date of the month.</li>
-                        </ol>
-                        <div class="kajabi-media-block kajabi-media-block-narrow">
-                            <img src="kajabi_affiliates_facebook.png" alt="Customer post about paying affiliates on a set date" class="kajabi-media">
-                            <p class="kajabi-caption">Insights from a customer thread on Facebook on how they keep track of affiliate payments.</p>
+                    </li>
+                    <li>
+                        <div class="kajabi-problem-split">
+                            <p><strong>A large number of Kajabi heroes</strong> pay out their affiliates on a designated date of the month.</p>
+                            <div class="kajabi-problem-figure">
+                                <img src="kajabi_affiliates_facebook.png" alt="Customer post about paying affiliates on a set date" class="kajabi-media">
+                                <p class="kajabi-caption">Insights from a customer thread on Facebook on how they keep track of affiliate payments.</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ol>
             </div>
             <div class="kajabi-story-block">
                 <div class="kajabi-story-row">
                     <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎨</span> Designs</p>
-                    <div class="kajabi-story-sequence">
-                        <div class="kajabi-story-copy">
-                            <p class="kajabi-story-body">From the problem definitions, I landed on the core product components for the affiliate payouts flow:</p>
-                            <ol class="kajabi-story-list">
-                                <li>A system that supports both Manual and Automatic payout</li>
-                                <li>A payout flow for Manual that allows customer to cross-check transactions</li>
-                                <li>Setting a schedule for Manual</li>
-                                <li>Setting a schedule for Automatic (set payout date on a specific day of the month)</li>
-                                <li>View and export transactions and payouts</li>
-                            </ol>
-                            <p class="kajabi-story-body">I started by designing for both manual and automatic payouts together, so the system could account for both from the start, then sequenced implementation with manual shipping first and automatic following shortly after.</p>
-                            <p class="kajabi-story-body">For initial designs I used AI prototyping tools to do some generative brainstorming. I prompted it with the key product components and had it generate an initial affiliate payout flow. I find AI really useful for brainstorming because it gives me a quick baseline of what the product could look like. Then I can take those initial ideas, evaluate them, get feedback from stakeholders, and then dive into each component to refine the experience further.</p>
-                            <p class="kajabi-story-body">For example, in this Process Affiliate Payouts modal, customers can have hundreds of payouts to process, so a small table within a modal isn’t going to work for that volume of information. It’s also not ideal for cross-checking transactions, because the modal can easily be closed and there’s limited space to review everything side by side.</p>
-                        </div>
-                        <div class="kajabi-media-block">
-                            <div class="kajabi-media-row">
-                                <img src="kajabi_affiliates_ai_1.png" alt="AI generated affiliate payout exploration" class="kajabi-media">
-                                <img src="kajabi_affiliates_ai_2.png" alt="AI generated affiliate payout exploration" class="kajabi-media">
-                            </div>
-                            <p class="kajabi-caption">AI generated output of initial explorations based on key product components.</p>
-                        </div>
-                        <div class="kajabi-media-block">
-                            <div class="kajabi-iteration-row">
-                                <img src="kajabi_affiliates_iteration_1.png" alt="Early exploration of automatic and manual payouts" class="kajabi-media">
-                                <div class="kajabi-iteration-stack">
-                                    <img src="kajabi_affiliates_iteration_2.png" alt="Upcoming manual and automatic payout cards" class="kajabi-media">
-                                    <img src="kajabi_affiliates_iteration_3.png" alt="Scheduled automatic payments card" class="kajabi-media">
-                                </div>
-                            </div>
-                            <p class="kajabi-caption">I explored a few different ways to present automatic and manual payouts.</p>
-                        </div>
-                        <div class="kajabi-media-block">
-                            <img src="kajabi_affiliates_both_schedule.png" alt="Transactions dashboard with Automatic and Manual payout entry points" class="kajabi-media">
-                            <p class="kajabi-caption">Final design of the Transactions dashboard offering quick entry points to both Automatic and Manual payout.</p>
+                    <div class="kajabi-story-copy">
+                        <p class="kajabi-story-body">From the problem definitions, I landed on the core product components for the affiliate payouts flow:</p>
+                        <ol class="kajabi-story-list">
+                            <li>A system that supports both Manual and Automatic payout</li>
+                            <li>A payout flow for Manual that allows customer to cross-check transactions</li>
+                            <li>Setting a schedule for Manual</li>
+                            <li>Setting a schedule for Automatic (set payout date on a specific day of the month)</li>
+                            <li>View and export transactions and payouts</li>
+                        </ol>
+                        <p class="kajabi-story-body">I started by designing for both manual and automatic payouts together, so the system could account for both from the start, then sequenced implementation with manual shipping first and automatic following shortly after.</p>
+                        <p class="kajabi-story-body">For initial designs I used AI prototyping tools to do some generative brainstorming. I prompted it with the key product components and had it generate an initial affiliate payout flow. I find AI really useful for brainstorming because it gives me a quick baseline of what the product could look like. Then I can take those initial ideas, evaluate them, get feedback from stakeholders, and then dive into each component to refine the experience further.</p>
+                        <p class="kajabi-story-body">For example, in this Process Affiliate Payouts modal, customers can have hundreds of payouts to process, so a small table within a modal isn’t going to work for that volume of information. It’s also not ideal for cross-checking transactions, because the modal can easily be closed and there’s limited space to review everything side by side.</p>
+                    </div>
+                </div>
+                <div class="kajabi-media-block">
+                    <div class="kajabi-media-row">
+                        <img src="kajabi_affiliates_ai_1.png" alt="AI generated affiliate payout exploration" class="kajabi-media">
+                        <img src="kajabi_affiliates_ai_2.png" alt="AI generated affiliate payout exploration" class="kajabi-media">
+                    </div>
+                    <p class="kajabi-caption">AI generated output of initial explorations based on key product components.</p>
+                </div>
+                <div class="kajabi-media-block">
+                    <div class="kajabi-iteration-row">
+                        <img src="kajabi_affiliates_iteration_1.png" alt="Early exploration of automatic and manual payouts" class="kajabi-media">
+                        <div class="kajabi-iteration-stack">
+                            <img src="kajabi_affiliates_iteration_2.png" alt="Upcoming manual and automatic payout cards" class="kajabi-media">
+                            <img src="kajabi_affiliates_iteration_3.png" alt="Scheduled automatic payments card" class="kajabi-media">
                         </div>
                     </div>
+                    <p class="kajabi-caption">I explored a few different ways to present automatic and manual payouts.</p>
+                </div>
+                <div class="kajabi-media-block">
+                    <img src="kajabi_affiliates_both_schedule.png" alt="Transactions dashboard with Automatic and Manual payout entry points" class="kajabi-media">
+                    <p class="kajabi-caption">Final design of the Transactions dashboard offering quick entry points to both Automatic and Manual payout.</p>
                 </div>
             </div>
             <div class="kajabi-story-block">
@@ -528,7 +536,7 @@
 
         <hr class="kajabi-project-divider">
 
-        <section class="kajabi-section">
+        <section class="kajabi-section" id="kajabi-affiliate-resources">
             <div class="kajabi-project-intro">
             <div class="kajabi-project-heading">
                 <p class="kajabi-project-date">jan - sep 2025</p>
@@ -555,7 +563,7 @@
 
         <hr class="kajabi-project-divider">
 
-        <section class="kajabi-section">
+        <section class="kajabi-section" id="kajabi-capital">
             <div class="kajabi-project-intro">
             <div class="kajabi-project-heading">
                 <p class="kajabi-project-date">sep - dec 2025</p>
@@ -593,7 +601,7 @@
 
         <hr class="kajabi-project-divider">
 
-        <section class="kajabi-section">
+        <section class="kajabi-section" id="kajabi-payments-onboarding">
             <div class="kajabi-project-intro">
             <div class="kajabi-project-heading">
                 <p class="kajabi-project-date">nov 2024</p>
@@ -693,7 +701,7 @@
 
         <hr class="kajabi-project-divider">
 
-        <section class="kajabi-section">
+        <section class="kajabi-section" id="kajabi-payouts">
             <div class="kajabi-project-heading">
                 <p class="kajabi-project-date">2024 - 2026</p>
                 <h2 class="kajabi-project-title">payouts</h2>
@@ -710,7 +718,7 @@
 
         <hr class="kajabi-project-divider">
 
-        <section class="kajabi-section">
+        <section class="kajabi-section" id="kajabi-disputes">
             <div class="kajabi-project-intro">
             <div class="kajabi-project-heading">
                 <p class="kajabi-project-date">sep - nov 2024</p>
@@ -738,7 +746,7 @@
 
         <hr class="kajabi-project-divider">
 
-        <section class="kajabi-section">
+        <section class="kajabi-section" id="kajabi-analytics">
             <div class="kajabi-project-intro">
             <div class="kajabi-project-heading">
                 <p class="kajabi-project-date">sep 2023 - nov 2023</p>
@@ -865,7 +873,7 @@
 
         <hr class="kajabi-project-divider">
 
-        <section class="kajabi-section">
+        <section class="kajabi-section" id="kajabi-transaction-details">
             <div class="kajabi-project-heading">
                 <p class="kajabi-project-date">nov - dec 2024</p>
                 <h2 class="kajabi-project-title">transaction details page revamp</h2>
@@ -877,6 +885,29 @@
             </div>
         </section>
     </main>
+    <nav class="kajabi-float-nav" id="kajabi-float-nav" aria-label="Projects" aria-hidden="true">
+        <div class="kajabi-float-nav-menu" id="kajabi-float-nav-menu">
+            <div class="kajabi-float-nav-menu-card" role="menu">
+                <a class="kajabi-float-nav-option is-current" role="menuitem" href="#kajabi-upsells" aria-current="true">Checkout: Upsells</a>
+                <a class="kajabi-float-nav-option" role="menuitem" href="#kajabi-order-bumps">Checkout: Order Bumps</a>
+                <a class="kajabi-float-nav-option" role="menuitem" href="#kajabi-media-library">Media Library</a>
+                <a class="kajabi-float-nav-option" role="menuitem" href="#kajabi-affiliate-payouts">Affiliate Payouts</a>
+                <a class="kajabi-float-nav-option" role="menuitem" href="#kajabi-affiliate-resources">Affiliate Resources &amp; Bounty</a>
+                <a class="kajabi-float-nav-option" role="menuitem" href="#kajabi-capital">Kajabi Capital</a>
+                <a class="kajabi-float-nav-option" role="menuitem" href="#kajabi-payments-onboarding">Payments Onboarding</a>
+                <a class="kajabi-float-nav-option" role="menuitem" href="#kajabi-payouts">Payouts</a>
+                <a class="kajabi-float-nav-option" role="menuitem" href="#kajabi-disputes">Disputes</a>
+                <a class="kajabi-float-nav-option" role="menuitem" href="#kajabi-analytics">Analytics</a>
+                <a class="kajabi-float-nav-option" role="menuitem" href="#kajabi-transaction-details">Transaction Details</a>
+            </div>
+        </div>
+        <button type="button" class="kajabi-float-nav-pill" aria-expanded="false" aria-controls="kajabi-float-nav-menu">
+            <span class="kajabi-float-nav-icon">
+                <img src="kajabi-nav-list.svg" alt="" width="16" height="16">
+            </span>
+            <span class="kajabi-float-nav-label">Checkout: Upsells</span>
+        </button>
+    </nav>
     <script src="kajabi.js"></script>
   </body>
 </html>

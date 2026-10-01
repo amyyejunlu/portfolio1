@@ -1185,3 +1185,142 @@ body.kajabi-video-modal-open .kajabi-close-btn {
         max-width: none !important;
     }
 }
+
+.kajabi-section[id] {
+    scroll-margin-top: 1.5rem;
+}
+
+.kajabi-float-nav {
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    z-index: 30;
+    transform: translateX(-50%) translateY(8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.kajabi-float-nav.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.kajabi-float-nav-pill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 100px;
+    background: #fff;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.07);
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: normal;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.kajabi-float-nav-icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+    overflow: hidden;
+}
+
+.kajabi-float-nav-icon img {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+.kajabi-float-nav-menu {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    padding-bottom: 8px;
+    transform: translateX(-50%) translateY(6px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+}
+
+.kajabi-float-nav.is-open .kajabi-float-nav-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.kajabi-float-nav-menu-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-sizing: border-box;
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.28) transparent;
+    padding: 12px;
+    border: 1px solid #e5e5ea;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.08);
+}
+
+.kajabi-float-nav-menu-card::-webkit-scrollbar {
+    width: 8px;
+}
+
+.kajabi-float-nav-menu-card::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 12px 0;
+}
+
+.kajabi-float-nav-menu-card::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 100px;
+}
+
+.kajabi-float-nav-option {
+    display: block;
+    box-sizing: border-box;
+    min-width: 209px;
+    width: max-content;
+    padding: 12px;
+    border-radius: 16px;
+    background: #fff;
+    color: #424242;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: normal;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.kajabi-float-nav-option:hover,
+.kajabi-float-nav-option:focus-visible {
+    background: #f6f6f6;
+    outline: none;
+}
+
+.kajabi-float-nav-option.is-current {
+    background: #f6f6f6;
+    color: #000;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .kajabi-float-nav,
+    .kajabi-float-nav-menu {
+        transition: none;
+    }
+}
