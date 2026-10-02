@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="favicon.png"/>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,7 +30,8 @@
             <div class="header-container">
                 <h1 class="header-name">amy lu</h1>
                 <div class="speech-bubble">
-                    <img src="speech-bubble.png" alt="Speech bubble" class="speech-bubble-image">
+                    <img class="speech-bubble-shape" src="speech-bubble-outline.png" alt="">
+                    <p class="speech-bubble-text" id="speech-bubble-text">Hi there! Glad you stopped by 👋🏻</p>
                 </div>
             </div>
         </div>
@@ -131,5 +133,24 @@
             </div>
         </div>
     </footer>
+    <script>
+        (function () {
+            var phrases = [
+                "You’ve got this! 💪🏻",
+                "Hey! I hope your day is going well ☺️",
+                "Good design is patient problem solving 🎨",
+                "Let’s hope for the best 💪🏻",
+                "Don’t be anxious about anything ❤️",
+                "Don't let your heart be troubled 🤍",
+                "There is a time for everything 💆",
+                "Hi there! Glad you stopped by 👋🏻"
+            ];
+            var line = phrases[Math.floor(Math.random() * phrases.length)];
+            var bubble = document.getElementById("speech-bubble-text");
+            if (bubble) {
+                bubble.textContent = line;
+            }
+        })();
+    </script>
 </body>
 </html>
