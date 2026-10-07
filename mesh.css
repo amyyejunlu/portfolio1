@@ -99,7 +99,6 @@ body {
     border: 0;
     border-top: 1px solid #000;
     width: 100vw;
-    max-width: 1440px;
     height: 0;
     margin-top: 0;
     margin-bottom: 6.25rem;
@@ -574,11 +573,6 @@ body {
     }
     .mesh-section .mesh-project-desc {
         max-width: 700px;
-    }
-    .mesh-project-divider {
-        width: 1440px;
-        margin-left: calc(50% - 720px);
-        margin-right: auto;
     }
 }
 
