@@ -222,23 +222,47 @@
         });
         var canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
         var ticking = false;
+        var lastScrollY = window.scrollY;
+        var scrollingDown = false;
+        var scrollIdleTimer = null;
 
         function setOpen(open) {
             nav.classList.toggle('is-open', open);
             pill.setAttribute('aria-expanded', open ? 'true' : 'false');
         }
 
-        function update() {
-            ticking = false;
+        function inReadingRange() {
             var pastParallax = hero.getBoundingClientRect().bottom <= 0;
             var upsellsTop = upsells.getBoundingClientRect().top;
             var enoughBelowUpsells = upsellsTop <= Math.min(160, window.innerHeight * 0.22);
-            var visible = pastParallax && enoughBelowUpsells;
+            return pastParallax && enoughBelowUpsells;
+        }
+
+        function setVisible(visible) {
             nav.classList.toggle('is-visible', visible);
             nav.setAttribute('aria-hidden', visible ? 'false' : 'true');
             if (!visible) {
                 setOpen(false);
             }
+        }
+
+        function update() {
+            ticking = false;
+            var scrollY = window.scrollY;
+            var delta = scrollY - lastScrollY;
+            if (Math.abs(delta) > 8) {
+                scrollingDown = delta > 0;
+            }
+            lastScrollY = scrollY;
+
+            var eligible = inReadingRange();
+            setVisible(eligible && !scrollingDown);
+
+            window.clearTimeout(scrollIdleTimer);
+            scrollIdleTimer = window.setTimeout(function () {
+                scrollingDown = false;
+                setVisible(inReadingRange());
+            }, 220);
 
             var zoneBottom = window.innerHeight * 0.55;
             var current = sections[0];
