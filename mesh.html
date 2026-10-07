@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="page-transition.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="favicon.png"/>
     <script src="page-transition.js"></script>
@@ -32,20 +32,113 @@
 
         <hr class="mesh-project-divider">
 
-        <section class="mesh-section">
+        <section class="mesh-section mesh-onramp">
             <div class="mesh-project-heading">
                 <p class="mesh-project-date">jul 2026</p>
                 <h2 class="mesh-project-title">fiat onramp</h2>
                 <p class="mesh-project-desc">Onboarding flow for first-time users buying crypto.</p>
             </div>
-            <div class="mesh-media-block">
-                <div class="mesh-media-row">
-                    <img src="mesh_onramp_1.png" alt="Fiat onramp screen" class="mesh-media">
-                    <img src="mesh_onramp_2.png" alt="Fiat onramp screen" class="mesh-media">
-                    <img src="mesh_onramp_1.gif" alt="Fiat onramp animation" class="mesh-media">
-                    <img src="mesh_onramp.gif" alt="Fiat onramp animation" class="mesh-media">
+            <div class="mesh-story-row">
+                <p class="mesh-story-label"><span class="mesh-story-icon" aria-hidden="true">🎯</span> Context &amp; Role</p>
+                <div class="mesh-story-copy">
+                    <p class="mesh-story-body">Mesh is a crypto payments infrastructure company connecting wallets and exchanges to enable seamless transfers between them. I joined as Senior Product Designer, working on the 0→1 full onboarding experience for a brand-new fiat onramp and offramp product. As the lead designer on this surface, I owned the end-to-end flow design — from account creation through KYC verification, bank transfer instructions, and transfer status — partnering closely with product and engineering to take the concept from early framing to a final product.</p>
+                    <p class="mesh-story-body">Beyond being 0→1, the timeline was extremely tight. I designed the full stepped flow in 2 days. KYC verification itself was handled by an external partner, which meant designing a handoff that felt seamless and trustworthy even though Mesh didn't control that part of the experience directly (the user shouldn't feel like they've left the product, even when the underlying verification is happening somewhere else). On top of that, the flow needed a transfer-pending state, since bank transfers don't resolve instantly, and first-time crypto users needed to feel confident their money was safely in motion, not lost.</p>
                 </div>
-                <p class="mesh-caption">Stepped mobile flow covering KYC verification, bank transfer instructions, and a transfer pending state.</p>
+            </div>
+            <div class="mesh-media-block">
+                <div class="mesh-media-row mesh-flow-row">
+                    <img src="mesh_onramp_1.png" alt="Buy amount screen" class="mesh-media">
+                    <img src="mesh_onramp_2.png" alt="Verify your identity screen" class="mesh-media">
+                    <img src="mesh_onramp_1.gif" alt="Transfer from your bank screen" class="mesh-media">
+                    <div class="mesh-pending" role="img" aria-label="Transfer pending">
+                        <div class="mesh-pending-card" aria-hidden="true">
+                            <div class="mesh-pending-main">
+                                <div class="mesh-pending-bar">
+                                    <span class="mesh-pending-spacer"></span>
+                                    <p class="mesh-pending-bar-title">Pay with SPEI</p>
+                                    <span class="mesh-pending-close">
+                                        <img src="mesh_onramp_pending_close.svg" alt="">
+                                    </span>
+                                </div>
+                                <div class="mesh-pending-hero">
+                                    <div class="mesh-pending-badge">
+                                        <img class="mesh-pending-badge-circle" src="mesh_onramp_pending_circle.svg" alt="">
+                                        <img class="mesh-pending-badge-clock" src="mesh_onramp_pending_clock.svg" alt="">
+                                        <img class="mesh-pending-badge-ring" src="mesh_onramp_pending_ring.svg" alt="">
+                                        <img class="mesh-pending-badge-arc" src="mesh_onramp_pending_arc.svg" alt="">
+                                    </div>
+                                    <p class="mesh-pending-title">Transfer pending</p>
+                                    <p class="mesh-pending-copy">We'll confirm your transfer once your bank sends it. This usually takes 20–40 minutes. We'll email you once it's done.</p>
+                                </div>
+                                <div class="mesh-pending-steps">
+                                    <div class="mesh-pending-rail">
+                                        <span class="mesh-pending-dot-wrap"><span class="mesh-pending-dot"></span></span>
+                                        <img src="mesh_onramp_pending_line.svg" alt="">
+                                        <span class="mesh-pending-clock">
+                                            <img src="mesh_onramp_pending_clock_sm.svg" alt="">
+                                        </span>
+                                        <img src="mesh_onramp_pending_line_2.svg" alt="">
+                                        <img src="mesh_onramp_pending_check.svg" alt="">
+                                    </div>
+                                    <div class="mesh-pending-step-copy">
+                                        <div class="mesh-pending-step">
+                                            <p class="mesh-pending-step-title is-muted">Sent from your bank</p>
+                                            <p class="mesh-pending-step-detail">$1,528.97 MXN transferred</p>
+                                        </div>
+                                        <div class="mesh-pending-step">
+                                            <p class="mesh-pending-step-title">Confirming your transfer</p>
+                                            <p class="mesh-pending-step-detail is-secondary">Approx. 20 - 40 min</p>
+                                        </div>
+                                        <p class="mesh-pending-step-title is-muted">Crypto deposited to your account</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mesh-pending-button">Got it</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mesh-story-row">
+                <p class="mesh-story-label"><span class="mesh-story-icon" aria-hidden="true">🎨</span> Key decisions</p>
+                <div class="mesh-story-copy mesh-story-decisions">
+                    <p class="mesh-story-body">A fiat-to-crypto transfer involves real money moving through an external bank rail (SPEI), which meant failure wasn't an edge case to handle later, it was a core part of the experience from day one. I designed a set of distinct failure and recovery states, each with its own specific message and next action, rather than a single generic error screen:</p>
+                    <ol class="mesh-story-list">
+                        <li>
+                            <strong>Identity verification failure</strong>
+                            <p>Since KYC was handled by an external partner, users needed a clear path forward even when that handoff didn't resolve cleanly: retry, or view an FAQ for more context, rather than a dead end.</p>
+                        </li>
+                        <li>
+                            <strong>Payment confirmation</strong>
+                            <p>since SPEI transfers happen outside the app, in the user's own banking app, this drawer appears when a user taps the "x" to close the payment instructions screen, prompting them to confirm whether they'd actually sent the transfer before letting them leave the flow. If they'd sent it, they could confirm with "I've sent the payment"; if not, they could cancel the order instead. This closed a real gap: without this check, a user could back out of the flow mid-transfer with no record of their intent, leaving Mesh unable to distinguish an abandoned order from a completed one still in flight.</p>
+                        </li>
+                        <li>
+                            <strong>Transfer window expiration</strong>
+                            <p>SPEI quotes are time-bound, so if a user didn't complete their bank transfer in time, the payment details were no longer valid. Rather than leaving them stuck on a dead quote, the flow explained what happened and gave a direct path to re-enter the amount and get a fresh quote.</p>
+                        </li>
+                        <li>
+                            <strong>Generic purchase failure</strong>
+                            <p>A fallback state for failures that didn't fit the more specific cases above, reassuring users that any funds received would be returned, with a direct path to contact support.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="mesh-failure-row">
+                <figure class="mesh-failure-item">
+                    <img src="mesh_onramp_identity.png" alt="Identity verification failure screen">
+                    <figcaption>Identity verification failure.</figcaption>
+                </figure>
+                <figure class="mesh-failure-item">
+                    <img src="mesh_onramp_payment.png" alt="Payment confirmation screen">
+                    <figcaption>Payment confirmation.</figcaption>
+                </figure>
+                <figure class="mesh-failure-item">
+                    <img src="mesh_onramp_expired.png" alt="Transfer window expiration screen">
+                    <figcaption>Transfer window expiration.</figcaption>
+                </figure>
+                <figure class="mesh-failure-item">
+                    <img src="mesh_onramp_generic.png" alt="Generic purchase failure screen">
+                    <figcaption>Generic purchase failure.</figcaption>
+                </figure>
             </div>
         </section>
 
