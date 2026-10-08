@@ -32,11 +32,82 @@
 
         <hr class="mesh-project-divider">
 
+        <section class="mesh-section mesh-case">
+            <div class="mesh-project-heading">
+                <p class="mesh-project-date">aug 2026</p>
+                <h2 class="mesh-project-title">crypto deposit for kalshi</h2>
+            </div>
+            <div class="mesh-story-row">
+                <p class="mesh-story-label"><span class="mesh-story-icon" aria-hidden="true">🎯</span> Context &amp; Role</p>
+                <div class="mesh-story-copy">
+                    <p class="mesh-story-body">In August, we were looking into enhancements to Mesh's deposit product for Kalshi, a prediction market and one of our clients. Kalshi users fund their accounts by depositing crypto from a wallet or exchange through Mesh, so this flow is the first moment money actually moves for them. I worked with 2 PMs to revisit the existing deposit experience and establish a clearer baseline for the product. This exercise simplified the experience, clarified the relationship between tokens and funding sources, and created more consistency across wallets and exchange flows.</p>
+                </div>
+            </div>
+            <div class="mesh-media-block">
+                <div class="mesh-media-row mesh-flow-row">
+                    <img src="mesh_kalshi_1.png" alt="Fund your account" class="mesh-media">
+                    <img src="mesh_kalshi_2.png" alt="Select your account" class="mesh-media">
+                    <img src="mesh_kalshi_3.png" alt="Enter amount" class="mesh-media">
+                    <img src="mesh_kalshi_4.png" alt="Review deposit" class="mesh-media">
+                </div>
+                <p class="mesh-caption">Deposit flow: choose a funding method, select a wallet or exchange, enter an amount, and review fees before confirming.</p>
+            </div>
+            <div class="mesh-decision">
+                <div class="mesh-story-row">
+                    <p class="mesh-story-label"><span class="mesh-story-icon" aria-hidden="true">🎨</span> Key decisions</p>
+                    <ol class="mesh-story-list" start="1">
+                        <li>
+                            <strong>Focus on enter amount</strong>
+                            <p>The original Enter amount screen asked users to keep track of two different token controls at once: a token chip at the top showing USDC on Base, and a “Funded by ETH” row at the bottom. A progress stepper sat above both. It was very unclear which token was actually funding the $24 deposit?</p>
+                            <p>I collapsed these into a single Funded by control and removed the stepper, giving the screen one clear job: enter an amount. The amount now sits front and center with its max, the funding source is one clearly labeled row beneath it, and the button reads "Review deposit" instead of "Review" so users know what comes next.</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="mesh-compare">
+                    <figure class="mesh-compare-item">
+                        <img src="mesh_kalshi_amount_old.png" alt="Old enter amount screen with multiple funding controls">
+                        <figcaption>Old: Enter amount with multiple funding controls.</figcaption>
+                    </figure>
+                    <figure class="mesh-compare-item">
+                        <img src="mesh_kalshi_amount_new.png" alt="New enter amount screen focused on a single amount">
+                        <figcaption>✅ New: A focused experience for entering an amount.</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="mesh-decision">
+                <div class="mesh-story-row">
+                    <p class="mesh-story-label"><span class="mesh-story-icon" aria-hidden="true">🎨</span> Key decisions</p>
+                    <ol class="mesh-story-list" start="2">
+                        <li>
+                            <strong>Make token selection consistent across wallets and exchanges</strong>
+                            <p>The original Choose a token screen displayed every token a user held across every chain in one long list. Tabbed filters, redundant “converted before deposit” labels, and competing information made the experience difficult to parse. There was also a fundamental ambiguity in the UI: users had to distinguish between the token they were selecting and the network it was on, while simultaneously understanding how conversion would work.</p>
+                            <p>I replaced this with a compact Funded by sheet that adapts to the source of funds. For wallets, where users select a single token, the sheet uses radio buttons. For exchanges, where multiple tokens can be combined to fund a deposit, users can select multiple tokens with checkboxes, each capped at its available balance. In both cases, a persistent Total funding amount shows exactly how much will be used, so users never have to calculate it themselves. The underlying flows work differently, but the interaction pattern stays consistent: users choose what will fund the deposit, and the UI clearly shows the resulting total.</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="mesh-compare">
+                    <figure class="mesh-compare-item">
+                        <img src="mesh_kalshi_token_old.png" alt="Old choose a token screen across tokens and networks">
+                        <figcaption>Old: Choose a token across multiple tokens and networks.</figcaption>
+                    </figure>
+                    <figure class="mesh-compare-item">
+                        <img src="mesh_kalshi_wallet.png" alt="New single-token selection for wallet funding">
+                        <figcaption>✅ New: Single-token selection for wallet funding.</figcaption>
+                    </figure>
+                    <figure class="mesh-compare-item">
+                        <img src="mesh_kalshi_exchange.png" alt="New multi-token selection for exchange funding">
+                        <figcaption>✅ New: Multi-token selection for exchange funding.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <hr class="mesh-project-divider">
+
         <section class="mesh-section mesh-onramp">
             <div class="mesh-project-heading">
                 <p class="mesh-project-date">jul 2026</p>
                 <h2 class="mesh-project-title">fiat onramp</h2>
-                <p class="mesh-project-desc">Onboarding flow for first-time users buying crypto.</p>
             </div>
             <div class="mesh-story-row">
                 <p class="mesh-story-label"><span class="mesh-story-icon" aria-hidden="true">🎯</span> Context &amp; Role</p>

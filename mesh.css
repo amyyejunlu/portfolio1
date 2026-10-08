@@ -192,14 +192,17 @@ body {
     playsinline: true;
 }
 
-.mesh-onramp {
+.mesh-onramp,
+.mesh-case {
     display: flex;
     flex-direction: column;
     gap: 64px;
 }
 
 .mesh-onramp > .mesh-project-heading,
-.mesh-onramp > .mesh-media-block {
+.mesh-onramp > .mesh-media-block,
+.mesh-case > .mesh-project-heading,
+.mesh-case > .mesh-media-block {
     margin-bottom: 0;
 }
 
@@ -560,6 +563,54 @@ body {
     letter-spacing: 0.4px;
 }
 
+.mesh-decision {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+}
+
+.mesh-decision .mesh-story-list {
+    flex: 1;
+    min-width: 0;
+}
+
+.mesh-compare {
+    display: flex;
+    gap: 64px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+.mesh-compare-item {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+    margin: 0;
+}
+
+.mesh-compare-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+}
+
+.mesh-compare-item figcaption {
+    margin: 0;
+    color: #727272;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+}
+
 @media (min-width: 1440px) {
     .mesh-header {
         max-width: 1000px;
@@ -603,7 +654,8 @@ body {
         flex-direction: column;
         gap: 1rem;
     }
-    .mesh-failure-row {
+    .mesh-failure-row,
+    .mesh-compare {
         flex-direction: column;
         gap: 1rem;
     }
