@@ -159,19 +159,71 @@ body {
 }
 
 .mesh-media-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
     gap: 1rem;
-    align-items: stretch;
+    align-items: start;
+}
+
+.mesh-offramp-media {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    container-type: inline-size;
+}
+
+.mesh-offramp-top {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 36px;
+}
+
+.mesh-offramp-top img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 446 / 776;
+    object-fit: cover;
+    object-position: top center;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.mesh-offramp-follow {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mesh-offramp-follow .mesh-caption {
+    margin: 0;
+}
+
+.mesh-offramp-bottom {
+    display: flex;
+    gap: 36px;
+    align-items: flex-start;
+}
+
+.mesh-offramp-bottom img {
+    display: block;
+    width: auto;
+    height: calc((100cqi - 108px) / 4 * 776 / 446);
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    background: #fff;
 }
 
 .mesh-media-row > .mesh-media,
 .mesh-media-row > .mesh-placeholder,
-.mesh-media-row > .mesh-video-hover {
-    flex: 1 1 0;
+.mesh-media-row > .mesh-video-hover,
+.mesh-media-row > .mesh-pending {
     min-width: 0;
     width: 100%;
-    aspect-ratio: 446 / 776;
+    max-width: 100%;
     height: auto;
+    aspect-ratio: auto;
     object-fit: contain;
 }
 
@@ -288,13 +340,9 @@ body {
 
 .mesh-flow-row.mesh-media-row {
     gap: 36px;
-    align-items: flex-start;
 }
 
 .mesh-flow-row.mesh-media-row > .mesh-media {
-    aspect-ratio: auto;
-    width: 100%;
-    height: auto;
     border-radius: 10px;
     border-color: #e5e5ea;
 }
@@ -528,9 +576,10 @@ body {
 }
 
 .mesh-failure-row {
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: 36px;
+    align-items: start;
     width: 100%;
 }
 
@@ -576,10 +625,10 @@ body {
 }
 
 .mesh-compare {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
     gap: 64px;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: start;
     width: 100%;
 }
 
@@ -595,10 +644,22 @@ body {
 .mesh-compare-item img {
     display: block;
     width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
     border: 1px solid #e5e5e5;
     background: #fff;
+}
+
+.mesh-compare.mesh-compare-pair {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+}
+
+.mesh-compare-pair .mesh-compare-item {
+    flex: 0 0 calc((100% - 128px) / 3);
+    width: calc((100% - 128px) / 3);
 }
 
 .mesh-compare-item figcaption {
@@ -650,14 +711,27 @@ body {
         gap: 8px;
     }
     .mesh-media-row,
-    .mesh-flow-row.mesh-media-row {
-        flex-direction: column;
+    .mesh-flow-row.mesh-media-row,
+    .mesh-compare,
+    .mesh-failure-row {
         gap: 1rem;
     }
-    .mesh-failure-row,
-    .mesh-compare {
-        flex-direction: column;
+    .mesh-compare.mesh-compare-pair {
         gap: 1rem;
+    }
+    .mesh-compare-pair .mesh-compare-item {
+        flex-basis: calc((100% - 2rem) / 3);
+        width: calc((100% - 2rem) / 3);
+    }
+    .mesh-offramp-top,
+    .mesh-offramp-bottom {
+        gap: 16px;
+    }
+    .mesh-offramp-top {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .mesh-offramp-bottom img {
+        height: calc((100cqi - 16px) / 2 * 776 / 446);
     }
     .mesh-page video {
         object-fit: contain !important;

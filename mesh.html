@@ -63,7 +63,7 @@
                         </li>
                     </ol>
                 </div>
-                <div class="mesh-compare">
+                <div class="mesh-compare mesh-compare-pair">
                     <figure class="mesh-compare-item">
                         <img src="mesh_kalshi_amount_old.png" alt="Old enter amount screen with multiple funding controls">
                         <figcaption>Old: Enter amount with multiple funding controls.</figcaption>
@@ -121,52 +121,7 @@
                     <img src="mesh_onramp_1.png" alt="Buy amount screen" class="mesh-media">
                     <img src="mesh_onramp_2.png" alt="Verify your identity screen" class="mesh-media">
                     <img src="mesh_onramp_1.gif" alt="Transfer from your bank screen" class="mesh-media">
-                    <div class="mesh-pending" role="img" aria-label="Transfer pending">
-                        <div class="mesh-pending-card" aria-hidden="true">
-                            <div class="mesh-pending-main">
-                                <div class="mesh-pending-bar">
-                                    <span class="mesh-pending-spacer"></span>
-                                    <p class="mesh-pending-bar-title">Pay with SPEI</p>
-                                    <span class="mesh-pending-close">
-                                        <img src="mesh_onramp_pending_close.svg" alt="">
-                                    </span>
-                                </div>
-                                <div class="mesh-pending-hero">
-                                    <div class="mesh-pending-badge">
-                                        <img class="mesh-pending-badge-circle" src="mesh_onramp_pending_circle.svg" alt="">
-                                        <img class="mesh-pending-badge-clock" src="mesh_onramp_pending_clock.svg" alt="">
-                                        <img class="mesh-pending-badge-ring" src="mesh_onramp_pending_ring.svg" alt="">
-                                        <img class="mesh-pending-badge-arc" src="mesh_onramp_pending_arc.svg" alt="">
-                                    </div>
-                                    <p class="mesh-pending-title">Transfer pending</p>
-                                    <p class="mesh-pending-copy">We'll confirm your transfer once your bank sends it. This usually takes 20–40 minutes. We'll email you once it's done.</p>
-                                </div>
-                                <div class="mesh-pending-steps">
-                                    <div class="mesh-pending-rail">
-                                        <span class="mesh-pending-dot-wrap"><span class="mesh-pending-dot"></span></span>
-                                        <img src="mesh_onramp_pending_line.svg" alt="">
-                                        <span class="mesh-pending-clock">
-                                            <img src="mesh_onramp_pending_clock_sm.svg" alt="">
-                                        </span>
-                                        <img src="mesh_onramp_pending_line_2.svg" alt="">
-                                        <img src="mesh_onramp_pending_check.svg" alt="">
-                                    </div>
-                                    <div class="mesh-pending-step-copy">
-                                        <div class="mesh-pending-step">
-                                            <p class="mesh-pending-step-title is-muted">Sent from your bank</p>
-                                            <p class="mesh-pending-step-detail">$1,528.97 MXN transferred</p>
-                                        </div>
-                                        <div class="mesh-pending-step">
-                                            <p class="mesh-pending-step-title">Confirming your transfer</p>
-                                            <p class="mesh-pending-step-detail is-secondary">Approx. 20 - 40 min</p>
-                                        </div>
-                                        <p class="mesh-pending-step-title is-muted">Crypto deposited to your account</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="mesh-pending-button">Got it</p>
-                        </div>
-                    </div>
+                    <img src="mesh_onramp.gif" alt="Transfer pending" class="mesh-media">
                 </div>
             </div>
             <div class="mesh-story-row">
@@ -221,15 +176,20 @@
                 <h2 class="mesh-project-title">fiat offramp</h2>
                 <p class="mesh-project-desc">Extending the buy framework for withdrawing crypto to cash.</p>
             </div>
-            <div class="mesh-media-block">
-                <div class="mesh-media-row">
-                    <img src="mesh_offramp_1.png" alt="Fiat offramp screen" class="mesh-media">
-                    <img src="mesh_offramp_2.png" alt="Fiat offramp screen" class="mesh-media">
-                    <img src="mesh_offramp.gif" alt="Fiat offramp animation" class="mesh-media">
-                    <img src="mesh_offramp_3.png" alt="Fiat offramp screen" class="mesh-media">
-                    <img src="mesh_offramp_4.png" alt="Fiat offramp screen" class="mesh-media">
+            <div class="mesh-media-block mesh-offramp-media">
+                <div class="mesh-offramp-top">
+                    <img src="mesh_offramp_withdraw.png" alt="Withdraw amount">
+                    <img src="mesh_offramp_verify.png" alt="Verify your identity">
+                    <img src="mesh_offramp_send.png" alt="Send Bitcoin from your wallet">
+                    <img src="mesh_offramp_pending.png" alt="Transaction pending">
                 </div>
-                <p class="mesh-caption">Stepped mobile flow covering KYC verification, bank transfer instructions, and a transfer pending state.</p>
+                <div class="mesh-offramp-follow">
+                    <div class="mesh-offramp-bottom">
+                        <img src="mesh_offramp_add_bank.png" alt="Add bank account">
+                        <img src="mesh_offramp_confirmed.png" alt="Your transaction is confirmed">
+                    </div>
+                    <p class="mesh-caption">Stepped mobile flow covering KYC verification, bank transfer instructions, and a transfer pending state.</p>
+                </div>
             </div>
         </section>
     </main>

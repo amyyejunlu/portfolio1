@@ -1093,6 +1093,7 @@ body.kajabi-video-modal-open .kajabi-close-btn {
     }
     .kajabi-problem-split {
         grid-template-columns: 1fr;
+        row-gap: 32px;
     }
     .kajabi-story-split {
         flex-direction: column;
