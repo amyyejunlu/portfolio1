@@ -82,6 +82,9 @@
             video.setAttribute('webkit-playsinline', '');
             video.setAttribute('controlsList', 'nofullscreen');
             video.playsInline = true;
+            if (video.getAttribute('preload') === 'none') {
+                video.preload = 'metadata';
+            }
 
             var canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
             video.controls = !canHover;
@@ -264,14 +267,10 @@
                 setVisible(inReadingRange());
             }, 220);
 
-            var zoneBottom = window.innerHeight * 0.55;
+            var marker = 96;
             var current = sections[0];
-            var bestOverlap = -1;
             sections.forEach(function (item) {
-                var rect = item.section.getBoundingClientRect();
-                var overlap = Math.min(rect.bottom, zoneBottom) - Math.max(rect.top, 0);
-                if (overlap > bestOverlap) {
-                    bestOverlap = overlap;
+                if (item.section.getBoundingClientRect().top <= marker) {
                     current = item;
                 }
             });
@@ -333,6 +332,80 @@
             }
         });
 
+        var pinnedSection = null;
+        var pinFrame = null;
+
+        function stopPinning() {
+            pinnedSection = null;
+            if (pinFrame) {
+                window.cancelAnimationFrame(pinFrame);
+                pinFrame = null;
+            }
+        }
+
+        function alignSection(section, behavior) {
+            var margin = 24;
+            var top = section.getBoundingClientRect().top + window.scrollY - margin;
+            window.scrollTo({ top: Math.max(0, top), behavior: behavior });
+        }
+
+        function pinToSection(section) {
+            pinnedSection = section;
+            if (pinFrame) {
+                window.cancelAnimationFrame(pinFrame);
+            }
+            var margin = 24;
+            var started = window.performance.now();
+            var lastScroll = window.scrollY;
+            var stillFrames = 0;
+            var correcting = false;
+            var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var behavior = reduceMotion ? 'auto' : 'smooth';
+            alignSection(section, behavior);
+
+            function watch(now) {
+                if (pinnedSection !== section) {
+                    return;
+                }
+                var top = section.getBoundingClientRect().top;
+                var aligned = Math.abs(top - margin) <= 16;
+                var scrollY = window.scrollY;
+                if (Math.abs(scrollY - lastScroll) < 0.5) {
+                    stillFrames += 1;
+                } else {
+                    stillFrames = 0;
+                }
+                lastScroll = scrollY;
+
+                if (aligned && stillFrames > 20) {
+                    pinnedSection = null;
+                    pinFrame = null;
+                    return;
+                }
+
+                if (!aligned && stillFrames > 8 && !correcting) {
+                    correcting = true;
+                    alignSection(section, behavior);
+                    stillFrames = 0;
+                    window.setTimeout(function () {
+                        correcting = false;
+                    }, 400);
+                }
+
+                if (now - started < 8000) {
+                    pinFrame = window.requestAnimationFrame(watch);
+                } else {
+                    pinnedSection = null;
+                    pinFrame = null;
+                }
+            }
+
+            pinFrame = window.requestAnimationFrame(watch);
+        }
+
+        window.addEventListener('wheel', stopPinning, { passive: true });
+        window.addEventListener('touchmove', stopPinning, { passive: true });
+
         links.forEach(function (link) {
             link.addEventListener('click', function (event) {
                 var section = document.getElementById(link.getAttribute('href').slice(1));
@@ -340,7 +413,7 @@
                     return;
                 }
                 event.preventDefault();
-                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                pinToSection(section);
                 setOpen(false);
             });
         });
