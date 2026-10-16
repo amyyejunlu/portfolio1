@@ -221,6 +221,10 @@ body {
     border: 1px solid #E5E5E5;
 }
 
+.kajabi-media-diagram {
+    border-radius: 10px;
+}
+
 .kajabi-media-plain {
     border: 0;
     border-radius: 0;

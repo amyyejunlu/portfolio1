@@ -514,7 +514,32 @@
             <div class="kajabi-story-block">
                 <div class="kajabi-story-row">
                     <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎨</span> Key decisions</p>
-                    <p class="kajabi-story-body kajabi-decision-note"><strong>“Manual payment due” becomes “Manual payout due”</strong> I initially advocated for keeping the word ‘Payments,’ because from my perspective, the customer is making a payment to their affiliates, so I felt the term mapped more directly to the action. But after several discussions with the PMs, we ultimately decided that ‘Payments’ could be confusing because it introduces another piece of terminology for customers to learn. By using ‘Payouts’ consistently throughout the experience, we were able to create a more streamlined mental model and align it with the Payouts tab below, where customers can see a history of payouts made through either automatic or manual payout methods.</p>
+                    <ol class="kajabi-story-list kajabi-story-list-detail" start="1">
+                        <li>
+                            <strong>Design manual and automatic payouts as one system</strong>
+                            <p>Creators wanted both: manual payouts to keep control, and automatic payouts to automate the process. I designed one status model that works for both. Commission statuses (Pending, Due, Paid, Canceled, Failed) show where each commission stands, and payout statuses (Upcoming, Paid, Partially failed, Failed) show what happened to the money.</p>
+                            <p>In manual payouts, creators can edit a commission until it’s paid or canceled, and then the status locks. Automatic payouts remove those manual steps, so the design effort went into making failures clear. When a payment fails, the commission is marked as Failed and creators can retry it or edit it, so they know when to step in.</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="kajabi-media-block">
+                    <img src="kajabi_affiliates_commission_status.png" alt="Commission statuses for manual and automatic payouts" class="kajabi-media kajabi-media-diagram">
+                    <p class="kajabi-caption">One commission status system for both manual and automatic payouts.</p>
+                </div>
+                <div class="kajabi-media-block">
+                    <img src="kajabi_affiliates_payout_status.png" alt="Payout statuses shared by manual and automatic payouts" class="kajabi-media kajabi-media-diagram">
+                    <p class="kajabi-caption">Payout statuses, shared by manual and automatic payouts.</p>
+                </div>
+            </div>
+            <div class="kajabi-story-block">
+                <div class="kajabi-story-row">
+                    <p class="kajabi-story-label"><span class="kajabi-story-icon" aria-hidden="true">🎨</span> Key decisions</p>
+                    <ol class="kajabi-story-list kajabi-story-list-detail" start="2">
+                        <li>
+                            <strong>“Manual payment due” becomes “Manual payout due”</strong>
+                            <p>I initially advocated for keeping the word ‘Payments,’ because from my perspective, the customer is making a payment to their affiliates, so I felt the term mapped more directly to the action. But after several discussions with the PMs, we ultimately decided that ‘Payments’ could be confusing because it introduces another piece of terminology for customers to learn. By using ‘Payouts’ consistently throughout the experience, we were able to create a more streamlined mental model and align it with the Payouts tab below, where customers can see a history of payouts made through either automatic or manual payout methods.</p>
+                        </li>
+                    </ol>
                 </div>
             </div>
             <div class="kajabi-story-block">
