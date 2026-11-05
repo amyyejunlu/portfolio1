@@ -336,6 +336,10 @@ body {
     width: 100%;
 }
 
+.kajabi-story-row-continue > .kajabi-story-body {
+    grid-column: 2;
+}
+
 .kajabi-story-label {
     display: flex;
     align-items: flex-start;
@@ -530,6 +534,11 @@ body {
 
 .kajabi-story-list-detail li strong {
     display: block;
+    font-weight: 700;
+}
+
+.kajabi-story-list-detail li strong em {
+    font-style: italic;
     font-weight: 700;
 }
 
@@ -1073,6 +1082,9 @@ body.kajabi-video-modal-open .kajabi-close-btn {
     .kajabi-story-row {
         grid-template-columns: 1fr;
         row-gap: 8px;
+    }
+    .kajabi-story-row-continue > .kajabi-story-body {
+        grid-column: 1;
     }
     .kajabi-journey {
         grid-template-columns: 1fr;
