@@ -71,10 +71,93 @@
 
         modal.querySelector('.kajabi-video-modal-backdrop').addEventListener('click', closeVideoModal);
         modal.querySelector('.kajabi-video-modal-close').addEventListener('click', closeVideoModal);
+        var imageModal = createImageModal();
+        var imageModalTimer = null;
+        var imageModalClosing = false;
+        var reduceImageMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function finishImageModalClose() {
+            imageModalClosing = false;
+            imageModal.hidden = true;
+            imageModal.classList.remove('is-open');
+            document.body.classList.remove('kajabi-video-modal-open');
+        }
+
+        function openImageModal(img) {
+            window.clearTimeout(imageModalTimer);
+            imageModalClosing = false;
+            var photo = imageModal.querySelector('.kajabi-image-modal-photo');
+            photo.src = img.currentSrc || img.getAttribute('src');
+            photo.alt = img.getAttribute('alt') || '';
+            imageModal.classList.remove('is-open');
+            imageModal.hidden = false;
+            document.body.classList.add('kajabi-video-modal-open');
+            imageModal.offsetHeight;
+            window.requestAnimationFrame(function () {
+                if (!imageModalClosing) {
+                    imageModal.classList.add('is-open');
+                }
+            });
+            imageModal.querySelector('.kajabi-image-modal-close').focus();
+        }
+
+        function closeImageModal() {
+            if (imageModal.hidden || imageModalClosing) {
+                return;
+            }
+            imageModalClosing = true;
+            imageModal.classList.remove('is-open');
+            imageModalTimer = window.setTimeout(finishImageModalClose, reduceImageMotion ? 0 : 280);
+        }
+
+        imageModal.querySelector('.kajabi-video-modal-backdrop').addEventListener('click', closeImageModal);
+        imageModal.querySelector('.kajabi-image-modal-close').addEventListener('click', closeImageModal);
+        imageModal.querySelector('.kajabi-image-modal-frame').addEventListener('click', closeImageModal);
+
         document.addEventListener('keydown', function (event) {
             if (event.key === 'Escape' && !modal.hidden) {
                 closeVideoModal();
             }
+            if (event.key === 'Escape' && !imageModal.hidden) {
+                closeImageModal();
+            }
+        });
+
+        root.querySelectorAll([
+            '.kajabi-media-row > img.kajabi-media',
+            '.kajabi-iteration-row > img.kajabi-media',
+            '.kajabi-iteration-stack > img.kajabi-media',
+            '.kajabi-media-grid > img.kajabi-media',
+            '.kajabi-problem-figure > img.kajabi-media',
+            '.kajabi-finding > img.kajabi-media',
+            '.kajabi-story-split > img.kajabi-media',
+            '.kajabi-story-split-stack > img.kajabi-media',
+            '.kajabi-capital-row > img.kajabi-media',
+            '.kajabi-story-decisions-media > img.kajabi-media',
+            'img.kajabi-media-quote'
+        ].join(',')).forEach(function (img) {
+            if (img.closest('.kajabi-image-zoom')) {
+                return;
+            }
+            var zoom = document.createElement('span');
+            zoom.className = 'kajabi-image-zoom';
+            img.parentNode.insertBefore(zoom, img);
+            zoom.appendChild(img);
+
+            var enlarge = document.createElement('button');
+            enlarge.type = 'button';
+            enlarge.className = 'kajabi-video-enlarge';
+            enlarge.setAttribute('aria-label', 'Enlarge image');
+            enlarge.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3"></path><path d="M21 8V5a2 2 0 0 0-2-2h-3"></path><path d="M3 16v3a2 2 0 0 0 2 2h3"></path><path d="M16 21h3a2 2 0 0 0 2-2v-3"></path></svg>';
+            enlarge.addEventListener('click', function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                openImageModal(img);
+            });
+            zoom.addEventListener('click', function () {
+                openImageModal(img);
+            });
+            zoom.appendChild(enlarge);
         });
 
         root.querySelectorAll('video').forEach(function (video) {
@@ -417,6 +500,22 @@
                 setOpen(false);
             });
         });
+    }
+
+    function createImageModal() {
+        var existing = document.querySelector('.kajabi-image-modal');
+        if (existing) {
+            return existing;
+        }
+        var modal = document.createElement('div');
+        modal.className = 'kajabi-image-modal';
+        modal.hidden = true;
+        modal.setAttribute('role', 'dialog');
+        modal.setAttribute('aria-modal', 'true');
+        modal.setAttribute('aria-label', 'Enlarged image');
+        modal.innerHTML = '<div class="kajabi-video-modal-backdrop"></div><div class="kajabi-image-modal-dialog"><button type="button" class="kajabi-image-modal-frame" aria-label="Close image"><img class="kajabi-image-modal-photo" alt=""></button><button type="button" class="kajabi-video-modal-close kajabi-image-modal-close" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 6-12 12"></path><path d="m6 6 12 12"></path></svg></button></div>';
+        document.body.appendChild(modal);
+        return modal;
     }
 
     function createVideoModal() {
