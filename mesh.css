@@ -299,6 +299,10 @@ body {
     gap: 24px;
 }
 
+.mesh-story-decisions .mesh-story-list li:not(:last-child) {
+    margin-bottom: 24px;
+}
+
 .mesh-story-list li {
     margin: 0;
 }
