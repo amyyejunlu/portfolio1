@@ -575,6 +575,59 @@ body {
     text-align: center;
 }
 
+.mesh-design-copy {
+    gap: 32px;
+}
+
+.mesh-design-row {
+    display: flex;
+    gap: 64px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.mesh-design-item {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+    gap: 16px;
+    width: max-content;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
+.mesh-design-pair-images {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.mesh-design-item > img,
+.mesh-design-pair-images img {
+    display: block;
+    width: auto;
+    height: 420px;
+    max-width: 100%;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    object-fit: contain;
+    object-position: top center;
+}
+
+.mesh-design-item figcaption {
+    width: 0;
+    min-width: 100%;
+    margin: 0;
+    color: #727272;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+}
+
 .mesh-failure-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
@@ -713,8 +766,20 @@ body {
     .mesh-media-row,
     .mesh-flow-row.mesh-media-row,
     .mesh-compare,
-    .mesh-failure-row {
+    .mesh-failure-row,
+    .mesh-design-row,
+    .mesh-design-pair-images {
         gap: 1rem;
+    }
+    .mesh-design-row,
+    .mesh-design-pair-images {
+        flex-direction: column;
+    }
+    .mesh-design-item > img,
+    .mesh-design-pair-images img {
+        width: 100%;
+        height: auto;
+        max-width: 280px;
     }
     .mesh-compare.mesh-compare-pair {
         gap: 1rem;

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Amy Lu, Product Designer at Mesh: fiat onramp and offramp onboarding for first-time users buying crypto and withdrawing to cash.">
-    <link rel="stylesheet" href="mesh.css">
+    <link rel="stylesheet" href="mesh.css?v=3">
     <link rel="stylesheet" href="page-transition.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -112,7 +112,7 @@
             <div class="mesh-story-row">
                 <p class="mesh-story-label"><span class="mesh-story-icon" aria-hidden="true">🎯</span> Context &amp; Role</p>
                 <div class="mesh-story-copy">
-                    <p class="mesh-story-body">Mesh is a crypto payments infrastructure company connecting wallets and exchanges to enable seamless transfers between them. I joined as Senior Product Designer, working on the 0→1 full onboarding experience for a brand-new fiat onramp and offramp product. As the lead designer on this surface, I owned the end-to-end flow design — from account creation through KYC verification, bank transfer instructions, and transfer status — partnering closely with product and engineering to take the concept from early framing to a final product.</p>
+                    <p class="mesh-story-body">Mesh is a crypto payments infrastructure company connecting wallets and exchanges to enable seamless transfers between them. I joined as Senior Product Designer, working on the 0→1 full onboarding experience for a brand-new fiat onramp and offramp product. As the solo designer on this surface, I owned the end-to-end flow design — from account creation through KYC verification, bank transfer instructions, and transfer status — partnering closely with product and engineering to take the concept from early framing to a final product.</p>
                     <p class="mesh-story-body">Beyond being 0→1, the timeline was extremely tight. I designed the full stepped flow in 2 days. KYC verification itself was handled by an external partner, which meant designing a handoff that felt seamless and trustworthy even though Mesh didn't control that part of the experience directly (the user shouldn't feel like they've left the product, even when the underlying verification is happening somewhere else). On top of that, the flow needed a transfer-pending state, since bank transfers don't resolve instantly, and first-time crypto users needed to feel confident their money was safely in motion, not lost.</p>
                 </div>
             </div>
@@ -123,9 +123,69 @@
                     <img src="mesh_onramp_1.gif" alt="Transfer from your bank screen" class="mesh-media">
                     <img src="mesh_onramp.gif" alt="Transfer pending" class="mesh-media">
                 </div>
+                <p class="mesh-caption">Stepped mobile flow covering KYC verification, bank transfer instructions, and a transfer pending state.</p>
             </div>
             <div class="mesh-story-row">
-                <p class="mesh-story-label"><span class="mesh-story-icon" aria-hidden="true">✨</span> Key decisions</p>
+                <p class="mesh-story-label"><span class="mesh-story-icon" aria-hidden="true">🎨</span> Designs</p>
+                <div class="mesh-story-copy mesh-design-copy">
+                    <p class="mesh-story-body">Breaking down the design iterations for the most important pages starting with the Buy amount screen. The first version put everything on one screen: payment methods, a fee breakdown, and a total. It was complete, but the user had to take in a lot before they’d typed a number. I removed the quick-amount chips, and consolidated the caret interactions into a bottom sheet, keeping amount entry front and center.</p>
+                    <div class="mesh-design-row mesh-design-row-buy">
+                        <figure class="mesh-design-item">
+                            <img src="mesh_onramp_buy_old.png" alt="Earlier buy screen with payment details expanded inline">
+                            <figcaption>Old: Tapping a caret expanded the content inline.</figcaption>
+                        </figure>
+                        <figure class="mesh-design-item mesh-design-pair">
+                            <div class="mesh-design-pair-images">
+                                <img src="mesh_onramp_buy_amount.png" alt="Buy amount screen with the keypad and quick-amount chips removed">
+                                <img src="mesh_onramp_buy_total.png" alt="Buy amount screen with the fee breakdown in a bottom sheet">
+                            </div>
+                            <figcaption>✅ New: Removed quick-amount chips and clicking the carets opens a bottom sheet.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="mesh-story-row">
+                <p class="mesh-story-label"><span class="mesh-story-icon" aria-hidden="true">🎨</span> Designs</p>
+                <div class="mesh-story-copy mesh-design-copy">
+                    <p class="mesh-story-body">This is the screen where we show bank transfer instructions for the user. They need to copy the payment details into their own banking app within the time window, so clarity matters most here. After 3 iterations, I landed on a cleaned up design where there is more visual separation from payment instructions and view order details. The timer also moved up next to the transfer icon so that real estate is reserved for payment instructions, without needing to scroll.</p>
+                    <div class="mesh-design-row">
+                        <figure class="mesh-design-item">
+                            <img src="mesh_onramp_spei_old.png" alt="Earlier bank transfer screen with a progress bar and a less prominent timer">
+                            <figcaption>Old: Unclear heading &amp; description. Timer lacks visual prominence.</figcaption>
+                        </figure>
+                        <figure class="mesh-design-item">
+                            <img src="mesh_onramp_spei_refined.png" alt="Refined bank transfer screen with clearer instructions and order details">
+                            <figcaption>Old: Removed the progress bar, refined the copy, and improved the visual hierarchy between instructions and order details.</figcaption>
+                        </figure>
+                        <figure class="mesh-design-item">
+                            <img src="mesh_onramp_1.gif" alt="Final bank transfer screen with the timer in a pill beside the transfer icon">
+                            <figcaption>✅ New: Moved timer into a pill so that users can view payment instructions without scrolling.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="mesh-story-row">
+                <p class="mesh-story-label"><span class="mesh-story-icon" aria-hidden="true">🎨</span> Designs</p>
+                <div class="mesh-story-copy mesh-design-copy">
+                    <p class="mesh-story-body">Bank transfers aren’t instant. After the user sends the money, our system has to perform a check on the backend verifying the money arrived, and only then would they initiate the crypto deposit into their account. So there may be a gap of time that elapses, and this screen has to communicate that. The redesigned transfer pending screen communicates the expected timeline for when the crypto will arrive in the user's account. It also reassures users that they can safely close the modal and don't need to keep it open while the transfer is being processed.</p>
+                    <div class="mesh-design-row">
+                        <figure class="mesh-design-item">
+                            <img src="mesh_onramp_pending_old.png" alt="Earlier transfer pending screen that still showed the timer and payment instructions">
+                            <figcaption>Old: Unclear whether the timer and instructions still apply in this state.</figcaption>
+                        </figure>
+                        <figure class="mesh-design-item">
+                            <img src="mesh_onramp_pending_copy.png" alt="Transfer pending screen with an updated icon and copy">
+                            <figcaption>Old: Updated icon and copy.</figcaption>
+                        </figure>
+                        <figure class="mesh-design-item">
+                            <img src="mesh_onramp.gif" alt="Transfer pending screen with a timeline for when crypto arrives">
+                            <figcaption>✅ New: Added a clear timeline showing when the transfer is expected to complete.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="mesh-story-row">
+                <p class="mesh-story-label"><span class="mesh-story-icon" aria-hidden="true">🎨</span> Designs</p>
                 <div class="mesh-story-copy mesh-story-decisions">
                     <p class="mesh-story-body">A fiat-to-crypto transfer involves real money moving through an external bank rail (SPEI), which meant failure wasn't an edge case to handle later, it was a core part of the experience from day one. I designed a set of distinct failure and recovery states, each with its own specific message and next action, rather than a single generic error screen:</p>
                     <ol class="mesh-story-list">
@@ -151,19 +211,19 @@
             <div class="mesh-failure-row">
                 <figure class="mesh-failure-item">
                     <img src="mesh_onramp_identity.png" alt="Identity verification failure screen">
-                    <figcaption>Identity verification failure.</figcaption>
+                    <figcaption>1. Identity verification failure.</figcaption>
                 </figure>
                 <figure class="mesh-failure-item">
                     <img src="mesh_onramp_payment.png" alt="Payment confirmation screen">
-                    <figcaption>Payment confirmation.</figcaption>
+                    <figcaption>2. Payment confirmation.</figcaption>
                 </figure>
                 <figure class="mesh-failure-item">
                     <img src="mesh_onramp_expired.png" alt="Transfer window expiration screen">
-                    <figcaption>Transfer window expiration.</figcaption>
+                    <figcaption>3. Transfer window expiration.</figcaption>
                 </figure>
                 <figure class="mesh-failure-item">
                     <img src="mesh_onramp_generic.png" alt="Generic purchase failure screen">
-                    <figcaption>Generic purchase failure.</figcaption>
+                    <figcaption>4. Generic purchase failure.</figcaption>
                 </figure>
             </div>
         </section>
