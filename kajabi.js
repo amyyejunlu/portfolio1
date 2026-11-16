@@ -74,6 +74,7 @@
         var imageModal = createImageModal();
         var imageModalTimer = null;
         var imageModalClosing = false;
+        var imageModalToken = 0;
         var reduceImageMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         function finishImageModalClose() {
@@ -87,17 +88,39 @@
             window.clearTimeout(imageModalTimer);
             imageModalClosing = false;
             var photo = imageModal.querySelector('.kajabi-image-modal-photo');
-            photo.src = img.currentSrc || img.getAttribute('src');
-            photo.alt = img.getAttribute('alt') || '';
+            var nextSrc = img.currentSrc || img.getAttribute('src') || '';
+            var token = ++imageModalToken;
             imageModal.classList.remove('is-open');
+            photo.alt = img.getAttribute('alt') || '';
+            photo.removeAttribute('src');
             imageModal.hidden = false;
             document.body.classList.add('kajabi-video-modal-open');
-            imageModal.offsetHeight;
-            window.requestAnimationFrame(function () {
-                if (!imageModalClosing) {
-                    imageModal.classList.add('is-open');
+
+            function reveal() {
+                if (token !== imageModalToken || imageModalClosing) {
+                    return;
                 }
-            });
+                imageModal.offsetHeight;
+                window.requestAnimationFrame(function () {
+                    if (token !== imageModalToken || imageModalClosing) {
+                        return;
+                    }
+                    imageModal.classList.add('is-open');
+                });
+            }
+
+            photo.onload = function () {
+                reveal();
+            };
+            photo.onerror = function () {
+                reveal();
+            };
+            photo.src = nextSrc;
+            if (photo.decode) {
+                photo.decode().then(reveal).catch(reveal);
+            } else if (photo.complete) {
+                reveal();
+            }
             imageModal.querySelector('.kajabi-image-modal-close').focus();
         }
 
